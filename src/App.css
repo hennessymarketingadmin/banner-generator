@@ -1,0 +1,29 @@
+.bannerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(81, 93, 113);
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(81, 93, 113);
+    color: white;
+    width: 1200px;
+}
+
+h1 {
+    font-family: Arial Rounded MT Bold;
+}
+
+.bannerBtn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}

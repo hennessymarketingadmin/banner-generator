@@ -1,12 +1,33 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Banner from './components/banner.js';
+import Create from './components/create.js';
 
-function App() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+
+class App extends Component {
+
+  state = {
+    create: false,
+  }
+
+  render() {
+    return (
+      <div>
+        <Banner 
+          create={this.state.create}
+        />
+
+        {this.state.create ? <Create/>
+        :
+        <button
+          onClick = {()=>{
+            this.setState({create: true})
+          }}
+        >Start</button>
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
