@@ -23,7 +23,7 @@ class App extends Component {
           onClick = {()=>{
             this.setState({create: true})
           }}
-        >Start</button>
+        >Get Started</button>
         }
       </div>
     );

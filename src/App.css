@@ -27,3 +27,30 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
 }
+
+.createContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.create {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 1200px;
+}
+
+.nav {
+    /* border: 1px solid red; */
+    height: 1000px;
+    background-color: rgb(42, 48, 56);
+    /* background-color: rgb(187, 186, 175); */
+}
+
+.template {
+    /* border: 1px solid blue; */
+    height: 1000px;
+    background-color: rgb(224, 224, 210);
+    background-color: rgb(238, 240, 242);
+
+}
