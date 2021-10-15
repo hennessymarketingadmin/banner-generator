@@ -25,7 +25,7 @@ class Create extends Component {
                 <div className='create'>
                     <div className='nav'>
                         <div><button className='copyBtn'>Copy Code</button></div>
-                        <div><button>clear</button></div>
+                        <div><button>Reset</button></div>
                         <div>Banner Height</div>
                         <input                            
                         onChange = {(event) => {
@@ -38,7 +38,7 @@ class Create extends Component {
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundImgUrl: x})
-                        }} 
+                        }}
                         ></input>
                         <div>Text</div>
                         <input

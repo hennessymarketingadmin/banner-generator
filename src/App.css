@@ -18,6 +18,50 @@
 h1 {
     font-family: Arial Rounded MT Bold;
 }
+.homeContainer {
+    background-color: rgb(81, 93, 113);
+    /* border: 1px solid red; */
+    height: 720px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.homeContainerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.homeContainerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    /* border: 1px solid red; */
+    padding-left: 80px;
+}
+.homeHeader {
+    margin: 10px;
+    font-size: 50px;
+    /* margin-left: 20px; */
+}
+.homeBtn {
+    text-decoration: none;
+    font-family: Arial Rounded MT Bold;
+    color: white;
+    background-color: rgb(238, 124, 177);
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+.homeBtn:hover {
+    box-shadow: 0 10px 50px rgba(214, 147, 218, 0.4);
+}
 .copyBtn {
     background-color: white;
     border: none;
