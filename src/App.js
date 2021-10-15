@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
         <Banner 
-          create={this.state.create}
+          // create={this.state.create}
         />
 
         {this.state.create ? <Create/>

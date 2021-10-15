@@ -6,10 +6,10 @@ class Banner extends Component {
             <div className='bannerContainer'>
                 <div className='banner'>
                     <h1>Hennessy Banner Generator</h1>
-                    {this.props.create ? 
+                    {/* {this.props.create ? 
                     <button
                         className='bannerBtn'
-                    >Copy Code</button> : null}
+                    >Copy Code</button> : null} */}
                 </div>
             </div>
         );
