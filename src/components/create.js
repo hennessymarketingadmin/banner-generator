@@ -33,6 +33,7 @@ class Create extends Component {
             backgroundImage: 'url(' + this.state.backgroundImgUrl + ')',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%',
+            height: this.state.bannerHeight + 'px',
         }
 
         const title = {
@@ -46,7 +47,8 @@ class Create extends Component {
             // backgroundColor: this.state.textBackground,
             // opacity: this.state.backgroundOpacity,
             background: 'rgba(' + this.state.textBackgroundColorR + ', ' + this.state.textBackgroundColorG + ', ' + this.state.textBackgroundColorB + ', ' + this.state.backgroundOpacity +')',
-            // background:  'rgba(255, 255, 255, 0.5)'
+            // background:  'rgba(255, 255, 255, 0.5)',
+            padding: '10px',
         }
 
         return (
@@ -62,7 +64,7 @@ class Create extends Component {
                         <input                            
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({backgroundImgUrl: x})
+                            this.setState({bannerHeight: x})
                         }}
                         ></input>
                         <div>Image Url</div>
@@ -96,7 +98,6 @@ class Create extends Component {
                         ></input>
                         <div>Text Background size width</div>
                         <input
-                        // placeholder='R'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundWidth: x})
@@ -104,7 +105,6 @@ class Create extends Component {
                         ></input>
                         <div>Text Background size height</div>
                         <input
-                        // placeholder=''
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundHeight: x})
