@@ -110,8 +110,10 @@ class Create extends Component {
                             this.setState({backgroundHeight: x})
                         }} 
                         ></input>
-                        <div>Text Background color rgb()</div>
+                        <div>Text Background color</div>
+                        <div> rgb(
                         <input
+                        className='rgbInputs'
                         placeholder='R'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -119,6 +121,7 @@ class Create extends Component {
                         }} 
                         ></input>
                         <input
+                        className='rgbInputs'
                         placeholder='G'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -126,19 +129,23 @@ class Create extends Component {
                         }} 
                         ></input>
                         <input
+                        className='rgbInputs'
                         placeholder='B'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({textBackgroundColorB: x})
                         }} 
                         ></input>
-                        <div>Background opacity </div>
+                        )</div>
+                        <div>Background opacity
                         <input
+                        className='rgbInputs'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundOpacity: x})
                         }} 
                         ></input>
+                        </div>
                         <div>Text placement</div>
                         <input
                         onChange = {(event) => {
