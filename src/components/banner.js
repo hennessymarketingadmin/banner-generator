@@ -5,7 +5,7 @@ class Banner extends Component {
         return (
             <div className='bannerContainer'>
                 <div className='banner'>
-                    <h1>Hennessy Banner Generator</h1>
+                    <h1 className='bannerLogo'>Hennessy Banner Generator</h1>
                     {/* {this.props.create ? 
                     <button
                         className='bannerBtn'

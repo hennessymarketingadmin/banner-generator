@@ -7,9 +7,14 @@ class Create extends Component {
         text: '',
         bannerHeight: '',
         imageUrl: '',
-        text: '',
-        texFont: '',
-        textBackground: '',
+        title: '',
+        body: '',
+        texFontSize: '',
+        backgroundWidth: '',
+        backgroundHeight: '',
+        textBackgroundColorR: '',
+        textBackgroundColorG: '',
+        textBackgroundColorB: '',
         backgroundOpacity: '',
         textPlacement: '',
         addButton: '',
@@ -19,13 +24,40 @@ class Create extends Component {
     }
 
     render() {
+
+        // const resetBtn = {
+        //     color: "red",
+        // };
+
+        const template = {
+            backgroundImage: 'url(' + this.state.backgroundImgUrl + ')',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100%',
+        }
+
+        const title = {
+            fontSize: this.state.texFontSize + 'px',
+        }
+
+        const textBackground = {
+            height: this.state.backgroundHeight + 'px',
+            width: this.state.backgroundWidth + 'px',
+            border: '1px solid red',
+            // backgroundColor: this.state.textBackground,
+            // opacity: this.state.backgroundOpacity,
+            background: 'rgba(' + this.state.textBackgroundColorR + ', ' + this.state.textBackgroundColorG + ', ' + this.state.textBackgroundColorB + ', ' + this.state.backgroundOpacity +')',
+            // background:  'rgba(255, 255, 255, 0.5)'
+        }
+
         return (
             <div className='createContainer'>
                 {/* <h1>Create</h1> */}
                 <div className='create'>
                     <div className='nav'>
                         <div><button className='copyBtn'>Copy Code</button></div>
-                        <div><button>Reset</button></div>
+                        <div><button 
+                        // style={resetBtn}
+                        >Reset</button></div>
                         <div>Banner Height</div>
                         <input                            
                         onChange = {(event) => {
@@ -40,25 +72,64 @@ class Create extends Component {
                             this.setState({backgroundImgUrl: x})
                         }}
                         ></input>
-                        <div>Text</div>
+                        <div>Title</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({title: x})
                         }} 
                         ></input>
-                        <div>Text Font</div>
+                        <div>body</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({texFont: x})
+                            this.setState({body: x})
                         }} 
                         ></input>
-                        <div>Text Background</div>
+                        <div>Text Font-size</div>
                         <input
+                        placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({textBackground: x})
+                            this.setState({texFontSize: x})
+                        }} 
+                        ></input>
+                        <div>Text Background size width</div>
+                        <input
+                        // placeholder='R'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({backgroundWidth: x})
+                        }} 
+                        ></input>
+                        <div>Text Background size height</div>
+                        <input
+                        // placeholder=''
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({backgroundHeight: x})
+                        }} 
+                        ></input>
+                        <div>Text Background color rgb()</div>
+                        <input
+                        placeholder='R'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({textBackgroundColorR: x})
+                        }} 
+                        ></input>
+                        <input
+                        placeholder='G'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({textBackgroundColorG: x})
+                        }} 
+                        ></input>
+                        <input
+                        placeholder='B'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({textBackgroundColorB: x})
                         }} 
                         ></input>
                         <div>Background opacity </div>
@@ -130,7 +201,7 @@ class Create extends Component {
                     
                         <div><button>Add Button</button></div>
                     
-                        <div>Button text </div>
+                        <div>Button text</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
@@ -155,8 +226,13 @@ class Create extends Component {
                         ></input>
                     </div>
                     <div className='templateContainer'>
-                        <div className='template' style={{backgroundImage: 'url(' + this.state.backgroundImgUrl + ')'}} >
-
+                        <div className='template' style={template} >
+                            {this.state.title?
+                            <div style={textBackground}>
+                                <h1 style={title}>{this.state.title}</h1>
+                                <p>{this.state.body}</p>
+                            </div> 
+                            : null }
                         </div>
                     </div>
                 </div>
