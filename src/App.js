@@ -28,7 +28,7 @@ class App extends Component {
             <h1 className='homeHeader'>Your Product</h1>
             <h1 className='homeHeader'>To Life</h1>
             <button
-              className='homeBtn'
+              className='PinkBtn'
               onClick = {()=>{
                 this.setState({create: true})
               }}

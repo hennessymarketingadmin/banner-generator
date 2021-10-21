@@ -45,7 +45,7 @@
     font-size: 50px;
     /* margin-left: 20px; */
 }
-.homeBtn {
+.PinkBtn {
     text-decoration: none;
     font-family: Arial Rounded MT Bold;
     color: white;
@@ -63,7 +63,7 @@
 .homeBtn:hover {
     box-shadow: 0 10px 50px rgba(214, 147, 218, 0.4);
 }
-.copyBtn {
+.whiteBtn {
     background-color: white;
     border: none;
     color: black;
@@ -71,6 +71,8 @@
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 20px;
+    margin: 3px;
+    cursor: pointer;
 }
 .createContainer {
     display: flex;

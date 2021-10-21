@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 class Create extends Component {
 
     state = {
-        backgroundImgUrl: '',
         bannerHeight: '',
+        backgroundImgUrl: '',
+        fontFamily: '',
+        fontColor: '',
         leftTitle: '',
+        leftTitleFontSize: '',
         leftBody: '',
-        leftTexFontSize: '',
+        leftBodyFontSize: '',
         leftJustifyContent: '',
         leftAlignItems: '',
         leftBackgroundWidth: '',
@@ -16,14 +19,23 @@ class Create extends Component {
         leftTextBackgroundColorG: '',
         leftTextBackgroundColorB: '',
         leftBackgroundOpacity: '',
-        leftTextPlacement: '',
+        // leftTextPlacement: '',
         leftButton1: false,
+        LeftButtonText1: '',
+        leftButtonLink1: '',
+        leftButtonColor1: '',
         leftButton2: false,
+        LeftButtonText2: '',
+        leftButtonLink2: '',
+        leftButtonColor1: '',
         leftButton3: false,
-        addButton: '',
-        buttonText: '',
-        buttonLink: '',
-        buttonColor: '',
+        LeftButtonText3: '',
+        leftButtonLink3: '',
+        leftButtonColor1: '',
+        // addButton: '',
+        // buttonText: '',
+        // buttonLink: '',
+        // buttonColor: '',
         right: {
             title: '',
             body: '',
@@ -53,10 +65,16 @@ class Create extends Component {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%',
             height: this.state.bannerHeight + 'px',
+            fontFamily: this.state.fontFamily,
+            color: this.state.fontColor,
         }
 
-        const title = {
-            fontSize: this.state.texFontSize + 'px',
+        const LeftTitle = {
+            fontSize: this.state.leftTitleFontSize + 'px',
+        }
+
+        const LeftBody = {
+            fontSize: this.state.leftBodyFontSize + 'px',
         }
 
         const leftTextBackground = {
@@ -77,6 +95,15 @@ class Create extends Component {
             alignItems: this.state.leftAlignItems,
         }
 
+        const bannerBtn = {
+            backgroundColor: 'black',
+            padding: '10px 20px',
+            color: 'white',
+            border: 'none',
+            cursor: 'pointer',
+            margin: '5px'
+        }
+
         return (
             <div className='createContainer'>
                 {/* <h1>Create</h1> */}
@@ -84,7 +111,7 @@ class Create extends Component {
                     <div className='nav'>
                         <div><button 
                         // className='copyBtn'
-                        className='homeBtn'
+                        className='PinkBtn'
                         >Copy Code</button></div>
                         
                         <div>Banner Height</div>
@@ -97,10 +124,28 @@ class Create extends Component {
                         ></input>
                         <div>Background Image</div>
                         <input
-                        placeholder='Insert URL'
+                        placeholder='Background Url'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundImgUrl: x})
+                        }}
+                        ></input>
+                        <div>Font-Family</div>
+                        <input
+                        // className='rgbInputs'
+                        // placeholder='#'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({fontFamily: x})
+                        }}
+                        ></input>
+                        <div>Font-Color</div>
+                        <input
+                        // className='rgbInputs'
+                        // placeholder='#'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({fontColor: x})
                         }}
                         ></input>
                         <h2>Left</h2>
@@ -111,6 +156,15 @@ class Create extends Component {
                             this.setState({leftTitle: x})
                         }} 
                         ></input>
+                        <div>Title Font-Size</div>
+                        <input
+                        placeholder='px'
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({leftTitleFontSize: x})
+                        }}
+                        ></input>
+                        <hr/>
                         <div>Body</div>
                         <input
                         onChange = {(event) => {
@@ -118,25 +172,27 @@ class Create extends Component {
                             this.setState({leftBody: x})
                         }} 
                         ></input>
-                        <div>Text Font-size</div>
+                        <div>Body Font-Size</div>
                         <input
                         placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({texFontSize: x})
-                        }}
+                            this.setState({leftBodyFontSize: x})
+                        }} 
                         ></input>
-                        <div>Background Position</div>
-                        <div>Justify Content</div>
-                        <button onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
-                        <button onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
-                        <button onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
-                        <div>Align Items</div>
-                        <button onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
-                        <button onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
-                        <button onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
+                        <hr/>
+                        <h3>Background Position</h3>
+                        <div>Justify Content (Vertical)</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
+                        <div>Align Items (Horizontal)</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
                         <div>Text Background size width</div>
                         <input
+                        placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundWidth: x})
@@ -144,6 +200,7 @@ class Create extends Component {
                         ></input>
                         <div>Text Background size height</div>
                         <input
+                        placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundHeight: x})
@@ -175,25 +232,44 @@ class Create extends Component {
                             this.setState({textBackgroundColorB: x})
                         }} 
                         ></input>
-                        )</div>
-                        <div>Background opacity
+                        
+                        {/* <div>Background opacity */}
                         <input
+                        placeholder='O'
                         className='rgbInputs'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundOpacity: x})
                         }} 
                         ></input>
-                        </div>
-                        <div>Text placement</div>
+                        )</div>
+                        {/* </div> */}
+                        <hr/>
+                        {/* <div>Text placement</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({textPlacement: x})
                         }} 
+                        ></input> */}
+                        <h3>Buttons</h3>
+                        <div>Button Background color</div>
+                        <input
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({leftButtonColor3: x})
+                        }} 
                         ></input>
-                    
+                        <div>Button color</div>
+                        <input
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({leftButtonColor3: x})
+                        }} 
+                        ></input>
+
                         <div><button
+                        className='whiteBtn'
                         onClick = {()=>{
                             let leftButton1 = this.state.leftButton1
                             this.setState({leftButton1: !leftButton1})
@@ -204,7 +280,7 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({buttonText: x})
+                            this.setState({LeftButtonText1: x})
                         }} 
                         ></input>
                     
@@ -212,19 +288,20 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({buttonLink: x})
+                            this.setState({leftButtonLink1: x})
                         }} 
                         ></input>
                     
-                        <div>Button color</div>
+                        {/* <div>Button color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({buttonColor: x})
+                            this.setState({leftButtonColor1: x})
                         }} 
-                        ></input>
-                    
+                        ></input> */}
+                    {/* <hr/> */}
                     <div><button
+                    className='whiteBtn'
                         onClick = {()=>{
                             let leftButton2 = this.state.leftButton2
                             this.setState({leftButton2: !leftButton2})
@@ -235,7 +312,7 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({LeftButtonText2: x})
                         }} 
                         ></input>
                     
@@ -243,19 +320,20 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({leftButtonLink2: x})
                         }} 
                         ></input>
                     
-                        <div>Button color</div>
+                        {/* <div>Button color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({leftButtonColor2: x})
                         }} 
-                        ></input>
-                    
+                        ></input> */}
+                    {/* <hr/> */}
                     <div><button
+                    className='whiteBtn'
                         onClick = {()=>{
                             let leftButton3 = this.state.leftButton3
                             this.setState({leftButton3: !leftButton3})
@@ -266,7 +344,7 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({LeftButtonText3: x})
                         }} 
                         ></input>
                     
@@ -274,28 +352,32 @@ class Create extends Component {
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({leftButtonLink3: x})
                         }} 
                         ></input>
                     
-                        <div>Button color</div>
+                        {/* <div>Button color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({text: x})
+                            this.setState({leftButtonColor3: x})
                         }} 
-                        ></input>
+                        ></input> */}
+                        <hr/>
+                        <div>Insert Image</div>
+                        <input placeholder='Image Url'/>
+                        <hr/>
                         <h2>Right</h2>
                     </div>
                     <div className='templateContainer'>
                         <div className='template' style={template} >
                             <div className='templateLeft' style={templateLeft}>
                                 <div style={leftTextBackground}>
-                                    {this.state.leftTitle ? <h1>{this.state.leftTitle}</h1> : null}
-                                    {this.state.leftBody ? <p>{this.state.leftBody}</p> : null}
-                                    {this.state.leftButton1 ? <button>button 1</button> : null}
-                                    {this.state.leftButton2 ? <button>button 2</button> : null}
-                                    {this.state.leftButton3 ? <button>button 3</button> : null}
+                                    {this.state.leftTitle ? <h1 style={LeftTitle}>{this.state.leftTitle}</h1> : null}
+                                    {this.state.leftBody ? <p style={LeftBody}>{this.state.leftBody}</p> : null}
+                                    {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
+                                    {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
+                                    {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtn}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null}
                                 </div>
                             </div>
                             <div className='templateRight'>
