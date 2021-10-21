@@ -4,23 +4,42 @@ class Create extends Component {
 
     state = {
         backgroundImgUrl: '',
-        text: '',
         bannerHeight: '',
-        imageUrl: '',
-        title: '',
-        body: '',
-        texFontSize: '',
-        backgroundWidth: '',
-        backgroundHeight: '',
-        textBackgroundColorR: '',
-        textBackgroundColorG: '',
-        textBackgroundColorB: '',
-        backgroundOpacity: '',
-        textPlacement: '',
+        leftTitle: '',
+        leftBody: '',
+        leftTexFontSize: '',
+        leftJustifyContent: '',
+        leftAlignItems: '',
+        leftBackgroundWidth: '',
+        leftBackgroundHeight: '',
+        leftTextBackgroundColorR: '',
+        leftTextBackgroundColorG: '',
+        leftTextBackgroundColorB: '',
+        leftBackgroundOpacity: '',
+        leftTextPlacement: '',
+        leftButton1: false,
+        leftButton2: false,
+        leftButton3: false,
         addButton: '',
         buttonText: '',
         buttonLink: '',
         buttonColor: '',
+        right: {
+            title: '',
+            body: '',
+            texFontSize: '',
+            backgroundWidth: '',
+            backgroundHeight: '',
+            textBackgroundColorR: '',
+            textBackgroundColorG: '',
+            textBackgroundColorB: '',
+            backgroundOpacity: '',
+            textPlacement: '',
+            addButton: '',
+            buttonText: '',
+            buttonLink: '',
+            buttonColor: '',
+        }
     }
 
     render() {
@@ -40,10 +59,10 @@ class Create extends Component {
             fontSize: this.state.texFontSize + 'px',
         }
 
-        const textBackground = {
+        const leftTextBackground = {
             height: this.state.backgroundHeight + 'px',
             width: this.state.backgroundWidth + 'px',
-            border: '1px solid red',
+            // border: '1px solid red',
             // backgroundColor: this.state.textBackground,
             // opacity: this.state.backgroundOpacity,
             background: 'rgba(' + this.state.textBackgroundColorR + ', ' + this.state.textBackgroundColorG + ', ' + this.state.textBackgroundColorB + ', ' + this.state.backgroundOpacity +')',
@@ -51,41 +70,52 @@ class Create extends Component {
             padding: '10px',
         }
 
+        const templateLeft = {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: this.state.leftJustifyContent,
+            alignItems: this.state.leftAlignItems,
+        }
+
         return (
             <div className='createContainer'>
                 {/* <h1>Create</h1> */}
                 <div className='create'>
                     <div className='nav'>
-                        <div><button className='copyBtn'>Copy Code</button></div>
                         <div><button 
-                        // style={resetBtn}
-                        >Reset</button></div>
+                        // className='copyBtn'
+                        className='homeBtn'
+                        >Copy Code</button></div>
+                        
                         <div>Banner Height</div>
-                        <input                            
+                        <input   
+                        placeholder='400px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({bannerHeight: x})
                         }}
                         ></input>
-                        <div>Image Url</div>
+                        <div>Background Image</div>
                         <input
+                        placeholder='Insert URL'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({backgroundImgUrl: x})
                         }}
                         ></input>
+                        <h2>Left</h2>
                         <div>Title</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({title: x})
+                            this.setState({leftTitle: x})
                         }} 
                         ></input>
-                        <div>body</div>
+                        <div>Body</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({body: x})
+                            this.setState({leftBody: x})
                         }} 
                         ></input>
                         <div>Text Font-size</div>
@@ -94,8 +124,17 @@ class Create extends Component {
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({texFontSize: x})
-                        }} 
+                        }}
                         ></input>
+                        <div>Background Position</div>
+                        <div>Justify Content</div>
+                        <button onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
+                        <button onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
+                        <button onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
+                        <div>Align Items</div>
+                        <button onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
+                        <button onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
+                        <button onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
                         <div>Text Background size width</div>
                         <input
                         onChange = {(event) => {
@@ -154,7 +193,12 @@ class Create extends Component {
                         }} 
                         ></input>
                     
-                        <div><button>Add Button</button></div>
+                        <div><button
+                        onClick = {()=>{
+                            let leftButton1 = this.state.leftButton1
+                            this.setState({leftButton1: !leftButton1})
+                        }}
+                        >{this.state.leftButton1 ? 'Remove Button' : 'Add Button'}</button></div>
                     
                         <div>Button text</div>
                         <input
@@ -180,7 +224,12 @@ class Create extends Component {
                         }} 
                         ></input>
                     
-                        <div><button>Add Button</button></div>
+                    <div><button
+                        onClick = {()=>{
+                            let leftButton2 = this.state.leftButton2
+                            this.setState({leftButton2: !leftButton2})
+                        }}
+                        >{this.state.leftButton2 ? 'Remove Button' : 'Add Button'}</button></div>
                     
                         <div>Button text</div>
                         <input
@@ -206,7 +255,12 @@ class Create extends Component {
                         }} 
                         ></input>
                     
-                        <div><button>Add Button</button></div>
+                    <div><button
+                        onClick = {()=>{
+                            let leftButton3 = this.state.leftButton3
+                            this.setState({leftButton3: !leftButton3})
+                        }}
+                        >{this.state.leftButton3 ? 'Remove Button' : 'Add Button'}</button></div>
                     
                         <div>Button text</div>
                         <input
@@ -231,15 +285,22 @@ class Create extends Component {
                             this.setState({text: x})
                         }} 
                         ></input>
+                        <h2>Right</h2>
                     </div>
                     <div className='templateContainer'>
                         <div className='template' style={template} >
-                            {this.state.title?
-                            <div style={textBackground}>
-                                <h1 style={title}>{this.state.title}</h1>
-                                <p>{this.state.body}</p>
-                            </div> 
-                            : null }
+                            <div className='templateLeft' style={templateLeft}>
+                                <div style={leftTextBackground}>
+                                    {this.state.leftTitle ? <h1>{this.state.leftTitle}</h1> : null}
+                                    {this.state.leftBody ? <p>{this.state.leftBody}</p> : null}
+                                    {this.state.leftButton1 ? <button>button 1</button> : null}
+                                    {this.state.leftButton2 ? <button>button 2</button> : null}
+                                    {this.state.leftButton3 ? <button>button 3</button> : null}
+                                </div>
+                            </div>
+                            <div className='templateRight'>
+
+                            </div>
                         </div>
                     </div>
                 </div>

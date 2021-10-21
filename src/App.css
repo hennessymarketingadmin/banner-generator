@@ -21,7 +21,7 @@
 .homeContainer {
     background-color: rgb(81, 93, 113);
     /* border: 1px solid red; */
-    height: 720px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -58,6 +58,7 @@
     border: none;
     width: 200px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .homeBtn:hover {
     box-shadow: 0 10px 50px rgba(214, 147, 218, 0.4);
@@ -69,6 +70,7 @@
     padding: 15px 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 .createContainer {
     display: flex;
@@ -76,6 +78,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(238, 240, 242);
+    /* height: 100vh; */
 }
 .create {
     display: grid;
@@ -84,28 +87,36 @@
 }
 .nav {
     /* border: 1px solid red; */
-    height: 1000px;
+    height: 700px;
     background-color: rgb(42, 48, 56);
     color: white;
     /* background-color: rgb(187, 186, 175); */
     padding: 20px;
+    overflow: scroll;
 }
 .templateContainer {
     /* border: 1px solid blue; */
-    height: 1000px;
-    background-color: rgb(238, 240, 242);
+    height: 700px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border-right: 1px solid gray;
+    /* border-right: 1px solid gray; */
 }
 .template {
     border: 1px solid gray;
-    width: 80%;
+    width: 95%;
     height: 400px;
     margin-top: 20px;
-    
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.templateRight {
+    border: 1px solid red;
+}
+.templateLeft {
+    border: 1px solid red;
 }
 
 .rgbInputs {
