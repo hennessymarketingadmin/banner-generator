@@ -11,6 +11,7 @@ class Create extends Component {
         leftTitleFontSize: '',
         leftBody: '',
         leftBodyFontSize: '',
+        leftAddDropDown: false,
         leftJustifyContent: '',
         leftAlignItems: '',
         leftBackgroundWidth: '',
@@ -19,7 +20,6 @@ class Create extends Component {
         leftTextBackgroundColorG: '',
         leftTextBackgroundColorB: '',
         leftBackgroundOpacity: '',
-        // leftTextPlacement: '',
         leftButton1: false,
         LeftButtonText1: '',
         leftButtonLink1: '',
@@ -32,34 +32,80 @@ class Create extends Component {
         LeftButtonText3: '',
         leftButtonLink3: '',
         leftButtonColor1: '',
-        // addButton: '',
-        // buttonText: '',
-        // buttonLink: '',
-        // buttonColor: '',
-        right: {
-            title: '',
-            body: '',
-            texFontSize: '',
-            backgroundWidth: '',
-            backgroundHeight: '',
-            textBackgroundColorR: '',
-            textBackgroundColorG: '',
-            textBackgroundColorB: '',
-            backgroundOpacity: '',
-            textPlacement: '',
-            addButton: '',
-            buttonText: '',
-            buttonLink: '',
-            buttonColor: '',
-        }
     }
 
     render() {
+        const offerDetailsOne = () => {
+            let x = document.getElementById("detailsOne");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
 
-        // const resetBtn = {
-        //     color: "red",
-        // };
+        const offerDetailsTwo = () => {
+            let x = document.getElementById("detailsTwo");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
 
+        const offerDetailsThree = () => {
+            let x = document.getElementById("detailsThree");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const offerDetailsFour = () => {
+            let x = document.getElementById("detailsFour");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const dropDownOne = () => {
+            let x = document.getElementById("dropDownOne");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const dropDownTwo = () => {
+            let x = document.getElementById("dropDownTwo");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const dropDownThree = () => {
+            let x = document.getElementById("dropDownThree");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const dropDownFour = () => {
+            let x = document.getElementById("dropDownFour");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
         const template = {
             backgroundImage: 'url(' + this.state.backgroundImgUrl + ')',
             backgroundRepeat: 'no-repeat',
@@ -80,11 +126,7 @@ class Create extends Component {
         const leftTextBackground = {
             height: this.state.backgroundHeight + 'px',
             width: this.state.backgroundWidth + 'px',
-            // border: '1px solid red',
-            // backgroundColor: this.state.textBackground,
-            // opacity: this.state.backgroundOpacity,
-            background: 'rgba(' + this.state.textBackgroundColorR + ', ' + this.state.textBackgroundColorG + ', ' + this.state.textBackgroundColorB + ', ' + this.state.backgroundOpacity +')',
-            // background:  'rgba(255, 255, 255, 0.5)',
+            background: 'rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +')',
             padding: '10px',
         }
 
@@ -106,11 +148,9 @@ class Create extends Component {
 
         return (
             <div className='createContainer'>
-                {/* <h1>Create</h1> */}
                 <div className='create'>
                     <div className='nav'>
                         <div><button 
-                        // className='copyBtn'
                         className='PinkBtn'
                         >Copy Code</button></div>
                         
@@ -132,8 +172,6 @@ class Create extends Component {
                         ></input>
                         <div>Font-Family</div>
                         <input
-                        // className='rgbInputs'
-                        // placeholder='#'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({fontFamily: x})
@@ -141,8 +179,6 @@ class Create extends Component {
                         ></input>
                         <div>Font-Color</div>
                         <input
-                        // className='rgbInputs'
-                        // placeholder='#'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({fontColor: x})
@@ -180,6 +216,23 @@ class Create extends Component {
                             this.setState({leftBodyFontSize: x})
                         }} 
                         ></input>
+                        <hr/>
+                        <h3>Drop Down</h3>
+                        <button className='whiteBtn' 
+                        onClick={()=>{
+                            let x = this.state.leftAddDropDown
+                            this.setState({leftAddDropDown: !x})
+                        }}
+                        >{this.state.leftAddDropDown ? 'Remove Dropdown' : 'Add DropDown'}</button>
+                        {this.state.leftAddDropDown ? 
+                        <div>
+                            <div>Drop Down Title</div>
+                            <input placeholder='ex: reginal offers'></input>
+                            <div>price</div>
+                            <div>Offer Details</div>
+                            <input></input>
+                        </div> 
+                        : null}
                         <hr/>
                         <h3>Background Position</h3>
                         <div>Justify Content (Vertical)</div>
@@ -233,7 +286,6 @@ class Create extends Component {
                         }} 
                         ></input>
                         
-                        {/* <div>Background opacity */}
                         <input
                         placeholder='O'
                         className='rgbInputs'
@@ -243,17 +295,9 @@ class Create extends Component {
                         }} 
                         ></input>
                         )</div>
-                        {/* </div> */}
                         <hr/>
-                        {/* <div>Text placement</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({textPlacement: x})
-                        }} 
-                        ></input> */}
                         <h3>Buttons</h3>
-                        <div>Button Background color</div>
+                        {/* <div>Button Background color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
@@ -266,7 +310,7 @@ class Create extends Component {
                             let x = event.target.value
                             this.setState({leftButtonColor3: x})
                         }} 
-                        ></input>
+                        ></input> */}
 
                         <div><button
                         className='whiteBtn'
@@ -275,31 +319,25 @@ class Create extends Component {
                             this.setState({leftButton1: !leftButton1})
                         }}
                         >{this.state.leftButton1 ? 'Remove Button' : 'Add Button'}</button></div>
+
+                        {this.state.leftButton1 ? <div>
+                            <div>Button text</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftButtonText1: x})
+                            }} 
+                            ></input>
+                        
+                            <div>Button link</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftButtonLink1: x})
+                            }} 
+                            ></input>
+                        </div>: null}
                     
-                        <div>Button text</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({LeftButtonText1: x})
-                        }} 
-                        ></input>
-                    
-                        <div>Button link</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonLink1: x})
-                        }} 
-                        ></input>
-                    
-                        {/* <div>Button color</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonColor1: x})
-                        }} 
-                        ></input> */}
-                    {/* <hr/> */}
                     <div><button
                     className='whiteBtn'
                         onClick = {()=>{
@@ -307,31 +345,24 @@ class Create extends Component {
                             this.setState({leftButton2: !leftButton2})
                         }}
                         >{this.state.leftButton2 ? 'Remove Button' : 'Add Button'}</button></div>
+                        {this.state.leftButton2 ? <div>
+                            <div>Button text</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftButtonText2: x})
+                            }} 
+                            ></input>
+                        
+                            <div>Button link</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftButtonLink2: x})
+                            }} 
+                            ></input>
+                        </div>: null}
                     
-                        <div>Button text</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({LeftButtonText2: x})
-                        }} 
-                        ></input>
-                    
-                        <div>Button link</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonLink2: x})
-                        }} 
-                        ></input>
-                    
-                        {/* <div>Button color</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonColor2: x})
-                        }} 
-                        ></input> */}
-                    {/* <hr/> */}
                     <div><button
                     className='whiteBtn'
                         onClick = {()=>{
@@ -339,30 +370,24 @@ class Create extends Component {
                             this.setState({leftButton3: !leftButton3})
                         }}
                         >{this.state.leftButton3 ? 'Remove Button' : 'Add Button'}</button></div>
+                        {this.state.leftButton3 ? <div>
+                            <div>Button text</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftButtonText3: x})
+                            }} 
+                            ></input>
+                        
+                            <div>Button link</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftButtonLink3: x})
+                            }} 
+                            ></input>
+                        </div>: null}
                     
-                        <div>Button text</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({LeftButtonText3: x})
-                        }} 
-                        ></input>
-                    
-                        <div>Button link</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonLink3: x})
-                        }} 
-                        ></input>
-                    
-                        {/* <div>Button color</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftButtonColor3: x})
-                        }} 
-                        ></input> */}
                         <hr/>
                         <div>Insert Image</div>
                         <input placeholder='Image Url'/>
@@ -378,6 +403,45 @@ class Create extends Component {
                                     {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
                                     {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
                                     {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtn}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null}
+                                    {/* _____________________ */}
+                                    {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
+                                        <div>
+                                            REGIONAL OFFERS
+                                        </div>
+                                    <button className='reginalOffersBtn' onClick={dropDownOne}>2021 finance</button>
+                                    <div id="dropDownOne">
+                                        price
+                                        <button onClick={offerDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="detailsOne">
+                                            your text here
+                                        </div>
+                                    </div>
+                                    <button className='reginalOffersBtn' onClick={dropDownTwo}>2022 finance</button>
+                                    <div id="dropDownTwo">
+                                        price
+                                        <button onClick={offerDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="detailsTwo">
+                                            your text here
+                                        </div>
+                                    </div>
+                                    <button className='reginalOffersBtn' onClick={dropDownThree}>2021 cash</button>
+                                    <div id="dropDownThree">
+                                        price
+                                        <button onClick={offerDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="detailsThree">
+                                            your text here
+                                        </div>
+                                    </div>
+                                    <button className='reginalOffersBtn' onClick={dropDownFour}>2020 cash</button>
+                                    <div id="dropDownFour">
+                                        price
+                                        <button onClick={offerDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="detailsFour">
+                                            your text here
+                                        </div>
+                                    </div>
+                                    </div> : null}
+                                    {/* _____________________ */}
                                 </div>
                             </div>
                             <div className='templateRight'>

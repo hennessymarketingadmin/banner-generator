@@ -20,7 +20,6 @@
 }
 .homeContainer {
     background-color: rgb(81, 93, 113);
-    /* border: 1px solid red; */
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -30,20 +29,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
 }
 .homeContainerRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
-    /* border: 1px solid red; */
     padding-left: 80px;
 }
 .homeHeader {
     margin: 10px;
     font-size: 50px;
-    /* margin-left: 20px; */
 }
 .PinkBtn {
     text-decoration: none;
@@ -88,23 +84,19 @@
     width: 1500px;
 }
 .nav {
-    /* border: 1px solid red; */
     height: 700px;
     background-color: rgb(42, 48, 56);
     color: white;
-    /* background-color: rgb(187, 186, 175); */
     padding: 20px;
     overflow: scroll;
 }
 .templateContainer {
-    /* border: 1px solid blue; */
     height: 700px;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* border-right: 1px solid gray; */
 }
 .template {
     border: 1px solid gray;
@@ -115,13 +107,45 @@
     grid-template-columns: 50% 50%;
 }
 .templateRight {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .templateLeft {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .rgbInputs {
     width: 25px;
     margin-left: 3px;
+}
+
+#detailsOne, #dropDownOne, 
+#detailsTwo, #dropDownTwo,
+#detailsThree, #dropDownThree,
+#detailsFour, #dropDownFour {
+    display: none;
+}
+
+.reginalOffersContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.offerDetailsBtn {
+    background-color: rgb(203, 203, 203);
+    padding: 10px 100px;
+    border: none;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.reginalOffersBtn {
+    background-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    padding: 10px 100px;
+    cursor: pointer;
 }
