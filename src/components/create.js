@@ -12,6 +12,15 @@ class Create extends Component {
         leftBody: '',
         leftBodyFontSize: '',
         leftAddDropDown: false,
+        LeftDropDownTitle: '',
+        LeftDropDownS1T: '',
+        LeftDropDownS2T: '',
+        LeftDropDownS3T: '',
+        LeftDropDownS4T: '',
+        LeftDropDownS1D: '',
+        LeftDropDownS2D: '',
+        LeftDropDownS3D: '',
+        LeftDropDownS4D: '',
         leftJustifyContent: '',
         leftAlignItems: '',
         leftBackgroundWidth: '',
@@ -117,6 +126,7 @@ class Create extends Component {
 
         const LeftTitle = {
             fontSize: this.state.leftTitleFontSize + 'px',
+            border: 'none'
         }
 
         const LeftBody = {
@@ -139,7 +149,7 @@ class Create extends Component {
 
         const bannerBtn = {
             backgroundColor: 'black',
-            padding: '10px 20px',
+            padding: '12px 50px',
             color: 'white',
             border: 'none',
             cursor: 'pointer',
@@ -156,7 +166,7 @@ class Create extends Component {
                         
                         <div>Banner Height</div>
                         <input   
-                        placeholder='400px'
+                        placeholder='500px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({bannerHeight: x})
@@ -217,6 +227,9 @@ class Create extends Component {
                         }} 
                         ></input>
                         <hr/>
+                        <h3>Pricing</h3>
+                        <button className='whiteBtn'>Add Price</button>
+                        <hr/>
                         <h3>Drop Down</h3>
                         <button className='whiteBtn' 
                         onClick={()=>{
@@ -227,10 +240,77 @@ class Create extends Component {
                         {this.state.leftAddDropDown ? 
                         <div>
                             <div>Drop Down Title</div>
-                            <input placeholder='ex: reginal offers'></input>
-                            <div>price</div>
-                            <div>Offer Details</div>
-                            <input></input>
+                            <input 
+                            placeholder='ex: reginal offers'
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownTitle: x})
+                            }} 
+                            ></input>
+                            <div>Section One title</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS1T: x})
+                            }}
+                            ></input>
+                            {/* <div>price</div> */}
+                            <div>Offer Details One</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS1D: x})
+                            }}
+                            ></input>
+
+                            <div>Section Two title</div>
+                            <input 
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS2T: x})
+                            }}
+                            ></input>
+                            {/* <div>price</div> */}
+                            <div>Offer Details Two</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS2D: x})
+                            }}
+                            ></input>
+
+                            <div>Section Three title</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS3T: x})
+                            }}
+                            ></input>
+                            {/* <div>price</div> */}
+                            <div>Offer Details Three</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS3D: x})
+                            }}
+                            ></input>
+
+                            <div>Section Four title</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS4T: x})
+                            }}
+                            ></input>
+                            {/* <div>price</div> */}
+                            <div>Offer Details Four</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({LeftDropDownS4D: x})
+                            }}
+                            ></input>
+
                         </div> 
                         : null}
                         <hr/>
@@ -406,38 +486,57 @@ class Create extends Component {
                                     {/* _____________________ */}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
-                                            REGIONAL OFFERS
+                                            {this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS'}
                                         </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownOne}>2021 finance</button>
+                                    <button className='reginalOffersBtn' onClick={dropDownOne}>{this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance'}</button>
                                     <div id="dropDownOne">
-                                        price
+                                        <div className='dropDownPriceContainer'>
+                                            <div className='dropDownPrice'>0% apr</div>
+                                            <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                            <div className='dropDownPrice'>0mos.</div>
+                                        </div>
                                         <button onClick={offerDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="detailsOne">
-                                            your text here
+                                            {this.state.LeftDropDownS1D ? this.state.LeftDropDownS1D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownTwo}>2022 finance</button>
+                                    <button className='reginalOffersBtn' onClick={dropDownTwo}>{this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance'}</button>
                                     <div id="dropDownTwo">
-                                        price
+                                        <div className='dropDownPriceContainer'>
+                                            <div className='dropDownPrice'>0% apr</div>
+                                            <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                            <div className='dropDownPrice'>0mos.</div>
+                                        </div>
+
                                         <button onClick={offerDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="detailsTwo">
-                                            your text here
+                                            {this.state.LeftDropDownS2D ? this.state.LeftDropDownS2D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownThree}>2021 cash</button>
+                                    <button className='reginalOffersBtn' onClick={dropDownThree}>{this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash'}</button>
                                     <div id="dropDownThree">
-                                        price
+                                        <div className='dropDownPriceContainer'>
+                                            <div className='dropDownPrice'>0% apr</div>
+                                            <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                            <div className='dropDownPrice'>0mos.</div>
+                                        </div>
+
                                         <button onClick={offerDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="detailsThree">
-                                            your text here
+                                            {this.state.LeftDropDownS3D ? this.state.LeftDropDownS3D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownFour}>2020 cash</button>
+                                    <button className='reginalOffersBtn' onClick={dropDownFour}>{this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash'}</button>
                                     <div id="dropDownFour">
-                                        price
+                                        <div className='dropDownPriceContainer'>
+                                            <div className='dropDownPrice'>0% apr</div>
+                                            <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                            <div className='dropDownPrice'>0mos.</div>
+                                        </div>
+
                                         <button onClick={offerDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="detailsFour">
-                                            your text here
+                                            {this.state.LeftDropDownS4D ? this.state.LeftDropDownS4D : 'offer details text here'}
                                         </div>
                                     </div>
                                     </div> : null}
