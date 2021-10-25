@@ -36,11 +36,11 @@ class Create extends Component {
         leftButton2: false,
         LeftButtonText2: '',
         leftButtonLink2: '',
-        leftButtonColor1: '',
+        leftButtonColor2: '',
         leftButton3: false,
         LeftButtonText3: '',
         leftButtonLink3: '',
-        leftButtonColor1: '',
+        leftButtonColor3: '',
     }
 
     render() {
@@ -314,15 +314,7 @@ class Create extends Component {
                         </div> 
                         : null}
                         <hr/>
-                        <h3>Background Position</h3>
-                        <div>Justify Content (Vertical)</div>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
-                        <div>Align Items (Horizontal)</div>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
+                        <h3>Background</h3>
                         <div>Text Background size width</div>
                         <input
                         placeholder='px'
@@ -346,7 +338,7 @@ class Create extends Component {
                         placeholder='R'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({textBackgroundColorR: x})
+                            this.setState({leftTextBackgroundColorR: x})
                         }} 
                         ></input>
                         <input
@@ -354,7 +346,7 @@ class Create extends Component {
                         placeholder='G'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({textBackgroundColorG: x})
+                            this.setState({leftTextBackgroundColorG: x})
                         }} 
                         ></input>
                         <input
@@ -362,7 +354,7 @@ class Create extends Component {
                         placeholder='B'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({textBackgroundColorB: x})
+                            this.setState({leftTextBackgroundColorB: x})
                         }} 
                         ></input>
                         
@@ -371,10 +363,19 @@ class Create extends Component {
                         className='rgbInputs'
                         onChange = {(event) => {
                             let x = event.target.value
-                            this.setState({backgroundOpacity: x})
+                            this.setState({leftBackgroundOpacity: x})
                         }} 
                         ></input>
                         )</div>
+                        <h4>Background Position</h4>
+                        <div>Justify Content (Vertical)</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
+                        <div>Align Items (Horizontal)</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
                         <hr/>
                         <h3>Buttons</h3>
                         {/* <div>Button Background color</div>

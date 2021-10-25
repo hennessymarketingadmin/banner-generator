@@ -21,7 +21,7 @@ class App extends Component {
         :
         <div className='homeContainer'>
           <div className='homeContainerLeft'>
-            <img src={HomeImg}/>
+            <img src={HomeImg} alt='Home'/>
           </div>
           <div className='homeContainerRight'>
             <h1 className='homeHeader'>Bring</h1>
