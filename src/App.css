@@ -162,7 +162,7 @@
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     height: 80px;
-    /* width: ; */
+    width: 350px;
 }
 
 .dropDownPrice {
@@ -177,4 +177,39 @@
 .vl {
     border-left: 1px solid black;
     height: 20px;
+}
+
+.pricingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.pricing {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.pricingLineVirtical {
+    border-top: 1px solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 200px;
+}
+
+.pricingContainerOptionTwo {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    height: 80px;
+    width: 350px;
+}
+
+.pricingOptionTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

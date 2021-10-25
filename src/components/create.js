@@ -11,6 +11,7 @@ class Create extends Component {
         leftTitleFontSize: '',
         leftBody: '',
         leftBodyFontSize: '',
+        leftAddPricing: false,
         leftAddDropDown: false,
         LeftDropDownTitle: '',
         LeftDropDownS1T: '',
@@ -153,7 +154,7 @@ class Create extends Component {
             color: 'white',
             border: 'none',
             cursor: 'pointer',
-            margin: '5px'
+            margin: '15px',
         }
 
         return (
@@ -228,15 +229,20 @@ class Create extends Component {
                         ></input>
                         <hr/>
                         <h3>Pricing</h3>
-                        <button className='whiteBtn'>Add Price</button>
+                        <button className='whiteBtn'
+                        onClick = {() => {
+                            let x = this.state.leftAddPricing
+                            this.setState({leftAddPricing: !x})
+                        }} 
+                        >{this.state.leftAddPricing ? 'Remove Price' : 'Add Price'}</button>
                         <hr/>
-                        <h3>Drop Down</h3>
+                        <h3>Regional Offer</h3>
                         <button className='whiteBtn' 
                         onClick={()=>{
                             let x = this.state.leftAddDropDown
                             this.setState({leftAddDropDown: !x})
                         }}
-                        >{this.state.leftAddDropDown ? 'Remove Dropdown' : 'Add DropDown'}</button>
+                        >{this.state.leftAddDropDown ? 'Remove Offer' : 'Add Offer'}</button>
                         {this.state.leftAddDropDown ? 
                         <div>
                             <div>Drop Down Title</div>
@@ -481,10 +487,34 @@ class Create extends Component {
                                 <div style={leftTextBackground}>
                                     {this.state.leftTitle ? <h1 style={LeftTitle}>{this.state.leftTitle}</h1> : null}
                                     {this.state.leftBody ? <p style={LeftBody}>{this.state.leftBody}</p> : null}
+                                    {/* _____________________ */}
+                                    {this.state.leftAddPricing ? 
+                                    // <div className='pricingContainer'>
+                                    //     <div>36 month lease</div>
+                                    //     <div><span className='pricingOptionOne'>$439</span> / month</div>
+                                    //     <div>MSRP: $40,745</div>
+                                    // </div> 
+                                    // <div className='pricingContainer'>
+                                    //     <div>24 month lease</div>
+                                    //     <div><span className='pricing'>$439</span> / month</div>
+                                    //     <hr className='pricingLineVirtical'></hr>
+                                    //     <div>Buy for</div>
+                                    //     <div><span className='pricing'>$42,300</span></div>
+                                    //     <div>Limited availability at this price</div>
+                                    // </div>
+                                    // <div className='pricingContainerOptionTwo'>
+                                    //         <div className='pricingOptionTwo'><span className='pricing'>2</span>% apr</div>
+                                    //         <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                    //         <div className='pricingOptionTwo'><span className='pricing'>399</span>/mo.</div>
+                                    //     </div>
+                                    <div>
+                                        price
+                                    </div>
+                                    : null}
+                                    {/* _____________________ */}
                                     {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
                                     {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
                                     {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtn}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null}
-                                    {/* _____________________ */}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
                                             {this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS'}
@@ -494,7 +524,7 @@ class Create extends Component {
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>0% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='dropDownPrice'>0mos.</div>
+                                            <div className='dropDownPrice'>0/mo.</div>
                                         </div>
                                         <button onClick={offerDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="detailsOne">
@@ -506,7 +536,7 @@ class Create extends Component {
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>0% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='dropDownPrice'>0mos.</div>
+                                            <div className='dropDownPrice'>0/mo.</div>
                                         </div>
 
                                         <button onClick={offerDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -519,7 +549,7 @@ class Create extends Component {
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>0% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='dropDownPrice'>0mos.</div>
+                                            <div className='dropDownPrice'>0/mo.</div>
                                         </div>
 
                                         <button onClick={offerDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -532,7 +562,7 @@ class Create extends Component {
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>0% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='dropDownPrice'>0mos.</div>
+                                            <div className='dropDownPrice'>0/mo.</div>
                                         </div>
 
                                         <button onClick={offerDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -541,7 +571,6 @@ class Create extends Component {
                                         </div>
                                     </div>
                                     </div> : null}
-                                    {/* _____________________ */}
                                 </div>
                             </div>
                             <div className='templateRight'>
