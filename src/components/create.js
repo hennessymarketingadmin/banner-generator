@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import OptionOneImg from './images/optionOne.png'
+import OptionTwoImg from './images/optionTwo.png'
+import OptionThreeImg from './images/optionThree.png'
 
 class Create extends Component {
 
@@ -11,6 +14,15 @@ class Create extends Component {
         leftTitleFontSize: '',
         leftBody: '',
         leftBodyFontSize: '',
+        leftPricingOption: '',
+        leftPricingOptionOneMonthlyLease: '',
+        leftPricingOptionOneMonthly: '',
+        leftPricingOptionOneMSRP: '',
+        leftPricingOptionTwoAPR: '',
+        leftPricingOptionTwoMonthly: '',
+        leftPricingOptionThreeMonthlyLease: '',
+        leftPricingOptionThreeMonthly: '',
+        leftPricingOptionThreeMSRP: '',
         leftAddPricing: false,
         leftAddDropDown: false,
         LeftDropDownTitle: '',
@@ -228,13 +240,99 @@ class Create extends Component {
                         }} 
                         ></input>
                         <hr/>
-                        <h3>Pricing</h3>
+                        <h2>Pricing</h2>
+                        
+                        <div>
+                            <h4>Pick A Pricing Style</h4>
+                            <div>Option 1</div>
+                            <img src={OptionOneImg} alt='' width='200px' height='100px'
+                                onClick={()=>{
+                                    this.setState({leftPricingOption: 'one'})
+                                }}
+                            />
+                            {this.state.leftPricingOption === 'one' ? 
+                            <div>
+                                <div>Month lease </div>
+                                <input 
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionOneMonthlyLease: x})
+                                    }}
+                                ></input>
+                                <div>Monthly</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionOneMonthly: x})
+                                    }}
+                                ></input>
+                                <div>MSRP</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionOneMSRP: x})
+                                    }}
+                                ></input>
+                            </div> : null}
+                            <div>Option 2</div>
+                            <img src={OptionTwoImg} alt='' width='200px' height='100px'
+                                onClick={()=>{
+                                    this.setState({leftPricingOption: 'two'})
+                                }}
+                            />
+                            {this.state.leftPricingOption === 'two' ? 
+                            <div>
+                                <div>APR</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionTwoAPR: x})
+                                    }}
+                                ></input>
+                                <div>Monthly</div>
+                                <input
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({leftPricingOptionTwoMonthly: x})
+                                }}
+                                ></input>
+                            </div> : null}
+                            <div>Option 3</div>
+                            <img src={OptionThreeImg} alt='' width='200px' height='150px'
+                                onClick={()=>{
+                                    this.setState({leftPricingOption: 'three'})
+                                }}
+                            />
+                            {this.state.leftPricingOption === 'three' ? 
+                            <div>
+                                <div>Month lease</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionThreeMonthlyLease: x})
+                                    }}
+                                ></input>
+                                <div>Monthly</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionThreeMonthly: x})
+                                    }}
+                                ></input>
+                                <div>MSRP</div>
+                                <input
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionThreeMSRP: x})
+                                    }}
+                                ></input>
+                            </div> : null}
+                        </div> 
                         <button className='whiteBtn'
                         onClick = {() => {
-                            let x = this.state.leftAddPricing
-                            this.setState({leftAddPricing: !x})
+                            this.setState({leftPricingOption: ''})
                         }} 
-                        >{this.state.leftAddPricing ? 'Remove Price' : 'Add Price'}</button>
+                        >Remove Pricing</button>
                         <hr/>
                         <h3>Regional Offer</h3>
                         <button className='whiteBtn' 
@@ -488,29 +586,29 @@ class Create extends Component {
                                     {this.state.leftTitle ? <h1 style={LeftTitle}>{this.state.leftTitle}</h1> : null}
                                     {this.state.leftBody ? <p style={LeftBody}>{this.state.leftBody}</p> : null}
                                     {/* _____________________ */}
-                                    {this.state.leftAddPricing ? 
-                                    // <div className='pricingContainer'>
-                                    //     <div>36 month lease</div>
-                                    //     <div><span className='pricingOptionOne'>$439</span> / month</div>
-                                    //     <div>MSRP: $40,745</div>
-                                    // </div> 
-                                    // <div className='pricingContainer'>
-                                    //     <div>24 month lease</div>
-                                    //     <div><span className='pricing'>$439</span> / month</div>
-                                    //     <hr className='pricingLineVirtical'></hr>
-                                    //     <div>Buy for</div>
-                                    //     <div><span className='pricing'>$42,300</span></div>
-                                    //     <div>Limited availability at this price</div>
-                                    // </div>
-                                    // <div className='pricingContainerOptionTwo'>
-                                    //         <div className='pricingOptionTwo'><span className='pricing'>2</span>% apr</div>
-                                    //         <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                    //         <div className='pricingOptionTwo'><span className='pricing'>399</span>/mo.</div>
-                                    //     </div>
-                                    <div>
-                                        price
+                                    {this.state.leftPricingOption === 'one' ? 
+                                    <div className='pricingContainer'>
+                                        <div>{this.state.leftPricingOptionOneMonthlyLease ? this.state.leftPricingOptionOneMonthlyLease : '36'} month lease</div>
+                                        <div><span className='pricing'>${this.state.leftPricingOptionOneMonthly ? this.state.leftPricingOptionOneMonthly : '439'}</span> / month</div>
+                                        <div>MSRP: ${this.state.leftPricingOptionOneMSRP ? this.state.leftPricingOptionOneMSRP : '40,745'}</div>
                                     </div>
-                                    : null}
+                                    
+                                    : this.state.leftPricingOption === 'two' ?
+                                    <div className='pricingContainerOptionTwo'>
+                                            <div className='pricingOptionTwo'><span className='pricing'>{this.state.leftPricingOptionTwoAPR ? this.state.leftPricingOptionTwoAPR : '2'}</span>% apr</div>
+                                            <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
+                                            <div className='pricingOptionTwo'><span className='pricing'>${this.state.leftPricingOptionTwoMonthly ? this.state.leftPricingOptionTwoMonthly : '399'}</span>/mo.</div>
+                                    </div>
+
+                                    : this.state.leftPricingOption === 'three' ?
+                                    <div className='pricingContainer'>
+                                        <div>{this.state.leftPricingOptionThreeMonthlyLease ? this.state.leftPricingOptionThreeMonthlyLease : '24'} month lease</div>
+                                        <div><span className='pricing'>${this.state.leftPricingOptionThreeMonthly ? this.state.leftPricingOptionThreeMonthly : '439'}</span> / month</div>
+                                        <hr className='pricingLineVirtical'></hr>
+                                        <div>Buy for</div>
+                                        <div><span className='pricing'>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
+                                        <div>Limited availability at this price</div>
+                                    </div> : null}
                                     {/* _____________________ */}
                                     {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
                                     {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}

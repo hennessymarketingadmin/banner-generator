@@ -106,12 +106,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.templateRight {
-    /* border: 1px solid red; */
+/* .templateRight {
+    border: 1px solid red;
 }
 .templateLeft {
-    /* border: 1px solid red; */
-}
+    border: 1px solid red;
+} */
 
 .rgbInputs {
     width: 25px;
@@ -135,11 +135,12 @@
 }
 .offerDetailsBtn {
     background-color: rgb(203, 203, 203);
-    padding: 10px 100px;
     border: none;
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
+    width: 100%;
+    padding: 10px;
 }
 #detailsOne,
 #detailsTwo,
@@ -212,4 +213,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+hr {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+input {
+    background-color: white;
+    border: none;
+    height: 25px;
+    border-radius: 2px;
+    padding-left: 5px;
+}
+
+input:focus {
+    outline: none;
 }
