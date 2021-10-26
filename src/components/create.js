@@ -314,6 +314,7 @@ class Create extends Component {
                         ></input>
                         <div>Title Font-Size</div>
                         <input
+                        type='number'
                         placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -330,6 +331,7 @@ class Create extends Component {
                         ></input>
                         <div>Body Font-Size</div>
                         <input
+                        type='number'
                         placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -351,6 +353,7 @@ class Create extends Component {
                             <div>
                                 <div>Month lease </div>
                                 <input 
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionOneMonthlyLease: x})
@@ -358,6 +361,7 @@ class Create extends Component {
                                 ></input>
                                 <div>Monthly</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionOneMonthly: x})
@@ -365,6 +369,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionOneMSRP: x})
@@ -381,6 +386,7 @@ class Create extends Component {
                             <div>
                                 <div>APR</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionTwoAPR: x})
@@ -388,10 +394,11 @@ class Create extends Component {
                                 ></input>
                                 <div>Monthly</div>
                                 <input
-                                onChange={(event)=>{
-                                    let x = event.target.value
-                                    this.setState({leftPricingOptionTwoMonthly: x})
-                                }}
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({leftPricingOptionTwoMonthly: x})
+                                    }}
                                 ></input>
                             </div> : null}
                             <div>Option 3</div>
@@ -404,6 +411,7 @@ class Create extends Component {
                             <div>
                                 <div>Month lease</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionThreeMonthlyLease: x})
@@ -411,6 +419,7 @@ class Create extends Component {
                                 ></input>
                                 <div>Monthly</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionThreeMonthly: x})
@@ -418,6 +427,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
+                                    type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionThreeMSRP: x})
@@ -456,6 +466,7 @@ class Create extends Component {
                             ></input>
                             <div>Section One apr</div>
                             <input
+                                type='number'
                                 placeholder='%'
                                 onChange={(event)=>{
                                     this.setState({leftSectionOneApr: event.target.value})
@@ -463,6 +474,7 @@ class Create extends Component {
                             ></input>
                             <div>Section One Monthly</div>
                             <input
+                                type='number'
                                 placeholder='mo'
                                 onChange={(event)=>{
                                     this.setState({leftSectionOneMonthly: event.target.value})
@@ -485,6 +497,7 @@ class Create extends Component {
                             ></input>
                             <div>Section Two apr</div>
                             <input
+                                type='number'
                                 placeholder='%'
                                 onChange={(event)=>{
                                     this.setState({leftSectionTwoApr: event.target.value})
@@ -492,6 +505,7 @@ class Create extends Component {
                             ></input>
                             <div>Section two Monthly</div>
                             <input
+                                type='number'
                                 placeholder='mo'
                                 onChange={(event)=>{
                                     this.setState({leftSectionTwoMonthly: event.target.value})
@@ -514,6 +528,7 @@ class Create extends Component {
                             ></input>
                             <div>Section Three apr</div>
                             <input
+                                type='number'
                                 placeholder='%'
                                 onChange={(event)=>{
                                     this.setState({leftSectionThreeApr: event.target.value})
@@ -521,6 +536,7 @@ class Create extends Component {
                             ></input>
                             <div>Section Three Monthly</div>
                             <input
+                                type='number'
                                 placeholder='mo'
                                 onChange={(event)=>{
                                     this.setState({leftSectionThreeMonthly: event.target.value})
@@ -542,6 +558,7 @@ class Create extends Component {
                             ></input>
                             <div>Section Four apr</div>
                             <input
+                                type='number'
                                 placeholder='%'
                                 onChange={(event)=>{
                                     this.setState({leftSectionFourApr: event.target.value})
@@ -549,6 +566,7 @@ class Create extends Component {
                             ></input>
                             <div>Section Four Monthly</div>
                             <input
+                                type='number'
                                 placeholder='mo'
                                 onChange={(event)=>{
                                     this.setState({leftSectionFourMonthly: event.target.value})
@@ -572,6 +590,7 @@ class Create extends Component {
                         <h3>Background</h3>
                         <div>Text Background size width</div>
                         <input
+                        type='number'
                         placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -580,6 +599,7 @@ class Create extends Component {
                         ></input>
                         <div>Text Background size height</div>
                         <input
+                        type='number'
                         placeholder='px'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -589,6 +609,7 @@ class Create extends Component {
                         <div>Text Background color</div>
                         <div> rgb(
                         <input
+                        type='number'
                         className='rgbInputs'
                         placeholder='R'
                         onChange = {(event) => {
@@ -597,6 +618,7 @@ class Create extends Component {
                         }} 
                         ></input>
                         <input
+                        type='number'
                         className='rgbInputs'
                         placeholder='G'
                         onChange = {(event) => {
@@ -605,6 +627,7 @@ class Create extends Component {
                         }} 
                         ></input>
                         <input
+                        type='number'
                         className='rgbInputs'
                         placeholder='B'
                         onChange = {(event) => {
@@ -614,6 +637,7 @@ class Create extends Component {
                         ></input>
                         
                         <input
+                        type='number'
                         placeholder='O'
                         className='rgbInputs'
                         onChange = {(event) => {
