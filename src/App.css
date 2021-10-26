@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap'); */
+
 .bannerContainer {
     display: flex;
     flex-direction: row;
@@ -99,7 +101,7 @@
     align-items: center;
 }
 .template {
-    border: 1px solid gray;
+    border: 1px dashed gray;
     width: 98%;
     height: 500px;
     margin-top: 20px;
