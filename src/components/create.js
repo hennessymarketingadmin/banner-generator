@@ -9,8 +9,8 @@ class Create extends Component {
     state = {
         bannerHeight: '',
         backgroundImgUrl: '',
-        fontFamily: '',
-        fontColor: '',
+        // fontFamily: '',
+        // fontColor: '',
         leftTitle: '',
         leftTitleFontSize: '',
         leftBody: '',
@@ -202,7 +202,7 @@ class Create extends Component {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%',
             height: this.state.bannerHeight + 'px',
-            fontFamily: this.state.fontFamily,
+            // fontFamily: this.state.fontFamily,
             color: this.state.fontColor,
         }
 
@@ -236,7 +236,7 @@ class Create extends Component {
             padding: '12px 50px',
             border: 'none',
             cursor: 'pointer',
-            margin: '15px',
+            margin: '5px',
         }
 
         const rightTitle = {
@@ -290,7 +290,7 @@ class Create extends Component {
                             this.setState({backgroundImgUrl: x})
                         }}
                         ></input>
-                        <div>Font-Family</div>
+                        {/* <div>Font-Family</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
@@ -303,7 +303,7 @@ class Create extends Component {
                             let x = event.target.value
                             this.setState({fontColor: x})
                         }}
-                        ></input>
+                        ></input> */}
                         <h1>Left Section</h1>
                         <div>Title</div>
                         <input
@@ -724,7 +724,7 @@ class Create extends Component {
                             ></input>
                         </div>: null}
                     
-                    <div><button
+                    {/* <div><button
                     className='whiteBtn'
                         onClick = {()=>{
                             let leftButton3 = this.state.leftButton3
@@ -747,7 +747,7 @@ class Create extends Component {
                                 this.setState({leftButtonLink3: x})
                             }} 
                             ></input>
-                        </div>: null}
+                        </div>: null} */}
                     
                         <hr/>
                         <h3>Insert Image</h3>
@@ -1195,7 +1195,7 @@ class Create extends Component {
                             ></input>
                         </div>: null}
                     
-                    <div><button
+                    {/* <div><button
                     className='whiteBtn'
                         onClick = {()=>{
                             let rightButton3 = this.state.rightButton3
@@ -1218,7 +1218,7 @@ class Create extends Component {
                                 this.setState({rightButtonLink3: x})
                             }} 
                             ></input>
-                        </div>: null}
+                        </div>: null} */}
                     
                         <hr/>
                         <h3>Insert Image</h3>
@@ -1274,7 +1274,7 @@ class Create extends Component {
                                     </div> : null}
                                     {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
                                     {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
-                                    {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtn}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null}
+                                    {/* {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtnBottom}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null} */}
                                     {this.state.leftImageUrl ? <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageWidth} height={this.state.leftImageHeight}/></div> : null}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
@@ -1363,7 +1363,7 @@ class Create extends Component {
                                     </div> : null}
                                     {this.state.rightButton1 ? <a href={this.state.rightButtonLink1}><button style={bannerBtn}>{this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1'}</button></a> : null}
                                     {this.state.rightButton2 ? <a href={this.state.rightButtonLink2}><button style={bannerBtn}>{this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 2'}</button></a> : null}
-                                    {this.state.rightButton3 ? <a href={this.state.rightButtonLink3}><button style={bannerBtn}>{this.state.rightButtonText3 ? this.state.rightButtonText3 : 'button 3'}</button></a> : null}
+                                    {/* {this.state.rightButton3 ? <a href={this.state.rightButtonLink3}><button style={bannerBtn}>{this.state.rightButtonText3 ? this.state.rightButtonText3 : 'button 3'}</button></a> : null} */}
                                     {this.state.rightImageUrl ? <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div> : null}
                                     {this.state.rightAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
