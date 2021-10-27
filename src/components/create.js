@@ -10,7 +10,7 @@ class Create extends Component {
         bannerHeight: '',
         backgroundImgUrl: '',
         // fontFamily: '',
-        // fontColor: '',
+        fontColor: '',
         leftTitle: '',
         leftTitleFontSize: '',
         leftBody: '',
@@ -108,8 +108,8 @@ class Create extends Component {
         rightTextBackgroundColorG: '',
         rightTextBackgroundColorB: '',
         rightBackgroundOpacity: '',
-        rightButtonColor: '',
-        rightButtonBackgroundColor: '',
+        // rightButtonColor: '',
+        // rightButtonBackgroundColor: '',
         rightButton1: false,
         rightButtonText1: '',
         rightButtonLink1: '',
@@ -296,14 +296,14 @@ class Create extends Component {
                             let x = event.target.value
                             this.setState({fontFamily: x})
                         }}
-                        ></input>
+                        ></input> */}
                         <div>Font-Color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({fontColor: x})
                         }}
-                        ></input> */}
+                        ></input>
                         <h1>Left Section</h1>
                         <div>Title</div>
                         <input
@@ -671,7 +671,7 @@ class Create extends Component {
                             onChange = {(event) => {
                                 let x = event.target.value
                                 console.log(x)
-                                this.setState({leftButtonBackgroundColor: x})
+                                this.setState({ButtonBackgroundColor: x})
                             }} 
                             ></input>
                             <div>Button color</div>
@@ -679,7 +679,7 @@ class Create extends Component {
                             onChange = {(event) => {
                                 let x = event.target.value
                                 console.log(x)
-                                this.setState({leftButtonColor: x})
+                                this.setState({ButtonColor: x})
                             }} 
                             ></input>
                             <div>Button text</div>
@@ -1142,7 +1142,7 @@ class Create extends Component {
                             onChange = {(event) => {
                                 let x = event.target.value
                                 console.log(x)
-                                this.setState({rightButtonBackgroundColor: x})
+                                this.setState({ButtonBackgroundColor: x})
                             }} 
                             ></input>
                             <div>Button color</div>
@@ -1150,7 +1150,7 @@ class Create extends Component {
                             onChange = {(event) => {
                                 let x = event.target.value
                                 console.log(x)
-                                this.setState({rightButtonColor: x})
+                                this.setState({ButtonColor: x})
                             }} 
                             ></input>
                             <div>Button text</div>
