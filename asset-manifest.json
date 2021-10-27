@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/banner-generator/static/css/main.e69c9eba.chunk.css",
-    "main.js": "/banner-generator/static/js/main.6ac739d8.chunk.js",
-    "main.js.map": "/banner-generator/static/js/main.6ac739d8.chunk.js.map",
-    "runtime-main.js": "/banner-generator/static/js/runtime-main.78176317.js",
-    "runtime-main.js.map": "/banner-generator/static/js/runtime-main.78176317.js.map",
-    "static/js/2.8fffc2ca.chunk.js": "/banner-generator/static/js/2.8fffc2ca.chunk.js",
-    "static/js/2.8fffc2ca.chunk.js.map": "/banner-generator/static/js/2.8fffc2ca.chunk.js.map",
-    "static/js/3.1de1b1e6.chunk.js": "/banner-generator/static/js/3.1de1b1e6.chunk.js",
-    "static/js/3.1de1b1e6.chunk.js.map": "/banner-generator/static/js/3.1de1b1e6.chunk.js.map",
+    "main.js": "/banner-generator/static/js/main.b442c4e7.chunk.js",
+    "main.js.map": "/banner-generator/static/js/main.b442c4e7.chunk.js.map",
+    "runtime-main.js": "/banner-generator/static/js/runtime-main.f587809c.js",
+    "runtime-main.js.map": "/banner-generator/static/js/runtime-main.f587809c.js.map",
+    "static/js/2.7fde1210.chunk.js": "/banner-generator/static/js/2.7fde1210.chunk.js",
+    "static/js/2.7fde1210.chunk.js.map": "/banner-generator/static/js/2.7fde1210.chunk.js.map",
+    "static/js/3.ba94345d.chunk.js": "/banner-generator/static/js/3.ba94345d.chunk.js",
+    "static/js/3.ba94345d.chunk.js.map": "/banner-generator/static/js/3.ba94345d.chunk.js.map",
     "index.html": "/banner-generator/index.html",
     "static/css/main.e69c9eba.chunk.css.map": "/banner-generator/static/css/main.e69c9eba.chunk.css.map",
-    "static/js/2.8fffc2ca.chunk.js.LICENSE.txt": "/banner-generator/static/js/2.8fffc2ca.chunk.js.LICENSE.txt",
+    "static/js/2.7fde1210.chunk.js.LICENSE.txt": "/banner-generator/static/js/2.7fde1210.chunk.js.LICENSE.txt",
     "static/media/homeImg.5461e2b7.png": "/banner-generator/static/media/homeImg.5461e2b7.png",
     "static/media/optionOne.6dffc8a8.png": "/banner-generator/static/media/optionOne.6dffc8a8.png",
     "static/media/optionThree.2a4d3223.png": "/banner-generator/static/media/optionThree.2a4d3223.png",
@@ -19,9 +19,9 @@
     "static/media/regionalOffer.239aaea0.png": "/banner-generator/static/media/regionalOffer.239aaea0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.78176317.js",
-    "static/js/2.8fffc2ca.chunk.js",
+    "static/js/runtime-main.f587809c.js",
+    "static/js/2.7fde1210.chunk.js",
     "static/css/main.e69c9eba.chunk.css",
-    "static/js/main.6ac739d8.chunk.js"
+    "static/js/main.b442c4e7.chunk.js"
   ]
 }
