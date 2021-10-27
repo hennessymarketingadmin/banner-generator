@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import OptionOneImg from './images/optionOne.png';
 import OptionTwoImg from './images/optionTwo.png';
 import OptionThreeImg from './images/optionThree.png';
@@ -270,10 +271,11 @@ class Create extends Component {
             <div className='createContainer'>
                 <div className='create'>
                     <div className='nav'>
-                        <div><button 
-                        className='PinkBtn'
-                        >Copy Code</button></div>
-                        
+
+                    <CopyToClipboard text='copied'>
+                        <div><button className='PinkBtn'>Copy Code</button></div>
+                    </CopyToClipboard>
+
                         <div>Banner Height</div>
                         <input   
                         placeholder='500px'
@@ -369,7 +371,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
-                                    type='number'
+                                    // type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionOneMSRP: x})
@@ -427,7 +429,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
-                                    type='number'
+                                    // type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionThreeMSRP: x})
@@ -840,7 +842,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
-                                    type='number'
+                                    // type='number'
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({rightPricingOptionOneMSRP: x})
@@ -898,7 +900,7 @@ class Create extends Component {
                                 ></input>
                                 <div>MSRP</div>
                                 <input
-                                    type='number' 
+                                    // type='number' 
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({rightPricingOptionThreeMSRP: x})
