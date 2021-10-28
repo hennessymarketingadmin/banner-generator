@@ -122,6 +122,7 @@
     width: 25px;
     margin-left: 3px;
 }
+
 #dropDownOne {
     display: block;
 }
@@ -172,7 +173,6 @@
 }
 
 .dropDownPrice {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,13 +190,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
 }
 
-.pricing {
-    font-weight: bold;
-    font-size: 50px;
-}
 
 .pricingLineVirtical {
     border-top: 1px solid;
