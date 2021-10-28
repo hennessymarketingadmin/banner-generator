@@ -36,6 +36,7 @@ class Create extends Component {
         LeftDropDownS2D: '',
         LeftDropDownS3D: '',
         LeftDropDownS4D: '',
+        optionFontSize: '',
         leftSectionOneApr: '',
         leftSectionOneMonthly: '',
         leftSectionTwoApr: '',
@@ -66,6 +67,8 @@ class Create extends Component {
         leftImageUrl: '',
         leftImageHeight: '',
         leftImageWidth: '',
+        leftAddOfferDetails: false,
+        leftAddOfferDetailsText: '',
 
         // ------------------
 
@@ -123,7 +126,8 @@ class Create extends Component {
         rightImageUrl: '',
         rightImageHeight: '',
         rightImageWidth: '',
-
+        rightAddOfferDetails: false,
+        rightAddOfferDetailsText: '',
     }
 
     render() {
@@ -209,12 +213,14 @@ class Create extends Component {
 
         const LeftTitle = {
             fontSize: this.state.leftTitleFontSize + 'px',
-            border: 'none',
+            margin: '10px',
+            // color:'red',
             // fontFamily: 'Zen Kurenaido, sans-serif'
         }
 
         const LeftBody = {
             fontSize: this.state.leftBodyFontSize + 'px',
+            margin: '10px',
         }
 
         const leftTextBackground = {
@@ -222,6 +228,10 @@ class Create extends Component {
             width: this.state.leftBackgroundWidth + 'px',
             background: 'rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +')',
             padding: '10px',
+            // border: '1px solid red',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
         }
 
         const templateLeft = {
@@ -231,6 +241,15 @@ class Create extends Component {
             alignItems: this.state.leftAlignItems,
         }
 
+        const bannerBtnContainer = {
+            // border: '1px solid red',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginTop: '30px',
+            textDecoration: 'none',
+        }
+
         const bannerBtn = {
             backgroundColor: this.state.ButtonBackgroundColor ? this.state.ButtonBackgroundColor : 'black',
             color: this.state.ButtonColor ? this.state.ButtonColor : 'white',
@@ -238,6 +257,10 @@ class Create extends Component {
             border: 'none',
             cursor: 'pointer',
             margin: '5px',
+            // display: 'flex',
+            // flexDirection: 'row',
+            alignItems: 'center',
+            // textDecoration: 'none',
         }
 
         const rightTitle = {
@@ -255,6 +278,9 @@ class Create extends Component {
             width: this.state.rightBackgroundWidth + 'px',
             background: 'rgba(' + this.state.rightTextBackgroundColorR + ', ' + this.state.rightTextBackgroundColorG + ', ' + this.state.rightTextBackgroundColorB + ', ' + this.state.rightBackgroundOpacity +')',
             padding: '10px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
         }
 
         const templateRight = {
@@ -264,7 +290,20 @@ class Create extends Component {
             alignItems: this.state.rightAlignItems,
         }
 
-        console.log(templateRight)
+        const pricing = {
+            fontWeight: 'bold',
+            fontSize: this.state.optionFontSize ? this.state.optionFontSize + 'px' : '50px',
+        }
+
+        // const offerDetails = () => {
+        //     let x = document.getElementById('viewOfferDetails')
+            
+        //     if (x.style.display = "block") {
+        //         x.style.display = "none";
+        //     } else if (x.style.display = "none") {
+        //         x.style.display = "block";
+        //     }
+        // }
 
 
         return (
@@ -369,6 +408,14 @@ class Create extends Component {
                                         this.setState({leftPricingOptionOneMonthly: x})
                                     }}
                                 ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({optionFontSize: x})
+                                    }}
+                                ></input>
                                 <div>MSRP</div>
                                 <input
                                     // type='number'
@@ -402,6 +449,14 @@ class Create extends Component {
                                         this.setState({leftPricingOptionTwoMonthly: x})
                                     }}
                                 ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({optionFontSize: x})
+                                    }}
+                                ></input>
                             </div> : null}
                             <div>Option 3</div>
                             <img src={OptionThreeImg} alt='' width='200px' height='150px'
@@ -425,6 +480,14 @@ class Create extends Component {
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({leftPricingOptionThreeMonthly: x})
+                                    }}
+                                ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({optionFontSize: x})
                                     }}
                                 ></input>
                                 <div>MSRP</div>
@@ -750,7 +813,24 @@ class Create extends Component {
                             }} 
                             ></input>
                         </div>: null} */}
-                    
+                        <hr/>
+                        <h3>Offer Details</h3>
+                        <button className='whiteBtn'
+                            onClick={()=>{
+                                let x = this.state.leftAddOfferDetails
+                                this.setState({leftAddOfferDetails: !x})
+                            }}
+                        >{this.state.leftAddOfferDetails ? 'remove + view offer details' : '+ view offer details'}
+                        </button>
+                        {this.state.leftAddOfferDetails ? 
+                        <div>
+                            <div>Offer details Info</div>
+                            <input 
+                                onChange={(event)=>{
+                                    this.setState({leftAddOfferDetailsText: event.target.value})
+                                }}
+                            ></input> 
+                        </div> : null}
                         <hr/>
                         <h3>Insert Image</h3>
                         <input placeholder='Image Url'
@@ -840,6 +920,14 @@ class Create extends Component {
                                         this.setState({rightPricingOptionOneMonthly: x})
                                     }}
                                 ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({optionFontSize: x})
+                                    }}
+                                ></input>
                                 <div>MSRP</div>
                                 <input
                                     // type='number'
@@ -873,6 +961,13 @@ class Create extends Component {
                                     this.setState({rightPricingOptionTwoMonthly: x})
                                 }}
                                 ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                type='number'
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({optionFontSize: x})
+                                }}></input>
                             </div> : null}
                             <div>Option 3</div>
                             <img src={OptionThreeImg} alt='' width='200px' height='150px'
@@ -896,6 +991,14 @@ class Create extends Component {
                                     onChange={(event)=>{
                                         let x = event.target.value
                                         this.setState({rightPricingOptionThreeMonthly: x})
+                                    }}
+                                ></input>
+                                <div>Monthly Size</div>
+                                <input
+                                    type='number'
+                                    onChange={(event)=>{
+                                        let x = event.target.value
+                                        this.setState({optionFontSize: x})
                                     }}
                                 ></input>
                                 <div>MSRP</div>
@@ -1221,7 +1324,24 @@ class Create extends Component {
                             }} 
                             ></input>
                         </div>: null} */}
-                    
+                        <hr/>
+                        <h3>Offer Details</h3>
+                        <button className='whiteBtn'
+                            onClick={()=>{
+                                let x = this.state.rightAddOfferDetails
+                                this.setState({rightAddOfferDetails: !x})
+                            }}
+                        >{this.state.rightAddOfferDetails ? 'remove + view offer details' : '+ view offer details'}
+                        </button>
+                        {this.state.rightAddOfferDetails ? 
+                        <div>
+                            <div>Offer details Info</div>
+                            <input 
+                                onChange={(event)=>{
+                                    this.setState({rightAddOfferDetailsText: event.target.value})
+                                }}
+                            ></input> 
+                        </div> : null}
                         <hr/>
                         <h3>Insert Image</h3>
                         <input placeholder='Image Url'
@@ -1254,29 +1374,39 @@ class Create extends Component {
                                     {this.state.leftPricingOption === 'one' ? 
                                     <div className='pricingContainer'>
                                         <div>{this.state.leftPricingOptionOneMonthlyLease ? this.state.leftPricingOptionOneMonthlyLease : '36'} month lease</div>
-                                        <div><span className='pricing'>${this.state.leftPricingOptionOneMonthly ? this.state.leftPricingOptionOneMonthly : '439'}</span> / month</div>
+                                        <div><span style={pricing}>${this.state.leftPricingOptionOneMonthly ? this.state.leftPricingOptionOneMonthly : '439'}</span> / month</div>
                                         <div>MSRP: ${this.state.leftPricingOptionOneMSRP ? this.state.leftPricingOptionOneMSRP : '40,745'}</div>
                                     </div>
                                     
                                     : this.state.leftPricingOption === 'two' ?
                                     <div className='pricingContainerOptionTwo'>
-                                            <div className='pricingOptionTwo'><span className='pricing'>{this.state.leftPricingOptionTwoAPR ? this.state.leftPricingOptionTwoAPR : '2'}</span>% apr</div>
+                                            <div className='pricingOptionTwo'><span style={pricing}>{this.state.leftPricingOptionTwoAPR ? this.state.leftPricingOptionTwoAPR : '2'}</span>% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='pricingOptionTwo'><span className='pricing'>${this.state.leftPricingOptionTwoMonthly ? this.state.leftPricingOptionTwoMonthly : '399'}</span>/mo.</div>
+                                            <div className='pricingOptionTwo'><span style={pricing}>${this.state.leftPricingOptionTwoMonthly ? this.state.leftPricingOptionTwoMonthly : '399'}</span>/mo.</div>
                                     </div>
 
                                     : this.state.leftPricingOption === 'three' ?
                                     <div className='pricingContainer'>
                                         <div>{this.state.leftPricingOptionThreeMonthlyLease ? this.state.leftPricingOptionThreeMonthlyLease : '24'} month lease</div>
-                                        <div><span className='pricing'>${this.state.leftPricingOptionThreeMonthly ? this.state.leftPricingOptionThreeMonthly : '439'}</span> / month</div>
+                                        <div><span style={pricing}>${this.state.leftPricingOptionThreeMonthly ? this.state.leftPricingOptionThreeMonthly : '439'}</span> / month</div>
                                         <hr className='pricingLineVirtical'></hr>
                                         <div>Buy for</div>
-                                        <div><span className='pricing'>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
+                                        <div><span style={pricing}>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
-                                    {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
-                                    {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
+                                    <div style={bannerBtnContainer}>
+                                        {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
+                                        {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
+                                    </div>
                                     {/* {this.state.leftButton3 ? <a href={this.state.leftButtonLink3}><button style={bannerBtnBottom}>{this.state.LeftButtonText3 ? this.state.LeftButtonText3 : 'button 3'}</button></a> : null} */}
+                                    {/* {this.state.leftAddOfferDetails ? <div>+ view offer details</div> : null} */}
+                                    {this.state.leftAddOfferDetails ? 
+                                    <div class="offerDetailsDropdown">
+                                        <span>+ view offer details</span>
+                                        <div class="offerDetailsDropdownContent">
+                                            <p>{this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World'}</p>
+                                        </div>
+                                    </div> : null}
                                     {this.state.leftImageUrl ? <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageWidth} height={this.state.leftImageHeight}/></div> : null}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
@@ -1343,29 +1473,37 @@ class Create extends Component {
                                     {this.state.rightPricingOption === 'one' ? 
                                     <div className='pricingContainer'>
                                         <div>{this.state.rightPricingOptionOneMonthlyLease ? this.state.rightPricingOptionOneMonthlyLease : '36'} month lease</div>
-                                        <div><span className='pricing'>${this.state.rightPricingOptionOneMonthly ? this.state.rightPricingOptionOneMonthly : '439'}</span> / month</div>
+                                        <div><span style={pricing}>${this.state.rightPricingOptionOneMonthly ? this.state.rightPricingOptionOneMonthly : '439'}</span> / month</div>
                                         <div>MSRP: ${this.state.rightPricingOptionOneMSRP ? this.state.rightPricingOptionOneMSRP : '40,745'}</div>
                                     </div>
                                     
                                     : this.state.rightPricingOption === 'two' ?
                                     <div className='pricingContainerOptionTwo'>
-                                            <div className='pricingOptionTwo'><span className='pricing'>{this.state.rightPricingOptionTwoAPR ? this.state.rightPricingOptionTwoAPR : '2'}</span>% apr</div>
+                                            <div className='pricingOptionTwo'><span style={pricing}>{this.state.rightPricingOptionTwoAPR ? this.state.rightPricingOptionTwoAPR : '2'}</span>% apr</div>
                                             <div className='dropDownPrice'><div class="vl"></div><div>financing</div> up to<div class="vl"></div></div>
-                                            <div className='pricingOptionTwo'><span className='pricing'>${this.state.rightPricingOptionTwoMonthly ? this.state.rightPricingOptionTwoMonthly : '399'}</span>/mo.</div>
+                                            <div className='pricingOptionTwo'><span style={pricing}>${this.state.rightPricingOptionTwoMonthly ? this.state.rightPricingOptionTwoMonthly : '399'}</span>/mo.</div>
                                     </div>
 
                                     : this.state.rightPricingOption === 'three' ?
                                     <div className='pricingContainer'>
                                         <div>{this.state.rightPricingOptionThreeMonthlyLease ? this.state.rightPricingOptionThreeMonthlyLease : '24'} month lease</div>
-                                        <div><span className='pricing'>${this.state.rightPricingOptionThreeMonthly ? this.state.rightPricingOptionThreeMonthly : '439'}</span> / month</div>
+                                        <div><span style={pricing}>${this.state.rightPricingOptionThreeMonthly ? this.state.rightPricingOptionThreeMonthly : '439'}</span> / month</div>
                                         <hr className='pricingLineVirtical'></hr>
                                         <div>Buy for</div>
-                                        <div><span className='pricing'>${this.state.rightPricingOptionThreeMSRP ? this.state.rightPricingOptionThreeMSRP : '42,300'}</span></div>
+                                        <div><span style={pricing}>${this.state.rightPricingOptionThreeMSRP ? this.state.rightPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
-                                    {this.state.rightButton1 ? <a href={this.state.rightButtonLink1}><button style={bannerBtn}>{this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1'}</button></a> : null}
-                                    {this.state.rightButton2 ? <a href={this.state.rightButtonLink2}><button style={bannerBtn}>{this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 2'}</button></a> : null}
-                                    {/* {this.state.rightButton3 ? <a href={this.state.rightButtonLink3}><button style={bannerBtn}>{this.state.rightButtonText3 ? this.state.rightButtonText3 : 'button 3'}</button></a> : null} */}
+                                    <div style={bannerBtnContainer}>
+                                        {this.state.rightButton1 ? <a href={this.state.rightButtonLink1}><button style={bannerBtn}>{this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1'}</button></a> : null}
+                                        {this.state.rightButton2 ? <a href={this.state.rightButtonLink2}><button style={bannerBtn}>{this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 2'}</button></a> : null}
+                                    </div>
+                                    {this.state.rightAddOfferDetails ? 
+                                    <div class="offerDetailsDropdown">
+                                        <span>+ view offer details</span>
+                                        <div class="offerDetailsDropdownContent">
+                                            <p>{this.state.rightAddOfferDetailsText ? this.state.rightAddOfferDetailsText : 'Hello World'}</p>
+                                        </div>
+                                    </div> : null}
                                     {this.state.rightImageUrl ? <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div> : null}
                                     {this.state.rightAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
