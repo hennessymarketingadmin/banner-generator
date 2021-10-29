@@ -559,7 +559,9 @@ class Create extends Component {
                 <div className='create'>
                     <div className='nav'>
 
-                    <CopyToClipboard text={copyCode()}>
+                    <CopyToClipboard 
+                    // text={copyCode()}
+                    >
                         <div><button className='PinkBtn'>Copy Code</button></div>
                     </CopyToClipboard>
 
