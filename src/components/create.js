@@ -582,10 +582,11 @@ class Create extends Component {
                 '}\n',
                 '.rightTitle {\n',
                 'font-size: ' + this.state.rightTitleFontSize + 'px;\n',
-                'border: none;\n',
+                'margin: 10px;\n',
                 '}\n',
                 '.rightBody {\n',
                 'font-size: ' + this.state.rightBodyFontSize + 'px;\n',
+                'margin: 10px;\n',
                 '}\n',
                 '.rightTextBackground {',
                 'height: ' + this.state.rightBackgroundHeight + 'px;\n',
@@ -660,7 +661,7 @@ class Create extends Component {
                 'border-left: 1px solid black;\n',
                 'height: 20px;\n',
                 '}\n',
-                '.pricingContainerOptionOne, ..pricingContainerOptionThree {\n',
+                '.pricingContainerOptionOne, .pricingContainerOptionThree {\n',
                 'display: flex;\n',
                 'flex-direction: column;\n',
                 'justify-content: center;\n',
@@ -712,7 +713,6 @@ class Create extends Component {
                 }
             }
 
-            // console.log(filtered)
             return filtered.join('')
         }
 
