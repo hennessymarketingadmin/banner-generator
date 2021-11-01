@@ -185,7 +185,7 @@
     height: 20px;
 }
 
-.pricingContainer {
+.pricingContainerOptionOne, .pricingContainerOptionThree {
     display: flex;
     flex-direction: column;
     justify-content: center;
