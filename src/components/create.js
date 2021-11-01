@@ -128,47 +128,12 @@ class Create extends Component {
         rightImageWidth: '',
         rightAddOfferDetails: false,
         rightAddOfferDetailsText: '',
-
-
-        // displayOptionOne: false,
-        // displayOptionTwo: false,
-        // displayOptionThree: false,
     }
 
     render() {
-        // const displayBlock = 'block';
-        // const displayNone = 'none';
 
-        // var displayOptionOne = false;
-        // var displayOptionTwo = false;
-        // var displayOptionThree = false;
-
-        // const displayOption = (option) => {
-        //     if (option === 'one') {
-        //         displayOptionOne = true;
-        //         displayOptionTwo = false;
-        //         displayOptionThree = false;
-        //         this.setState({displayOptionOne: true})
-        //     } else if (option === 'two') {
-        //         displayOptionOne = false;
-        //         displayOptionTwo = true;
-        //         displayOptionThree = false;
-        //         this.setState({displayOptionTwo: true})
-        //     } else if (option === 'three') {
-        //         displayOptionOne = false;
-        //         displayOptionTwo = false;
-        //         displayOptionThree = true;
-        //         this.setState({displayOptionThree: true})
-        //     }
-            // console.log([option, this.state.displayOptionOne, this.state.displayOptionTwo, this.state.displayOptionThree])
-            // let x = 
-            // console.log(this.state.leftPricingOption)
-        // }
-
-
-
-        const offerDetailsOne = () => {
-            let x = document.getElementById("detailsOne");
+        const leftOfferDetailsOne = () => {
+            let x = document.getElementById("leftDetailsOne");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -176,8 +141,8 @@ class Create extends Component {
             }
         }
 
-        const offerDetailsTwo = () => {
-            let x = document.getElementById("detailsTwo");
+        const leftOfferDetailsTwo = () => {
+            let x = document.getElementById("leftDetailsTwo");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -185,8 +150,8 @@ class Create extends Component {
             }
         }
 
-        const offerDetailsThree = () => {
-            let x = document.getElementById("detailsThree");
+        const leftOfferDetailsThree = () => {
+            let x = document.getElementById("leftDetailsThree");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -194,8 +159,8 @@ class Create extends Component {
             }
         }
 
-        const offerDetailsFour = () => {
-            let x = document.getElementById("detailsFour");
+        const leftOfferDetailsFour = () => {
+            let x = document.getElementById("leftDetailsFour");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -203,8 +168,8 @@ class Create extends Component {
             }
         }
 
-        const dropDownOne = () => {
-            let x = document.getElementById("dropDownOne");
+        const leftDropDownOne = () => {
+            let x = document.getElementById("leftDropDownOne");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -212,8 +177,8 @@ class Create extends Component {
             }
         }
 
-        const dropDownTwo = () => {
-            let x = document.getElementById("dropDownTwo");
+        const leftDropDownTwo = () => {
+            let x = document.getElementById("leftDropDownTwo");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -221,8 +186,8 @@ class Create extends Component {
             }
         }
 
-        const dropDownThree = () => {
-            let x = document.getElementById("dropDownThree");
+        const leftDropDownThree = () => {
+            let x = document.getElementById("leftDropDownThree");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
@@ -230,14 +195,86 @@ class Create extends Component {
             }
         }
 
-        const dropDownFour = () => {
-            let x = document.getElementById("dropDownFour");
+        const leftDropDownFour = () => {
+            let x = document.getElementById("leftDropDownFour");
             if (x.style.display === "block") {
                 x.style.display = "none";
             } else {
                 x.style.display = "block";
             }
         }
+        const rightOfferDetailsOne = () => {
+            let x = document.getElementById("rightDetailsOne");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightOfferDetailsTwo = () => {
+            let x = document.getElementById("rightDetailsTwo");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightOfferDetailsThree = () => {
+            let x = document.getElementById("rightDetailsThree");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightOfferDetailsFour = () => {
+            let x = document.getElementById("rightDetailsFour");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightDropDownOne = () => {
+            let x = document.getElementById("rightDropDownOne");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightDropDownTwo = () => {
+            let x = document.getElementById("rightDropDownTwo");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightDropDownThree = () => {
+            let x = document.getElementById("rightDropDownThree");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        const rightDropDownFour = () => {
+            let x = document.getElementById("rightDropDownFour");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
         const template = {
             backgroundImage: 'url(' + this.state.backgroundImgUrl + ')',
             backgroundRepeat: 'no-repeat',
@@ -251,8 +288,6 @@ class Create extends Component {
         const LeftTitle = {
             fontSize: this.state.leftTitleFontSize + 'px',
             margin: '10px',
-            // color:'red',
-            // fontFamily: 'Zen Kurenaido, sans-serif'
         }
 
         const LeftBody = {
@@ -265,7 +300,6 @@ class Create extends Component {
             width: this.state.leftBackgroundWidth + 'px',
             background: 'rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +')',
             padding: '10px',
-            // border: '1px solid red',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -279,7 +313,6 @@ class Create extends Component {
         }
 
         const bannerBtnContainer = {
-            // border: '1px solid red',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -294,16 +327,12 @@ class Create extends Component {
             border: 'none',
             cursor: 'pointer',
             margin: '5px',
-            // display: 'flex',
-            // flexDirection: 'row',
             alignItems: 'center',
-            // textDecoration: 'none',
         }
 
         const rightTitle = {
             fontSize: this.state.rightTitleFontSize + 'px',
             border: 'none',
-            // fontFamily: 'Zen Kurenaido, sans-serif'
         }
 
         const rightBody = {
@@ -361,44 +390,44 @@ class Create extends Component {
                 (this.state.leftImageUrl ? null : <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageUrl} height={this.state.leftImageUrl}/></div>) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div>' + (this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownOne()\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div id=\'dropDownOne\'>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownOne()\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div id=\'leftDropDownOne\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button onClick=\'offerDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'detailsOne\'>' + (this.state.LeftDropDownS1D ? this.state.LeftDropDownS1D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownTwo()\'>' + (this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div id=\'dropDownTwo\'>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownTwo()\'>' + (this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div id=\'leftDropDownTwo\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button onClick=\'offerDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'detailsTwo\'>' + (this.state.LeftDropDownS2D ? this.state.LeftDropDownS2D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownThree()\'>' + (this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div id=\'dropDownThree\'>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownThree()\'>' + (this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div id=\'leftDropDownThree\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button onClick=\'offerDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'detailsThree\'>'+ (this.state.LeftDropDownS3D ? this.state.LeftDropDownS3D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownFour()\'>' + (this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div id=\'dropDownFour\'>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownFour()\'>' + (this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div id=\'leftDropDownFour\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<button onClick=\'offerDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'detailsFour\'>' + (this.state.LeftDropDownS4D ? this.state.LeftDropDownS4D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
@@ -420,45 +449,45 @@ class Create extends Component {
                 (this.state.rightImageUrl ? null : <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div>) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div>' + (this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownOne()\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'dropDownOne\'>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownOne()\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDropDownOne\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button onClick=\'offerDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'detailsOne\'>' + (this.state.rightDropDownS1D ? this.state.rightDropDownS1D : 'offer details text here') + '</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDetailsOne\'>' + (this.state.rightDropDownS1D ? this.state.rightDropDownS1D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownTwo()\'>'+ (this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'dropDownTwo\'>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownTwo()\'>'+ (this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDropDownTwo\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button onClick=\'offerDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'detailsTwo\'>' + (this.state.rightDropDownS2D ? this.state.rightDropDownS2D : 'offer details text here' ) + '</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDetailsTwo\'>' + (this.state.rightDropDownS2D ? this.state.rightDropDownS2D : 'offer details text here' ) + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownThree()\'>' + (this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'dropDownThree\'>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownThree()\'>' + (this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDropDownThree\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button onClick=\'offerDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'detailsThree\'>' + (this.state.rightDropDownS3D ? this.state.rightDropDownS3D : 'offer details text here') + '</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDetailsThree\'>' + (this.state.rightDropDownS3D ? this.state.rightDropDownS3D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'dropDownFour()\'>' + (this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'dropDownFour\'>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownFour()\'>' + (this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDropDownFour\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0') + '% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0') + '/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<button onClick=\'offerDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div id=\'detailsFour\'>' + (this.state.rightDropDownS4D ? this.state.rightDropDownS4D : 'offer details text here') + '</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div id=\'rightDetailsFour\'>' + (this.state.rightDropDownS4D ? this.state.rightDropDownS4D : 'offer details text here') + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 '</div>\n',
@@ -466,7 +495,7 @@ class Create extends Component {
                 '</div>\n',
                 
                 '<script>\n',
-                'function offerDetailsOne() {\n',
+                'function leftOfferDetailsOne() {\n',
                 'let x = document.getElementById("detailsOne");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -474,7 +503,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function offerDetailsTwo() {\n',
+                'function leftOfferDetailsTwo() {\n',
                 'let x = document.getElementById("detailsTwo");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -482,7 +511,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function offerDetailsThree() {\n',
+                'function leftOfferDetailsThree() {\n',
                 'let x = document.getElementById("detailsThree");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -490,7 +519,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function offerDetailsFour() {\n',
+                'function leftOfferDetailsFour() {\n',
                 'let x = document.getElementById("detailsFour");\n',
                 'if (x.style.display === "block") {\n',
                 ' x.style.display = "none";\n',
@@ -498,7 +527,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function dropDownOne() {\n',
+                'function leftDropDownOne() {\n',
                 'let x = document.getElementById("dropDownOne");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -506,7 +535,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function dropDownTwo() {\n',
+                'function leftDropDownTwo() {\n',
                 'let x = document.getElementById("dropDownTwo");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -514,7 +543,7 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function dropDownThree() {\n',
+                'function leftDropDownThree() {\n',
                 'let x = document.getElementById("dropDownThree");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -522,7 +551,72 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-                'function dropDownFour() {\n',
+                'function leftDropDownFour() {\n',
+                'let x = document.getElementById("dropDownFour");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+
+                'function rightOfferDetailsOne() {\n',
+                'let x = document.getElementById("detailsOne");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightOfferDetailsTwo() {\n',
+                'let x = document.getElementById("detailsTwo");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightOfferDetailsThree() {\n',
+                'let x = document.getElementById("detailsThree");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightOfferDetailsFour() {\n',
+                'let x = document.getElementById("detailsFour");\n',
+                'if (x.style.display === "block") {\n',
+                ' x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightDropDownOne() {\n',
+                'let x = document.getElementById("dropDownOne");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightDropDownTwo() {\n',
+                'let x = document.getElementById("dropDownTwo");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightDropDownThree() {\n',
+                'let x = document.getElementById("dropDownThree");\n',
+                'if (x.style.display === "block") {\n',
+                'x.style.display = "none";\n',
+                '} else {\n',
+                'x.style.display = "block";\n',
+                '}\n',
+                '}\n',
+                'function rightDropDownFour() {\n',
                 'let x = document.getElementById("dropDownFour");\n',
                 'if (x.style.display === "block") {\n',
                 'x.style.display = "none";\n',
@@ -607,13 +701,22 @@ class Create extends Component {
                 'font-weight: bold;\n',
                 'font-size: ' + this.state.optionFontSize ? this.state.optionFontSize + 'px;' : '50px;\n',
                 '}\n',
-                '#dropDownOne {\n',
+                '#leftDropDownOne {\n',
                 'display: block;\n',
                 '}\n',
-                '#detailsOne,\n',
-                '#detailsTwo, #dropDownTwo,\n',
-                '#detailsThree, #dropDownThree,\n',
-                '#detailsFour, #dropDownFour {\n',
+                '#leftDetailsOne,\n',
+                '#leftDetailsTwo, #leftDropDownTwo,\n',
+                '#leftDetailsThree, #leftDropDownThree,\n',
+                '#leftDetailsFour, #leftDropDownFour {\n',
+                'display: none;\n',
+                '}\n',
+                '#rightDropDownOne {\n',
+                'display: block;\n',
+                '}\n',
+                '#rightDetailsOne,\n',
+                '#rightDetailsTwo, #rightDropDownTwo,\n',
+                '#rightDetailsThree, #rightDropDownThree,\n',
+                '#rightDetailsFour, #leftDropDownFour {\n',
                 'display: none;\n',
                 '}\n',
                 '.reginalOffersContainer {\n',
@@ -1823,54 +1926,54 @@ class Create extends Component {
                                         <div>
                                             {this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS'}
                                         </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownOne}>{this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance'}</button>
-                                    <div id="dropDownOne">
+                                    <button className='reginalOffersBtn' onClick={leftDropDownOne}>{this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance'}</button>
+                                    <div id="leftDropDownOne">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0'}/mo.</div>
                                         </div>
-                                        <button onClick={offerDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsOne">
+                                        <button onClick={leftOfferDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="leftDetailsOne">
                                             {this.state.LeftDropDownS1D ? this.state.LeftDropDownS1D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownTwo}>{this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance'}</button>
-                                    <div id="dropDownTwo">
+                                    <button className='reginalOffersBtn' onClick={leftDropDownTwo}>{this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance'}</button>
+                                    <div id="leftDropDownTwo">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsTwo">
+                                        <button onClick={leftOfferDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="leftDetailsTwo">
                                             {this.state.LeftDropDownS2D ? this.state.LeftDropDownS2D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownThree}>{this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash'}</button>
-                                    <div id="dropDownThree">
+                                    <button className='reginalOffersBtn' onClick={leftDropDownThree}>{this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash'}</button>
+                                    <div id="leftDropDownThree">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsThree">
+                                        <button onClick={leftOfferDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="leftDetailsThree">
                                             {this.state.LeftDropDownS3D ? this.state.LeftDropDownS3D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownFour}>{this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash'}</button>
-                                    <div id="dropDownFour">
+                                    <button className='reginalOffersBtn' onClick={leftDropDownFour}>{this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash'}</button>
+                                    <div id="leftDropDownFour">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsFour">
+                                        <button onClick={leftOfferDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="leftDetailsFour">
                                             {this.state.LeftDropDownS4D ? this.state.LeftDropDownS4D : 'offer details text here'}
                                         </div>
                                     </div>
@@ -1920,54 +2023,54 @@ class Create extends Component {
                                         <div>
                                             {this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS'}
                                         </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownOne}>{this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance'}</button>
-                                    <div id="dropDownOne">
+                                    <button className='reginalOffersBtn' onClick={rightDropDownOne}>{this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance'}</button>
+                                    <div id="rightDropDownOne">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0'}/mo.</div>
                                         </div>
-                                        <button onClick={offerDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsOne">
+                                        <button onClick={rightOfferDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="rightDetailsOne">
                                             {this.state.rightDropDownS1D ? this.state.rightDropDownS1D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownTwo}>{this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance'}</button>
-                                    <div id="dropDownTwo">
+                                    <button className='reginalOffersBtn' onClick={rightDropDownTwo}>{this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance'}</button>
+                                    <div id="rightDropDownTwo">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsTwo">
+                                        <button onClick={rightOfferDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="rightDetailsTwo">
                                             {this.state.rightDropDownS2D ? this.state.rightDropDownS2D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownThree}>{this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash'}</button>
-                                    <div id="dropDownThree">
+                                    <button className='reginalOffersBtn' onClick={rightDropDownThree}>{this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash'}</button>
+                                    <div id="rightDropDownThree">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsThree">
+                                        <button onClick={rightOfferDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="rightDetailsThree">
                                             {this.state.rightDropDownS3D ? this.state.rightDropDownS3D : 'offer details text here'}
                                         </div>
                                     </div>
-                                    <button className='reginalOffersBtn' onClick={dropDownFour}>{this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash'}</button>
-                                    <div id="dropDownFour">
+                                    <button className='reginalOffersBtn' onClick={rightDropDownFour}>{this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash'}</button>
+                                    <div id="rightDropDownFour">
                                         <div className='dropDownPriceContainer'>
                                             <div className='dropDownPrice'>{this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0'}% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
                                             <div className='dropDownPrice'>{this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0'}/mo.</div>
                                         </div>
 
-                                        <button onClick={offerDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
-                                        <div id="detailsFour">
+                                        <button onClick={rightOfferDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
+                                        <div id="rightDetailsFour">
                                             {this.state.rightDropDownS4D ? this.state.rightDropDownS4D : 'offer details text here'}
                                         </div>
                                     </div>

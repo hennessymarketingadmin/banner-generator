@@ -123,13 +123,23 @@
     margin-left: 3px;
 }
 
-#dropDownOne {
+#leftDropDownOne {
     display: block;
 }
-#detailsOne,
-#detailsTwo, #dropDownTwo,
-#detailsThree, #dropDownThree,
-#detailsFour, #dropDownFour {
+#leftDetailsOne,
+#leftDetailsTwo, #leftDropDownTwo,
+#leftDetailsThree, #leftDropDownThree,
+#leftDetailsFour, #leftDropDownFour {
+    display: none;
+}
+
+#rightDropDownOne {
+    display: block;
+}
+#rightDetailsOne,
+#rightDetailsTwo, #rightDropDownTwo,
+#rightDetailsThree, #rightDropDownThree,
+#rightDetailsFour, #rightDropDownFour {
     display: none;
 }
 
