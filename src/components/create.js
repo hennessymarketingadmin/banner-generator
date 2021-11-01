@@ -307,6 +307,7 @@ class Create extends Component {
         // }
 
         const copyCode = () => {
+            let filtered = [];
             let code = [
                 '<div class=\'template\'>\n',
                 '<div class=\'templateLeft\'>\n',
@@ -341,7 +342,7 @@ class Create extends Component {
                 '<p>' + (this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World' ) + '</p>\n',
                 '</div>\n',
                 '</div>\n',
-                '<div><img src=' + (this.state.leftImageUrl) + 'alt=\'\' width=' + (this.state.leftImageWidth) + 'height='+(this.state.leftImageHeight) + '/></div>\n',
+                (this.state.leftImageUrl ? null : <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageUrl} height={this.state.leftImageUrl}/></div>) + '\n',
                 '<div class=\'reginalOffersContainer\'>\n',
                 '<div>' + (this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS') + '</div>\n',
                 '<button class=\'reginalOffersBtn\' onClick=\'dropDownOne\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>\n',
@@ -419,7 +420,7 @@ class Create extends Component {
                 '<p>' + (this.state.rightAddOfferDetailsText ? this.state.rightAddOfferDetailsText : 'Hello World') + '</p>\n',
                 '</div>\n',
                 '</div>\n',
-                '<div><img src=' + (this.state.rightImageUrl) + 'alt=\'\' width=' + (this.state.rightImageWidth) + 'height=' + (this.state.rightImageHeight) + '/></div>\n',
+                (this.state.rightImageUrl ? null : <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div>) + '\n',
                 '<div class=\'reginalOffersContainer\'>\n',
                 '<div>' + (this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS') + '</div>\n',
                 '<button class=\'reginalOffersBtn\' onClick=\'dropDownOne\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>\n',
@@ -466,7 +467,6 @@ class Create extends Component {
                 '</div>\n',
                 '</div>\n',
                 '</div>\n',
-
                 '<script>\n',
                 'function offerDetailsOne() {\n',
                 'let x = document.getElementById("detailsOne");\n',
@@ -533,7 +533,6 @@ class Create extends Component {
                 '}\n',
                 '}\n',
                 '</script>\n',
-
                 '<style>\n',
                 '.template {\n',
                 (this.state.backgroundImgUrl ? 'background-image: url(' + this.state.backgroundImgUrl + ')' : 'background-color: white') + ';\n',
@@ -708,8 +707,15 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
-            console.log('updated 4')
-            return code.join('')
+            console.log('updated 9')
+
+            for (let i = 0; i < code.length; i++) {
+                if (code[i] !== "[object Object]\n") {
+                    filtered.push(code[i])
+                }
+            }
+
+            return filtered.join('')
         }
 
         return (
