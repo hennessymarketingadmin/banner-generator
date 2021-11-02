@@ -387,7 +387,7 @@ class Create extends Component {
                 (this.state.leftButton2 ? '<a href=' + (this.state.leftButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.leftButton1 ? '</div>' : null) + '\n',
                 (this.state.leftAddOfferDetails ? '<div class=\'offerDetailsDropdown\'>\n<span>+ view offer details</span>\n<div class=\'offerDetailsDropdownContent\'>\n<p>' + (this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World' ) + '</p>\n</div>\n</div>\n' : null) + '\n',
-                (this.state.leftImageUrl ? null : <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageUrl} height={this.state.leftImageUrl}/></div>) + '\n',
+                (this.state.leftImageUrl ? '<div><img src=\'' + this.state.leftImageUrl + '\' alt=\'\' width=\'' + this.state.leftImageWidth + '\' height=\'' + this.state.leftImageHeight + '\' /></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div>' + (this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownOne()\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
@@ -445,8 +445,7 @@ class Create extends Component {
                 (this.state.rightButton2 ? '<a href=' + (this.state.rightButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.rightButton1 ? '</div>' : null) + '\n',
                 (this.state.rightAddOfferDetails ? '<div class=\'offerDetailsDropdown\'>\n<span>+ view offer details</span>\n<div class=\'offerDetailsDropdownContent\'>\n<p>' + (this.state.rightAddOfferDetailsText ? this.state.rightAddOfferDetailsText : 'Hello World' ) + '</p>\n</div>\n</div>\n' : null) + '\n',
-
-                (this.state.rightImageUrl ? null : <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div>) + '\n',
+                (this.state.rightImageUrl ? '<div><img src=\'' + this.state.rightImageUrl + '\' alt=\'\' width=\'' + this.state.rightImageWidth + '\' height=\'' + this.state.rightImageHeight + '\' /></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div>' + (this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownOne()\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
@@ -646,7 +645,7 @@ class Create extends Component {
                 '.leftTextBackground {\n',
                 'height: ' + this.state.leftBackgroundHeight + 'px;\n',
                 'width: ' + this.state.leftBackgroundWidth + 'px;\n',
-                'background: rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +')\n',
+                'background-color: rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +');\n',
                 'padding: 10px;\n',
                 'display: flex;\n',
                 'flex-direction: column;\n',
@@ -815,14 +814,13 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
-
             for (let i = 0; i < code.length; i++) {
                 if (code[i] !== "[object Object]\n" && code[i] !== "null\n") {
                     filtered.push(code[i])
                 }
             }
 
-            console.log('updated 3')
+            
             return filtered.join('')
         }
 
@@ -1769,7 +1767,7 @@ class Create extends Component {
                             <input
                             onChange = {(event) => {
                                 let x = event.target.value
-                                console.log(x)
+                                // console.log(x)
                                 this.setState({ButtonBackgroundColor: x})
                             }} 
                             ></input>
@@ -1777,7 +1775,7 @@ class Create extends Component {
                             <input
                             onChange = {(event) => {
                                 let x = event.target.value
-                                console.log(x)
+                                // console.log(x)
                                 this.setState({ButtonColor: x})
                             }} 
                             ></input>
