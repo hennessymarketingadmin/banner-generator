@@ -162,22 +162,26 @@
 
 #leftDropDownOne {
     display: block;
+    color: black;
 }
 #leftDetailsOne,
 #leftDetailsTwo, #leftDropDownTwo,
 #leftDetailsThree, #leftDropDownThree,
 #leftDetailsFour, #leftDropDownFour {
     display: none;
+    color: black;
 }
 
 #rightDropDownOne {
     display: block;
+    color: black;
 }
 #rightDetailsOne,
 #rightDetailsTwo, #rightDropDownTwo,
 #rightDetailsThree, #rightDropDownThree,
 #rightDetailsFour, #rightDropDownFour {
     display: none;
+    color: black;
 }
 
 .reginalOffersContainer {
@@ -185,6 +189,7 @@
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    width: 500px;
 }
 .offerDetailsBtn {
     background-color: rgb(203, 203, 203);
@@ -195,11 +200,16 @@
     width: 100%;
     padding: 10px;
 }
-#detailsOne,
-#detailsTwo,
-#detailsThree,
-#detailsFour {
+#leftDetailsOne,
+#leftDetailsTwo,
+#leftDetailsThree,
+#leftDetailsFour,
+#rightDetailsOne,
+#rightDetailsTwo,
+#rightDetailsThree,
+#rightDetailsFour {
     background-color: rgb(203, 203, 203);
+    font-size: smaller;
 }
 
 .reginalOffersBtn {
@@ -215,8 +225,10 @@
 .dropDownPriceContainer {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
-    height: 80px;
-    width: 350px;
+    /* height: 80px; */
+    width: 100%;
+    background-color: white;
+    color: black;
 }
 
 .dropDownPrice {
@@ -224,7 +236,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    height: 100px;
 }
 
 .vl {
@@ -296,6 +308,7 @@ input:focus {
     z-index: 1;
     font-size: 10px;
     text-align: center;
+    color: black;
 }
 
 .offerDetailsDropdown:hover .offerDetailsDropdownContent {

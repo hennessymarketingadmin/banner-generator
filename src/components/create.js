@@ -318,6 +318,7 @@ class Create extends Component {
             flexDirection: 'row',
             alignItems: 'center',
             marginTop: '30px',
+            marginBottom: '10px',
             textDecoration: 'none',
         }
 
@@ -394,9 +395,9 @@ class Create extends Component {
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownOne()\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDropDownOne\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDetailsOne\'>' + (this.state.LeftDropDownS1D ? this.state.LeftDropDownS1D : 'offer details text here') + '</div>' : null) + '\n',
@@ -404,9 +405,9 @@ class Create extends Component {
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownTwo()\'>' + (this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDropDownTwo\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDetailsTwo\'>' + (this.state.LeftDropDownS2D ? this.state.LeftDropDownS2D : 'offer details text here') + '</div>' : null) + '\n',
@@ -414,9 +415,9 @@ class Create extends Component {
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownThree()\'>' + (this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDropDownThree\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDetailsThree\'>'+ (this.state.LeftDropDownS3D ? this.state.LeftDropDownS3D : 'offer details text here') + '</div>' : null) + '\n',
@@ -424,9 +425,9 @@ class Create extends Component {
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownFour()\'>' + (this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDropDownFour\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.leftAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button onClick=\'leftOfferDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div id=\'leftDetailsFour\'>' + (this.state.LeftDropDownS4D ? this.state.LeftDropDownS4D : 'offer details text here') + '</div>' : null) + '\n',
@@ -452,9 +453,9 @@ class Create extends Component {
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownOne()\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDropDownOne\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsOne()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDetailsOne\'>' + (this.state.rightDropDownS1D ? this.state.rightDropDownS1D : 'offer details text here') + '</div>' : null) + '\n',
@@ -462,9 +463,9 @@ class Create extends Component {
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownTwo()\'>'+ (this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance') + '</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDropDownTwo\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsTwo()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDetailsTwo\'>' + (this.state.rightDropDownS2D ? this.state.rightDropDownS2D : 'offer details text here' ) + '</div>' : null) + '\n',
@@ -472,9 +473,9 @@ class Create extends Component {
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownThree()\'>' + (this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash') + '</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDropDownThree\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsThree()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDetailsThree\'>' + (this.state.rightDropDownS3D ? this.state.rightDropDownS3D : 'offer details text here') + '</div>' : null) + '\n',
@@ -482,9 +483,9 @@ class Create extends Component {
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownFour()\'>' + (this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash') + '</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDropDownFour\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPriceContainer\'>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0') + '% apr</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0') + '</span>% apr</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>' : null) + '\n',
-                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'>' + (this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0') + '/mo.</div>' : null) + '\n',
+                (this.state.rightAddDropDown ? '<div class=\'dropDownPrice\'><span class=\'pricing\'>' + (this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0') + '</span>/mo.</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button onClick=\'rightOfferDetailsFour()\' class=\'offerDetailsBtn\'>OFFER DETAILS</button>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div id=\'rightDetailsFour\'>' + (this.state.rightDropDownS4D ? this.state.rightDropDownS4D : 'offer details text here') + '</div>' : null) + '\n',
@@ -663,6 +664,7 @@ class Create extends Component {
                 'flex-direction: row;\n',
                 'align-items: center;\n',
                 'margin-top: 30px;\n',
+                'margin-bottom: 10px\n',
                 'text-decoration: none;\n',
                 '}\n',
                 '.bannerBtn {\n',
@@ -703,26 +705,42 @@ class Create extends Component {
                 '}\n',
                 '#leftDropDownOne {\n',
                 'display: block;\n',
+                'color: black;\n',
                 '}\n',
                 '#leftDetailsOne,\n',
                 '#leftDetailsTwo, #leftDropDownTwo,\n',
                 '#leftDetailsThree, #leftDropDownThree,\n',
                 '#leftDetailsFour, #leftDropDownFour {\n',
                 'display: none;\n',
+                'color: black;\n',
                 '}\n',
                 '#rightDropDownOne {\n',
                 'display: block;\n',
+                'color: black;\n',
                 '}\n',
                 '#rightDetailsOne,\n',
                 '#rightDetailsTwo, #rightDropDownTwo,\n',
                 '#rightDetailsThree, #rightDropDownThree,\n',
                 '#rightDetailsFour, #rightDropDownFour {\n',
                 'display: none;\n',
+                'color: black;\n',
+                '}\n',
+                '#leftDetailsOne\n',
+                '#leftDetailsTwo\n',
+                '#leftDetailsThree\n',
+                '#leftDetailsFour\n',
+                '#rightDetailsOne\n',
+                '#rightDetailsTwo\n',
+                '#rightDetailsThree\n',
+                '#rightDetailsFour {',
+                'background-color: rgb(203, 203, 203);\n',
+                'font-size: smaller;\n',
                 '}\n',
                 '.reginalOffersContainer {\n',
                 'display: flex;\n',
                 'flex-direction: column;\n',
                 'justify-content: center;\n',
+                'width: 500px;\n',
                 '}\n',
                 '.offerDetailsBtn {\n',
                 'background-color: rgb(203, 203, 203);\n',
@@ -757,14 +775,16 @@ class Create extends Component {
                 '.dropDownPriceContainer {\n',
                 'display: grid;\n',
                 'grid-template-columns: 33.33% 33.33% 33.33%;\n',
-                'height: 80px;\n',
-                'width: 350px;\n',
+                'width: 100%;\n',
+                'background-color: white;\n',
+                'color: black;\n',
                 '}\n',
                 '.dropDownPrice {\n',
                 'display: flex;\n',
                 'flex-direction: column;\n',
                 'justify-content: center;\n',
                 'align-items: center;\n',
+                'height: 100px;\n',
                 '}\n',
                 '.vl {\n',
                 'border-left: 1px solid black;\n',
@@ -809,6 +829,7 @@ class Create extends Component {
                 'z-index: 1;\n',
                 'font-size: 10px;\n',
                 'text-align: center;\n',
+                'color: black;\n',
                 '}\n',
                 '.offerDetailsDropdown:hover .offerDetailsDropdownContent {\n',
                 'display: block;\n',
@@ -2057,9 +2078,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={leftDropDownOne}>{this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance'}</button>
                                     <div id="leftDropDownOne">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionOneApr ? this.state.leftSectionOneApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionOneMonthly ? this.state.leftSectionOneMonthly : '0'}</span>/mo.</div>
                                         </div>
                                         <button onClick={leftOfferDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="leftDetailsOne">
@@ -2069,9 +2090,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={leftDropDownTwo}>{this.state.LeftDropDownS2T ? this.state.LeftDropDownS2T : '2022 finance'}</button>
                                     <div id="leftDropDownTwo">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionTwoApr ? this.state.leftSectionTwoApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionTwoMonthly ? this.state.leftSectionTwoMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={leftOfferDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -2082,9 +2103,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={leftDropDownThree}>{this.state.LeftDropDownS3T ? this.state.LeftDropDownS3T : '2021 cash'}</button>
                                     <div id="leftDropDownThree">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionThreeApr ? this.state.leftSectionThreeApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionThreeMonthly ? this.state.leftSectionThreeMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={leftOfferDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -2095,9 +2116,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={leftDropDownFour}>{this.state.LeftDropDownS4T ? this.state.LeftDropDownS4T : '2020 cash'}</button>
                                     <div id="leftDropDownFour">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionFourApr ? this.state.leftSectionFourApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.leftSectionFourMonthly ? this.state.leftSectionFourMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={leftOfferDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -2154,9 +2175,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={rightDropDownOne}>{this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance'}</button>
                                     <div id="rightDropDownOne">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionOneApr ? this.state.rightSectionOneApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionOneMonthly ? this.state.rightSectionOneMonthly : '0'}</span>/mo.</div>
                                         </div>
                                         <button onClick={rightOfferDetailsOne} className='offerDetailsBtn'>OFFER DETAILS</button>
                                         <div id="rightDetailsOne">
@@ -2166,9 +2187,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={rightDropDownTwo}>{this.state.rightDropDownS2T ? this.state.rightDropDownS2T : '2022 finance'}</button>
                                     <div id="rightDropDownTwo">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionTwoApr ? this.state.rightSectionTwoApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionTwoMonthly ? this.state.rightSectionTwoMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={rightOfferDetailsTwo} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -2179,9 +2200,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={rightDropDownThree}>{this.state.rightDropDownS3T ? this.state.rightDropDownS3T : '2021 cash'}</button>
                                     <div id="rightDropDownThree">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionThreeApr ? this.state.rightSectionThreeApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionThreeMonthly ? this.state.rightSectionThreeMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={rightOfferDetailsThree} className='offerDetailsBtn'>OFFER DETAILS</button>
@@ -2192,9 +2213,9 @@ class Create extends Component {
                                     <button className='reginalOffersBtn' onClick={rightDropDownFour}>{this.state.rightDropDownS4T ? this.state.rightDropDownS4T : '2020 cash'}</button>
                                     <div id="rightDropDownFour">
                                         <div className='dropDownPriceContainer'>
-                                            <div className='dropDownPrice'>{this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0'}% apr</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionFourApr ? this.state.rightSectionFourApr : '0'}</span>% apr</div>
                                             <div className='dropDownPrice'><div className="vl"></div><div>financing</div> up to<div className="vl"></div></div>
-                                            <div className='dropDownPrice'>{this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0'}/mo.</div>
+                                            <div className='dropDownPrice'><span style={pricing}>{this.state.rightSectionFourMonthly ? this.state.rightSectionFourMonthly : '0'}</span>/mo.</div>
                                         </div>
 
                                         <button onClick={rightOfferDetailsFour} className='offerDetailsBtn'>OFFER DETAILS</button>
