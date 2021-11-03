@@ -56,7 +56,8 @@
     border: none;
     width: 200px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .PinkBtn:hover {
     box-shadow: 0 10px 50px rgba(214, 147, 218, 0.4);
@@ -87,11 +88,47 @@
 }
 .nav {
     height: 700px;
-    background-color: rgb(42, 48, 56);
+    /* background-color: rgb(42, 48, 56); */
     color: white;
-    padding: 20px;
+    /* padding: 20px; */
     overflow: scroll;
 }
+
+.leftNavSection, .rightNavSection {
+    background-color: rgb(42, 48, 56);
+    padding: 20px;
+}
+.topNavSection {
+    background-color: rgb(42, 48, 56);
+    padding: 0px 20px 0px 20px
+}
+.sectionBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sectionBtnActive {
+    background-color: rgb(42, 48, 56);
+    color: white;
+    font-weight: bold;
+    /* border: 1px solid rgb(16, 20, 23); */
+    border: none;
+    padding: 22px 40px;
+}
+.sectionBtnInactive {
+    background-color: rgb(16, 20, 23);
+    color: gray;
+    font-weight: bold;
+    border: none;
+    padding: 22px 40px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.sectionBtnInactive:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .templateContainer {
     height: 700px;
     background-color: white;
@@ -228,6 +265,7 @@
 hr {
     margin-top: 35px;
     margin-bottom: 35px;
+    border: 1px solid white;
 }
 
 input {
