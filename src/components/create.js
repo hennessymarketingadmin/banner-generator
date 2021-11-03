@@ -813,6 +813,21 @@ class Create extends Component {
                 '.offerDetailsDropdown:hover .offerDetailsDropdownContent {\n',
                 'display: block;\n',
                 '}\n',
+                '@media screen and (min-width: 300px) and (max-width: 400px) {\n',
+                '.template {\n',
+                'grid-template-rows: 50% 50%;\n',
+                '}\n',
+                '}\n',
+                '@media screen and (min-width: 400px) and (max-width: 500px) {\n',
+                '.template {\n',
+                'grid-template-rows: 50% 50%;\n',
+                '}\n',
+                '}\n',
+                '@media screen and (min-width: 500px) and (max-width: 600px) {\n',
+                '.template {\n',
+                'grid-template-rows: 50% 50%;\n',
+                '}\n',
+                '}\n',
                 '</style>\n',
             ]
             for (let i = 0; i < code.length; i++) {
@@ -820,7 +835,6 @@ class Create extends Component {
                     filtered.push(code[i])
                 }
             }
-
             
             return filtered.join('')
         }
