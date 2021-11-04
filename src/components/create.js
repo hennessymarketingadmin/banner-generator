@@ -284,7 +284,7 @@ class Create extends Component {
             color: this.state.fontColor,
             display: 'grid',
             gridTemplateColumns: '50% 50%',
-            // fontFamily: this.state.fontFamily,
+            fontFamily: this.state.fontFamily,
         }
 
         const LeftTitle = {
@@ -364,6 +364,16 @@ class Create extends Component {
             fontSize: this.state.optionFontSize ? this.state.optionFontSize + 'px' : '50px',
         }
 
+        const leftImage = {
+            width: this.state.leftImageWidth,
+            height: this.state.leftImageHeight
+        }
+
+        const rightImage = {
+            width: this.state.rightImageWidth,
+            height: this.state.rightImageHeight
+        }
+
         // const offerDetails = () => {
         //     let x = document.getElementById('viewOfferDetails')
             
@@ -390,7 +400,7 @@ class Create extends Component {
                 (this.state.leftButton2 ? '<a href=' + (this.state.leftButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.leftButton1 ? '</div>' : null) + '\n',
                 (this.state.leftAddOfferDetails ? '<div class=\'offerDetailsDropdown\'>\n<span>+ view offer details</span>\n<div class=\'offerDetailsDropdownContent\'>\n<p>' + (this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World' ) + '</p>\n</div>\n</div>\n' : null) + '\n',
-                (this.state.leftImageUrl ? '<div><img src=\'' + this.state.leftImageUrl + '\' alt=\'\' width=\'' + this.state.leftImageWidth + '\' height=\'' + this.state.leftImageHeight + '\' /></div>' : null) + '\n',
+                (this.state.leftImageUrl ? '<div><img class=\'leftImage\' src=\'' + this.state.leftImageUrl + '\' alt=\'\'/></div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<div>' + (this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
                 (this.state.leftAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'leftDropDownOne()\'>' + (this.state.LeftDropDownS1T ? this.state.LeftDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
@@ -448,7 +458,7 @@ class Create extends Component {
                 (this.state.rightButton2 ? '<a href=' + (this.state.rightButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.rightButton1 ? '</div>' : null) + '\n',
                 (this.state.rightAddOfferDetails ? '<div class=\'offerDetailsDropdown\'>\n<span>+ view offer details</span>\n<div class=\'offerDetailsDropdownContent\'>\n<p>' + (this.state.rightAddOfferDetailsText ? this.state.rightAddOfferDetailsText : 'Hello World' ) + '</p>\n</div>\n</div>\n' : null) + '\n',
-                (this.state.rightImageUrl ? '<div><img src=\'' + this.state.rightImageUrl + '\' alt=\'\' width=\'' + this.state.rightImageWidth + '\' height=\'' + this.state.rightImageHeight + '\' /></div>' : null) + '\n',
+                (this.state.rightImageUrl ? '<div><img class=\'rightImage\' src=\'' + this.state.rightImageUrl + '\' alt=\'\'/></div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div class=\'reginalOffersContainer\'>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<div>' + (this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS') + '</div>' : null) + '\n',
                 (this.state.rightAddDropDown ? '<button class=\'reginalOffersBtn\' onClick=\'rightDropDownOne()\'>' + (this.state.rightDropDownS1T ? this.state.rightDropDownS1T : '2021 finance') + '</button>' : null) + '\n',
@@ -634,8 +644,8 @@ class Create extends Component {
                 'background-size: 100%;\n',
                 'height: ' + (this.state.bannerHeight ? this.state.bannerHeight : '500') + 'px;\n',
                 'color: ' + (this.state.fontColor ? this.state.fontColor : 'black') + ';\n',
-                'display: grid;\n',
-                'grid-template-columns: 50% 50%;\n',
+                'display: flex;\n',
+                'flex-direction: row;\n',
                 '}\n',
                 '.LeftTitle {\n',
                 'font-size: ' + this.state.leftTitleFontSize + 'px;\n',
@@ -659,6 +669,7 @@ class Create extends Component {
                 'flex-direction: row;\n',
                 'justify-content: ' + (this.state.leftJustifyContent ? this.state.leftJustifyContent : 'flex-start') + ';\n',
                 'align-items: ' + (this.state.leftAlignItems ? this.state.leftAlignItems : 'flex-start') + ';\n',
+                'width: 100%;\n',
                 '}\n',
                 '.bannerBtnContainer {\n',
                 'display: flex;\n',
@@ -699,6 +710,7 @@ class Create extends Component {
                 'flex-direction: row;\n',
                 'justify-content: ' + (this.state.rightJustifyContent ? this.state.rightJustifyContent : 'flex-start') + ';\n',
                 'align-items: ' + (this.state.rightAlignItems ? this.state.rightAlignItems : 'flex-start') + ';\n',
+                'width: 100%;\n',
                 '}\n',
                 '.pricing {\n',
                 'font-weight: bold;\n',
@@ -836,19 +848,27 @@ class Create extends Component {
                 '.offerDetailsDropdown:hover .offerDetailsDropdownContent {\n',
                 'display: block;\n',
                 '}\n',
+                '.rightImage {\n',
+                'width: ' + (this.state.rightImageWidth) + 'px\n',
+                'height: ' + (this.state.rightImageWidth) + 'px\n',
+                '}\n',
+                '.leftImage {\n',
+                'width: ' + (this.state.leftImageWidth) + 'px\n',
+                'height: ' + (this.state.leftImageWidth) + 'px\n',
+                '}\n',
                 '@media screen and (min-width: 300px) and (max-width: 400px) {\n',
                 '.template {\n',
-                'grid-template-rows: 50% 50%;\n',
+                'flex-direction: column;\n',
                 '}\n',
                 '}\n',
                 '@media screen and (min-width: 400px) and (max-width: 500px) {\n',
                 '.template {\n',
-                'grid-template-rows: 50% 50%;\n',
+                'flex-direction: column;\n',
                 '}\n',
                 '}\n',
                 '@media screen and (min-width: 500px) and (max-width: 600px) {\n',
                 '.template {\n',
-                'grid-template-rows: 50% 50%;\n',
+                'flex-direction: column;\n',
                 '}\n',
                 '}\n',
                 '</style>\n',
@@ -2073,7 +2093,7 @@ class Create extends Component {
                                             <p>{this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World'}</p>
                                         </div>
                                     </div> : null}
-                                    {this.state.leftImageUrl ? <div><img src={this.state.leftImageUrl} alt='' width={this.state.leftImageWidth} height={this.state.leftImageHeight}/></div> : null}
+                                    {this.state.leftImageUrl ? <div><img style={leftImage} src={this.state.leftImageUrl} alt=''/></div> : null}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
                                             {this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS'}
@@ -2171,7 +2191,7 @@ class Create extends Component {
                                             <p>{this.state.rightAddOfferDetailsText ? this.state.rightAddOfferDetailsText : 'Hello World'}</p>
                                         </div>
                                     </div> : null}
-                                    {this.state.rightImageUrl ? <div><img src={this.state.rightImageUrl} alt='' width={this.state.rightImageWidth} height={this.state.rightImageHeight}/></div> : null}
+                                    {this.state.rightImageUrl ? <div><img style={rightImage} src={this.state.rightImageUrl} alt=''/></div> : null}
                                     {this.state.rightAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
                                             {this.state.rightDropDownTitle ? this.state.rightDropDownTitle : 'REGIONAL OFFERS'}
