@@ -10,7 +10,7 @@ class Create extends Component {
     state = {
         bannerHeight: '',
         backgroundImgUrl: '',
-        // fontFamily: '',
+        fontFamily: '',
         fontColor: '',
         leftTitle: '',
         displayLeftNav: true,
@@ -284,6 +284,7 @@ class Create extends Component {
             color: this.state.fontColor,
             display: 'grid',
             gridTemplateColumns: '50% 50%',
+            // fontFamily: this.state.fontFamily,
         }
 
         const LeftTitle = {
@@ -379,7 +380,7 @@ class Create extends Component {
                 '<div class=\'template\'>\n',
                 '<div class=\'templateLeft\'>\n',
                 '<div class=\'leftTextBackground\'>\n',
-                (this.state.leftTitle ? '<h1 class=\'leftTitle\'>' + (this.state.leftTitle) + '</h1>\n' : null) + '\n',
+                (this.state.leftTitle ? '<h1 data-v-8504edf8 class=\'leftTitle\'>' + (this.state.leftTitle) + '</h1>\n' : null) + '\n',
                 (this.state.leftBody ? '<p class=\'leftBody\'>' + (this.state.leftBody) + '</p>\n' : null) + '\n',
                 (this.state.leftPricingOption === 'one' ? '<div class=\'pricingContainerOptionOne\'>\n<div>' + (this.state.leftPricingOptionOneMonthlyLease ? this.state.leftPricingOptionOneMonthlyLease : '36') + ' month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionOneMonthly ? this.state.leftPricingOptionOneMonthly : '439') + '</span> / month</div>\n<div>MSRP: $' + (this.state.leftPricingOptionOneMSRP ? this.state.leftPricingOptionOneMSRP : '40,745') + '</div>\n</div>': null) + '\n',
                 (this.state.leftPricingOption === 'two' ? '<div class=\'pricingContainerOptionTwo\'>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>' + (this.state.leftPricingOptionTwoAPR ? this.state.leftPricingOptionTwoAPR : '2') + '</span>% apr</div>\n<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>$' + (this.state.leftPricingOptionTwoMonthly ? this.state.leftPricingOptionTwoMonthly : '399' ) + '</span>/mo.</div>\n</div>' : null) + '\n',
@@ -638,11 +639,11 @@ class Create extends Component {
                 '}\n',
                 '.LeftTitle {\n',
                 'font-size: ' + this.state.leftTitleFontSize + 'px;\n',
-                'margin: 10px;\n',
+                'margin: 5px;\n',
                 '}\n',
                 '.LeftBody {\n',
                 'font-size: ' + this.state.leftBodyFontSize + 'px;\n',
-                'margin: 10px;\n',
+                'margin: 5px;\n',
                 '}\n',
                 '.leftTextBackground {\n',
                 'height: ' + this.state.leftBackgroundHeight + 'px;\n',
@@ -678,11 +679,11 @@ class Create extends Component {
                 '}\n',
                 '.rightTitle {\n',
                 'font-size: ' + this.state.rightTitleFontSize + 'px;\n',
-                'margin: 10px;\n',
+                'margin: 5px;\n',
                 '}\n',
                 '.rightBody {\n',
                 'font-size: ' + this.state.rightBodyFontSize + 'px;\n',
-                'margin: 10px;\n',
+                'margin: 5px;\n',
                 '}\n',
                 '.rightTextBackground {',
                 'height: ' + this.state.rightBackgroundHeight + 'px;\n',
@@ -701,7 +702,7 @@ class Create extends Component {
                 '}\n',
                 '.pricing {\n',
                 'font-weight: bold;\n',
-                'font-size: ' + this.state.optionFontSize ? this.state.optionFontSize + 'px;' : '50px;\n',
+                'font-size: ' + (this.state.optionFontSize ? this.state.optionFontSize : '50') + 'px;\n',
                 '}\n',
                 '#leftDropDownOne {\n',
                 'display: block;\n',
@@ -818,6 +819,7 @@ class Create extends Component {
                 '.offerDetailsDropdown {\n',
                 'position: relative;\n',
                 'display: inline-block;\n',
+                'margin: 5px\n',
                 '}\n',
                 '.offerDetailsDropdownContent {\n',
                 'display: none;\n',
@@ -897,13 +899,13 @@ class Create extends Component {
                             this.setState({backgroundImgUrl: x})
                         }}
                         ></input>
-                        {/* <div>Font-Family</div>
+                        <div>Font-Family</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({fontFamily: x})
                         }}
-                        ></input> */}
+                        ></input>
                         <div>Font-Color</div>
                         <input
                         onChange = {(event) => {
@@ -2059,10 +2061,11 @@ class Create extends Component {
                                         <div><span style={pricing}>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
+                                    {this.state.leftButton1 ? 
                                     <div style={bannerBtnContainer}>
                                         {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
                                         {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
-                                    </div>
+                                    </div> : null}
                                     {this.state.leftAddOfferDetails ? 
                                     <div className="offerDetailsDropdown">
                                         <span>+ view offer details</span>
@@ -2156,10 +2159,11 @@ class Create extends Component {
                                         <div><span style={pricing}>${this.state.rightPricingOptionThreeMSRP ? this.state.rightPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
+                                    {this.state.rightButton1 ?
                                     <div style={bannerBtnContainer}>
                                         {this.state.rightButton1 ? <a href={this.state.rightButtonLink1}><button style={bannerBtn}>{this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1'}</button></a> : null}
                                         {this.state.rightButton2 ? <a href={this.state.rightButtonLink2}><button style={bannerBtn}>{this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 2'}</button></a> : null}
-                                    </div>
+                                    </div> : null}
                                     {this.state.rightAddOfferDetails ? 
                                     <div className="offerDetailsDropdown">
                                         <span>+ view offer details</span>

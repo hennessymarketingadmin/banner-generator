@@ -117,7 +117,7 @@
 }
 .sectionBtnInactive {
     background-color: rgb(16, 20, 23);
-    color: gray;
+    color: darkgray;
     font-weight: bold;
     border: none;
     padding: 22px 40px;
@@ -144,6 +144,12 @@
     margin-top: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
+/* 
+    font-family: 'nobel book';
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1; */
 }
 /* .templateRight {
     border: 1px solid red;
@@ -262,9 +268,9 @@
 
 .pricingContainerOptionTwo {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    height: 80px;
-    width: 350px;
+    grid-template-columns: 30% 30% 40%;
+    /* height: 80px; */
+    width: 400px;
 }
 
 .pricingOptionTwo {
@@ -296,6 +302,7 @@ input:focus {
 .offerDetailsDropdown {
     position: relative;
     display: inline-block;
+    margin: 5px;
 }
 
 .offerDetailsDropdownContent {
