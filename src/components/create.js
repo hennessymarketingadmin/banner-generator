@@ -284,7 +284,7 @@ class Create extends Component {
             color: this.state.fontColor,
             display: 'grid',
             gridTemplateColumns: '50% 50%',
-            fontFamily: this.state.fontFamily,
+            // fontFamily: this.state.fontFamily,
         }
 
         const LeftTitle = {
@@ -646,6 +646,7 @@ class Create extends Component {
                 'color: ' + (this.state.fontColor ? this.state.fontColor : 'black') + ';\n',
                 'display: flex;\n',
                 'flex-direction: row;\n',
+                (this.state.fontFamily ? 'font-family: ' + this.state.fontFamily + ';' : null) + '\n',
                 '}\n',
                 '.LeftTitle {\n',
                 'font-size: ' + this.state.leftTitleFontSize + 'px;\n',
@@ -878,7 +879,7 @@ class Create extends Component {
                     filtered.push(code[i])
                 }
             }
-            
+
             return filtered.join('')
         }
 
@@ -919,18 +920,18 @@ class Create extends Component {
                             this.setState({backgroundImgUrl: x})
                         }}
                         ></input>
-                        <div>Font-Family</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({fontFamily: x})
-                        }}
-                        ></input>
                         <div>Font-Color</div>
                         <input
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({fontColor: x})
+                        }}
+                        ></input>
+                        <div>Font-Family</div>
+                        <input
+                        onChange = {(event) => {
+                            let x = event.target.value
+                            this.setState({fontFamily: x})
                         }}
                         ></input>
                     </div>
@@ -2053,6 +2054,7 @@ class Create extends Component {
 
                     </div>
                     <div className='templateContainer'>
+                        {this.state.fontFamily ? <div className='added'>Font Family Added</div> : null}
                         <div className='template' style={template} >
                             <div className='templateLeft' style={templateLeft}>
                                 <div style={leftTextBackground}>
