@@ -8,7 +8,7 @@ import RegionalOfferImg from './images/regionalOffer.png';
 class Create extends Component {
 
     state = {
-        bannerHeight: '',
+        // bannerHeight: '',
         backgroundImgUrl: '',
         fontFamily: '',
         fontColor: '',
@@ -365,13 +365,13 @@ class Create extends Component {
         }
 
         const leftImage = {
-            width: this.state.leftImageWidth,
-            height: this.state.leftImageHeight
+            width: this.state.leftImageWidth + 'px',
+            height: this.state.leftImageHeight + 'px',
         }
 
         const rightImage = {
-            width: this.state.rightImageWidth,
-            height: this.state.rightImageHeight
+            width: this.state.rightImageWidth + 'px',
+            height: this.state.rightImageHeight + 'px',
         }
 
         // const offerDetails = () => {
@@ -642,7 +642,7 @@ class Create extends Component {
                 (this.state.backgroundImgUrl ? 'background-image: url(' + this.state.backgroundImgUrl + ')' : 'background-color: white') + ';\n',
                 'background-repeat: no-repeat;\n',
                 'background-size: 100%;\n',
-                'height: ' + (this.state.bannerHeight ? this.state.bannerHeight : '500') + 'px;\n',
+                // 'height: ' + (this.state.bannerHeight ? this.state.bannerHeight : '500') + 'px;\n',
                 'color: ' + (this.state.fontColor ? this.state.fontColor : 'black') + ';\n',
                 'display: flex;\n',
                 'flex-direction: row;\n',
@@ -677,7 +677,7 @@ class Create extends Component {
                 'flex-direction: row;\n',
                 'align-items: center;\n',
                 'margin-top: 30px;\n',
-                'margin-bottom: 10px\n',
+                'margin-bottom: 10px;\n',
                 'text-decoration: none;\n',
                 '}\n',
                 '.bannerBtn {\n',
@@ -697,7 +697,7 @@ class Create extends Component {
                 'font-size: ' + this.state.rightBodyFontSize + 'px;\n',
                 'margin: 5px;\n',
                 '}\n',
-                '.rightTextBackground {',
+                '.rightTextBackground {\n',
                 'height: ' + this.state.rightBackgroundHeight + 'px;\n',
                 'width: ' + this.state.rightBackgroundWidth + 'px;\n',
                 'background: rgba(' + this.state.rightTextBackgroundColorR + ', ' + this.state.rightTextBackgroundColorG + ', ' + this.state.rightTextBackgroundColorB + ', ' + this.state.rightBackgroundOpacity +');\n',
@@ -861,10 +861,37 @@ class Create extends Component {
                 '.template {\n',
                 'flex-direction: column;\n',
                 '}\n',
+                '.leftTextBackground {\n',
+                'width: 100%;\n',
+                'height: 100%;\n',
+                '}\n',
+                '.rightTextBackground {\n',
+                'width: 100%;\n',
+                'height: 100%;\n',
+                '}\n',
+                '.bannerBtn {\n',
+                'padding: 5px 30px;\n',
+                'margin: 5px;\n',
+                '}\n',
                 '}\n',
                 '@media screen and (min-width: 400px) and (max-width: 500px) {\n',
                 '.template {\n',
                 'flex-direction: column;\n',
+                '}\n',
+                '.leftTextBackground {\n',
+                'width: 85%;\n',
+                'height: 100%;\n',
+                '}\n',
+                '.rightTextBackground {\n',
+                'width: 85%;\n',
+                'height: 100%;\n',
+                '}\n',
+                '.bannerBtnContainer {\n',
+                'margin-top: 15px\n',
+                '}\n',
+                '.bannerBtn {\n',
+                'padding: 5px 30px;\n',
+                'margin: 5px;\n',
                 '}\n',
                 '}\n',
                 '@media screen and (min-width: 500px) and (max-width: 600px) {\n',
@@ -904,14 +931,14 @@ class Create extends Component {
                         <CopyToClipboard text={copyCode()}>
                             <div><button className='PinkBtn'>Copy Code</button></div>
                         </CopyToClipboard>
-                        <div>Banner Height</div>
+                        {/* <div>Banner Height</div>
                         <input   
                         placeholder='500px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({bannerHeight: x})
                         }}
-                        ></input>
+                        ></input> */}
                         <div>Background Image</div>
                         <input
                         placeholder='Background Url'
