@@ -364,10 +364,10 @@ class Create extends Component {
             fontSize: this.state.optionFontSize ? this.state.optionFontSize + 'px' : '50px',
         }
 
-        const leftImage = {
-            width: this.state.leftImageWidth + 'px',
-            height: this.state.leftImageHeight + 'px',
-        }
+        // const leftImage = {
+        //     width: this.state.leftImageWidth + 'px',
+        //     height: this.state.leftImageHeight + 'px',
+        // }
 
         const rightImage = {
             width: this.state.rightImageWidth + 'px',
@@ -1387,7 +1387,7 @@ class Create extends Component {
                             }} 
                             ></input>
                             <div>Text Background color</div>
-                            <div> rgb(
+                            <div> rgba(
                             <input
                             value={this.state.leftTextBackgroundColorR}
                             type='number'
@@ -1946,7 +1946,7 @@ class Create extends Component {
                         }} 
                         ></input>
                         <div>Text Background color</div>
-                        <div> rgb(
+                        <div> rgba(
                         <input
                         value={this.state.rightTextBackgroundColorR}
                         type='number'

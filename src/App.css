@@ -76,10 +76,10 @@
 .createContainer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     background-color: rgb(238, 240, 242);
-    /* height: 100vh; */
+    height: 93vh;
 }
 .create {
     display: grid;
@@ -87,7 +87,7 @@
     width: 1500px;
 }
 .nav {
-    height: 700px;
+    height: 100%;
     /* background-color: rgb(42, 48, 56); */
     color: white;
     /* padding: 20px; */
@@ -130,7 +130,7 @@
 }
 
 .templateContainer {
-    height: 700px;
+    height: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@
 } */
 
 .rgbInputs {
-    width: 25px;
+    width: 45px;
     margin-left: 3px;
 }
 
