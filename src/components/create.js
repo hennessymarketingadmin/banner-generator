@@ -65,9 +65,9 @@ class Create extends Component {
         leftButton3: false,
         LeftButtonText3: '',
         leftButtonLink3: '',
-        leftImageUrl: '',
-        leftImageHeight: '',
-        leftImageWidth: '',
+        // leftImageUrl: '',
+        // leftImageHeight: '',
+        // leftImageWidth: '',
         leftAddOfferDetails: false,
         leftAddOfferDetailsText: '',
 
@@ -859,13 +859,13 @@ class Create extends Component {
                 '}\n',
                 '@media screen and (min-width: 300px) and (max-width: 400px) {\n',
                 '.template {\n',
-                'flex-direction: column;\n',
+                'flex-direction: column-reverse;\n',
                 'background-image: url("");\n',
                 'height: auto;\n',
                 '}\n',
                 '.templateLeft {\n',
                 'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100%;\n',
+                'background-size: 100% 100%;\n',
                 '}\n',
                 '.leftTextBackground {\n',
                 'width: 100%;\n',
@@ -885,13 +885,13 @@ class Create extends Component {
                 '}\n',
                 '@media screen and (min-width: 400px) and (max-width: 500px) {\n',
                 '.template {\n',
-                'flex-direction: column;\n',
+                'flex-direction: column-reverse;\n',
                 'background-image: url("");\n',
                 'height: auto;\n',
                 '}\n',
                 '.templateLeft {\n',
                 'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100%;\n',
+                'background-size: 100% 100%;\n',
                 '}\n',
                 '.leftTextBackground {\n',
                 'width: 100%;\n',
@@ -911,13 +911,13 @@ class Create extends Component {
                 '}\n',
                 '@media screen and (min-width: 500px) and (max-width: 600px) {\n',
                 '.template {\n',
-                'flex-direction: column;\n',
+                'flex-direction: column-reverse;\n',
                 'background-image: url("");\n',
                 'height: auto;\n',
                 '}\n',
                 '.templateLeft {\n',
                 'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100%\n',
+                'background-size: 100% 100%;\n',
                 '}\n',
                 '.leftTextBackground {\n',
                 'width: 100%;\n',
@@ -937,13 +937,13 @@ class Create extends Component {
                 '}\n',
                 '@media screen and (min-width: 600px) and (max-width: 700px) {\n',
                 '.template {\n',
-                'flex-direction: column;\n',
+                'flex-direction: column-reverse;\n',
                 'background-image: url("");\n',
                 'height: auto;\n',
                 '}\n',
                 '.templateLeft {\n',
                 'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100%;\n',
+                'background-size: 100% 100%;\n',
                 '}\n',
                 '.leftTextBackground {\n',
                 'width: 100%;\n',
@@ -1447,7 +1447,7 @@ class Create extends Component {
                                 let leftButton1 = this.state.leftButton1
                                 this.setState({leftButton1: !leftButton1})
                             }}
-                            >{this.state.leftButton1 ? 'Remove Button' : 'Add Button'}</button></div>
+                            >{this.state.leftButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
 
                             {this.state.leftButton1 ? <div>
                             <div>Button Background color</div>
@@ -1493,7 +1493,7 @@ class Create extends Component {
                                     let leftButton2 = this.state.leftButton2
                                     this.setState({leftButton2: !leftButton2})
                                 }}
-                            >{this.state.leftButton2 ? 'Remove Button' : 'Add Button'}</button></div>
+                            >{this.state.leftButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
                             {this.state.leftButton2 ? <div>
                             <div>Button text</div>
                             <input
@@ -1558,6 +1558,7 @@ class Create extends Component {
                             ></input> 
                         </div> : null}
                         <hr/>
+                        {/* <hr/>
                         <h3>Insert Image</h3>
                         <input 
                             value={this.state.leftImageUrl}
@@ -1579,7 +1580,7 @@ class Create extends Component {
                             onChange = {(event) => {
                                 this.setState({leftImageWidth: event.target.value})
                             }} 
-                        />
+                        /> */}
                         {/* <hr/> */}
                         {/* <hr/> */}
                     </div>
@@ -2005,7 +2006,7 @@ class Create extends Component {
                             let rightButton1 = this.state.rightButton1
                             this.setState({rightButton1: !rightButton1})
                         }}
-                        >{this.state.rightButton1 ? 'Remove Button' : 'Add Button'}</button></div>
+                        >{this.state.rightButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
 
                         {this.state.rightButton1 ? <div>
                             <div>Button Background color</div>
@@ -2051,7 +2052,7 @@ class Create extends Component {
                                 let rightButton2 = this.state.rightButton2
                                 this.setState({rightButton2: !rightButton2})
                             }}
-                        >{this.state.rightButton2 ? 'Remove Button' : 'Add Button'}</button></div>
+                        >{this.state.rightButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
                         {this.state.rightButton2 ? <div>
                             <div>Button text</div>
                             <input
@@ -2172,11 +2173,11 @@ class Create extends Component {
                                         <div><span style={pricing}>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
-                                    {this.state.leftButton1 ? 
-                                    <div style={bannerBtnContainer}>
-                                        {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
-                                        {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
-                                    </div> : null}
+                                    {/* {this.state.leftButton1 ?  */}
+                                    {/* <div style={bannerBtnContainer}> */}
+                                        {/* {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null} */}
+                                        {/* {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null} */}
+                                    {/* </div> : null} */}
                                     {this.state.leftAddOfferDetails ? 
                                     <div className="offerDetailsDropdown">
                                         <span>+ view offer details</span>
