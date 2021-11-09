@@ -850,13 +850,13 @@ class Create extends Component {
                 'display: block;\n',
                 '}\n',
                 '.rightImage {\n',
-                'width: ' + (this.state.rightImageWidth) + 'px\n',
-                'height: ' + (this.state.rightImageWidth) + 'px\n',
+                'width: ' + (this.state.rightImageWidth) + 'px;\n',
+                'height: ' + (this.state.rightImageWidth) + 'px;\n',
                 '}\n',
-                '.leftImage {\n',
-                'width: ' + (this.state.leftImageWidth) + 'px\n',
-                'height: ' + (this.state.leftImageWidth) + 'px\n',
-                '}\n',
+                // '.leftImage {\n',
+                // 'width: ' + (this.state.leftImageWidth) + 'px;\n',
+                // 'height: ' + (this.state.leftImageWidth) + 'px;\n',
+                // '}\n',
                 '@media screen and (min-width: 300px) and (max-width: 400px) {\n',
                 '.template {\n',
                 'flex-direction: column-reverse;\n',
@@ -2173,11 +2173,11 @@ class Create extends Component {
                                         <div><span style={pricing}>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
                                     </div> : null}
-                                    {/* {this.state.leftButton1 ?  */}
-                                    {/* <div style={bannerBtnContainer}> */}
-                                        {/* {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null} */}
-                                        {/* {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null} */}
-                                    {/* </div> : null} */}
+                                    {this.state.leftButton1 ? 
+                                        <div style={bannerBtnContainer}>
+                                            {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
+                                            {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
+                                    </div> : null}
                                     {this.state.leftAddOfferDetails ? 
                                     <div className="offerDetailsDropdown">
                                         <span>+ view offer details</span>
@@ -2185,7 +2185,7 @@ class Create extends Component {
                                             <p>{this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World'}</p>
                                         </div>
                                     </div> : null}
-                                    {this.state.leftImageUrl ? <div><img style={leftImage} src={this.state.leftImageUrl} alt=''/></div> : null}
+                                    {/* {this.state.leftImageUrl ? <div><img style={leftImage} src={this.state.leftImageUrl} alt=''/></div> : null} */}
                                     {this.state.leftAddDropDown ? <div className='reginalOffersContainer'>
                                         <div>
                                             {this.state.LeftDropDownTitle ? this.state.LeftDropDownTitle : 'REGIONAL OFFERS'}
