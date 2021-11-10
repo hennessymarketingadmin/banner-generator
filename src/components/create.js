@@ -54,16 +54,18 @@ class Create extends Component {
         leftTextBackgroundColorG: '',
         leftTextBackgroundColorB: '',
         leftBackgroundOpacity: '',
-        ButtonColor: '',
-        ButtonBackgroundColor: '',
+        buttonColor: '',
+        buttonBackgroundColor: '',
+        buttonPadding: '',
+        buttonRadius: '',
         leftButton1: false,
-        LeftButtonText1: '',
+        leftButtonText1: '',
         leftButtonLink1: '',
         leftButton2: false,
-        LeftButtonText2: '',
+        leftButtonText2: '',
         leftButtonLink2: '',
         leftButton3: false,
-        LeftButtonText3: '',
+        leftButtonText3: '',
         leftButtonLink3: '',
         // leftImageUrl: '',
         // leftImageHeight: '',
@@ -324,9 +326,10 @@ class Create extends Component {
         }
 
         const bannerBtn = {
-            backgroundColor: this.state.ButtonBackgroundColor ? this.state.ButtonBackgroundColor : 'black',
-            color: this.state.ButtonColor ? this.state.ButtonColor : 'white',
-            padding: '12px 50px',
+            backgroundColor: this.state.buttonBackgroundColor ? this.state.buttonBackgroundColor : 'black',
+            color: this.state.buttonColor ? this.state.buttonColor : 'white',
+            padding: this.state.buttonPadding ? this.state.buttonPadding : '12px 50px',
+            borderRadius: this.state.buttonRadius ? this.state.buttonRadius : '0xp',
             border: 'none',
             cursor: 'pointer',
             margin: '5px',
@@ -681,9 +684,10 @@ class Create extends Component {
                 'text-decoration: none;\n',
                 '}\n',
                 '.bannerBtn {\n',
-                'background-color: ' + (this.state.ButtonBackgroundColor ? this.state.ButtonBackgroundColor : 'black') + ';\n',
-                'color: ' + (this.state.ButtonColor ? this.state.ButtonColor : 'white') + ';\n',
-                'padding: 12px 50px;\n',
+                'background-color: ' + (this.state.buttonBackgroundColor ? this.state.buttonBackgroundColor : 'black') + ';\n',
+                'color: ' + (this.state.buttonColor ? this.state.buttonColor : 'white') + ';\n',
+                'padding: ' + (this.state.buttonPadding ? this.state.buttonPadding : '12px 50px') + ';\n',
+                'border-radius: ' + (this.state.buttonRadius ? this.state.buttonRadius : '0xp') + ';\n',
                 'border: none;\n',
                 'cursor: pointer;\n',
                 'margin: 5px;\n',
@@ -780,7 +784,7 @@ class Create extends Component {
                 '.reginalOffersBtn {\n',
                 'background-color: white;\n',
                 'border-top: none;\n',
-                'border-left: none;\n',
+                'border-right: none;\n',
                 'border-right: none;\n',
                 'border-bottom: 1px dotted;\n',
                 'padding: 10px 100px;\n',
@@ -963,7 +967,7 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
-            console.log(this.state.bannerHeight)
+            console.log(this.state.buttonRadius)
             for (let i = 0; i < code.length; i++) {
                 if (code[i] !== "[object Object]\n" && code[i] !== "null\n") {
                     filtered.push(code[i])
@@ -996,7 +1000,7 @@ class Create extends Component {
                         </CopyToClipboard>
                         <div>Banner Height</div>
                         <input 
-                        value={this.state.bannerHeight} 
+                        value={this.state.bannerHeight}
                         placeholder='Default 500px'
                         onChange = {(event) => {
                             let x = event.target.value
@@ -1443,6 +1447,39 @@ class Create extends Component {
                             <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>Down</button>
                             <hr/>
                             <h3>Buttons</h3>
+                            {this.state.leftButton1 ? <div>
+                            <div>Button Background color</div>
+                            <input
+                            value={this.state.buttonBackgroundColor}
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({buttonBackgroundColor: x})
+                            }} 
+                            ></input>
+                            <div>Button Text Color</div>
+                            <input
+                            value={this.state.buttonColor}
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({buttonColor: x})
+                            }} 
+                            ></input> 
+                            <div>Button Padding</div>
+                            <input
+                            value={this.state.buttonPadding}
+                            onChange={(event)=>{
+                                this.setState({buttonPadding: event.target.value})
+                            }}
+                            ></input>
+                            <div>Button Radius</div>
+                            <input
+                            valuse={this.state.buttonRadius}
+                            onChange={(event)=>{
+                                console.log(event.target.value)
+                                this.setState({buttonRadius: event.target.value})
+                            }}
+                            ></input>
+                            </div> : null}
                             <div><button
                             className='whiteBtn'
                             onClick = {()=>{
@@ -1452,34 +1489,16 @@ class Create extends Component {
                             >{this.state.leftButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
 
                             {this.state.leftButton1 ? <div>
-                            <div>Button Background color</div>
+                            <div>Button 1 Text</div>
                             <input
-                            value={this.state.ButtonBackgroundColor}
+                            value={this.state.leftButtonText1}
                             onChange = {(event) => {
                                 let x = event.target.value
-                                console.log(x)
-                                this.setState({ButtonBackgroundColor: x})
-                            }} 
-                            ></input>
-                            <div>Button color</div>
-                            <input
-                            value={this.state.ButtonColor}
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                console.log(x)
-                                this.setState({ButtonColor: x})
-                            }} 
-                            ></input>
-                            <div>Button text</div>
-                            <input
-                            value={this.state.LeftButtonText1}
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                this.setState({LeftButtonText1: x})
+                                this.setState({leftButtonText1: x})
                             }} 
                             ></input>
                         
-                            <div>Button link</div>
+                            <div>Button 1 Link</div>
                             <input
                             value={this.state.leftButtonLink1}
                             onChange = {(event) => {
@@ -1487,7 +1506,7 @@ class Create extends Component {
                                 this.setState({leftButtonLink1: x})
                             }} 
                             ></input>
-                            </div>: null}
+                            
                         
                             <div><button
                             className='whiteBtn'
@@ -1497,16 +1516,16 @@ class Create extends Component {
                                 }}
                             >{this.state.leftButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
                             {this.state.leftButton2 ? <div>
-                            <div>Button text</div>
+                            <div>Button 2 Text</div>
                             <input
-                            value={this.state.LeftButtonText2}
+                            value={this.state.leftButtonText2}
                             onChange = {(event) => {
                                 let x = event.target.value
-                                this.setState({LeftButtonText2: x})
+                                this.setState({leftButtonText2: x})
                             }} 
                             ></input>
                         
-                            <div>Button link</div>
+                            <div>Button 2 Link</div>
                             <input
                             value={this.state.leftButtonLink2}
                             onChange = {(event) => {
@@ -1514,32 +1533,8 @@ class Create extends Component {
                                 this.setState({leftButtonLink2: x})
                             }} 
                             ></input>
-                        </div>: null}
-                    
-                    {/* <div><button
-                    className='whiteBtn'
-                        onClick = {()=>{
-                            let leftButton3 = this.state.leftButton3
-                            this.setState({leftButton3: !leftButton3})
-                        }}
-                        >{this.state.leftButton3 ? 'Remove Button' : 'Add Button'}</button></div>
-                        {this.state.leftButton3 ? <div>
-                            <div>Button text</div>
-                            <input
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                this.setState({LeftButtonText3: x})
-                            }} 
-                            ></input>
-                        
-                            <div>Button link</div>
-                            <input
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                this.setState({leftButtonLink3: x})
-                            }} 
-                            ></input>
-                        </div>: null} */}
+                            </div>: null}
+                            </div>: null}
                         <hr/>
                         <h3>Offer Details</h3>
                         <button className='whiteBtn'
@@ -2002,34 +1997,49 @@ class Create extends Component {
                         <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-end'})}}>Down</button>
                         <hr/>
                         <h3>Buttons</h3>
-                        <div><button
-                        className='whiteBtn'
-                        onClick = {()=>{
-                            let rightButton1 = this.state.rightButton1
-                            this.setState({rightButton1: !rightButton1})
-                        }}
-                        >{this.state.rightButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
-
-                        {this.state.rightButton1 ? <div>
+                            {this.state.rightButton1 ? <div>
                             <div>Button Background color</div>
                             <input
-                            value={this.state.ButtonBackgroundColor}
+                            value={this.state.buttonBackgroundColor}
                             onChange = {(event) => {
                                 let x = event.target.value
-                                // console.log(x)
-                                this.setState({ButtonBackgroundColor: x})
+                                this.setState({buttonBackgroundColor: x})
                             }} 
                             ></input>
-                            <div>Button color</div>
+                            <div>Button Text Color</div>
                             <input
-                            value={this.state.ButtonColor}
+                            value={this.state.buttonColor}
                             onChange = {(event) => {
                                 let x = event.target.value
-                                // console.log(x)
-                                this.setState({ButtonColor: x})
+                                this.setState({buttonColor: x})
                             }} 
+                            ></input> 
+                            <div>Button Padding</div>
+                            <input
+                            value={this.state.buttonPadding}
+                            onChange={(event)=>{
+                                this.setState({buttonPadding: event.target.value})
+                            }}
                             ></input>
-                            <div>Button text</div>
+                            <div>Button Radius</div>
+                            <input
+                            valuse={this.state.buttonRadius}
+                            onChange={(event)=>{
+                                console.log(event.target.value)
+                                this.setState({buttonRadius: event.target.value})
+                            }}
+                            ></input>
+                            </div> : null}
+                            <div><button
+                            className='whiteBtn'
+                            onClick = {()=>{
+                                let rightButton1 = this.state.rightButton1
+                                this.setState({rightButton1: !rightButton1})
+                            }}
+                            >{this.state.rightButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
+
+                            {this.state.rightButton1 ? <div>
+                            <div>Button 1 Text</div>
                             <input
                             value={this.state.rightButtonText1}
                             onChange = {(event) => {
@@ -2038,7 +2048,7 @@ class Create extends Component {
                             }} 
                             ></input>
                         
-                            <div>Button link</div>
+                            <div>Button 1 Link</div>
                             <input
                             value={this.state.rightButtonLink1}
                             onChange = {(event) => {
@@ -2046,17 +2056,17 @@ class Create extends Component {
                                 this.setState({rightButtonLink1: x})
                             }} 
                             ></input>
-                        </div>: null}
-                    
-                        <div><button
-                        className='whiteBtn'
-                            onClick = {()=>{
-                                let rightButton2 = this.state.rightButton2
-                                this.setState({rightButton2: !rightButton2})
-                            }}
-                        >{this.state.rightButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
-                        {this.state.rightButton2 ? <div>
-                            <div>Button text</div>
+                            
+                        
+                            <div><button
+                            className='whiteBtn'
+                                onClick = {()=>{
+                                    let rightButton2 = this.state.rightButton2
+                                    this.setState({rightButton2: !rightButton2})
+                                }}
+                            >{this.state.rightButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
+                            {this.state.rightButton2 ? <div>
+                            <div>Button 2 Text</div>
                             <input
                             value={this.state.rightButtonText2}
                             onChange = {(event) => {
@@ -2065,7 +2075,7 @@ class Create extends Component {
                             }} 
                             ></input>
                         
-                            <div>Button link</div>
+                            <div>Button 2 Link</div>
                             <input
                             value={this.state.rightButtonLink2}
                             onChange = {(event) => {
@@ -2074,31 +2084,8 @@ class Create extends Component {
                             }} 
                             ></input>
                         </div>: null}
+                        </div>: null}
                     
-                    {/* <div><button
-                    className='whiteBtn'
-                        onClick = {()=>{
-                            let rightButton3 = this.state.rightButton3
-                            this.setState({rightButton3: !rightButton3})
-                        }}
-                        >{this.state.rightButton3 ? 'Remove Button' : 'Add Button'}</button></div>
-                        {this.state.rightButton3 ? <div>
-                            <div>Button text</div>
-                            <input
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                this.setState({rightButtonText3: x})
-                            }} 
-                            ></input>
-                        
-                            <div>Button link</div>
-                            <input
-                            onChange = {(event) => {
-                                let x = event.target.value
-                                this.setState({rightButtonLink3: x})
-                            }} 
-                            ></input>
-                        </div>: null} */}
                         <hr/>
                         <h3>Offer Details</h3>
                         <button className='whiteBtn'
@@ -2142,7 +2129,6 @@ class Create extends Component {
                             }} 
                         />
                     </div> }
-                    {/* ______________________________________ */}
 
                     </div>
                     <div className='templateContainer'>
@@ -2177,8 +2163,8 @@ class Create extends Component {
                                     </div> : null}
                                     {this.state.leftButton1 ? 
                                         <div style={bannerBtnContainer}>
-                                            {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1'}</button></a> : null}
-                                            {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 2'}</button></a> : null}
+                                            {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.leftButtonText1 ? this.state.leftButtonText1 : 'button 1'}</button></a> : null}
+                                            {this.state.leftButton2 ? <a href={this.state.leftButtonLink2}><button style={bannerBtn}>{this.state.leftButtonText2 ? this.state.leftButtonText2 : 'button 2'}</button></a> : null}
                                     </div> : null}
                                     {this.state.leftAddOfferDetails ? 
                                     <div className="offerDetailsDropdown">
