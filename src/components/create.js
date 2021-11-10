@@ -298,10 +298,10 @@ class Create extends Component {
         }
 
         const leftTextBackground = {
-            height: this.state.leftBackgroundHeight + 'px',
-            width: this.state.leftBackgroundWidth + 'px',
-            background: 'rgba(' + this.state.leftTextBackgroundColorR + ', ' + this.state.leftTextBackgroundColorG + ', ' + this.state.leftTextBackgroundColorB + ', ' + this.state.leftBackgroundOpacity +')',
-            padding: '10px',
+            height: (this.state.leftBackgroundHeight ? this.state.leftBackgroundHeight + 'px' : 'auto'),
+            width: (this.state.leftBackgroundWidth ? this.state.leftBackgroundWidth + 'px' : 'auto'),
+            background: 'rgba(' + (this.state.leftTextBackgroundColorR ? this.state.leftTextBackgroundColorR : '0') + ', ' + (this.state.leftTextBackgroundColorG ? this.state.leftTextBackgroundColorG : '0') + ', ' + (this.state.leftTextBackgroundColorB ? this.state.leftTextBackgroundColorB : '0') + ', ' + (this.state.leftBackgroundOpacity ? this.state.leftBackgroundOpacity : '0') +')',
+            padding: '30px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -343,10 +343,10 @@ class Create extends Component {
         }
 
         const rightTextBackground = {
-            height: this.state.rightBackgroundHeight + 'px',
-            width: this.state.rightBackgroundWidth + 'px',
-            background: 'rgba(' + this.state.rightTextBackgroundColorR + ', ' + this.state.rightTextBackgroundColorG + ', ' + this.state.rightTextBackgroundColorB + ', ' + this.state.rightBackgroundOpacity +')',
-            padding: '10px',
+            height: (this.state.rightBackgroundHeight ? this.state.rightBackgroundHeight + 'px' : 'auto'),
+            width: (this.state.rightBackgroundWidth ? this.state.rightBackgroundWidth + 'px' : 'auto'),
+            background: 'rgba(' + (this.state.rightTextBackgroundColorR ? this.state.rightTextBackgroundColorR : '0') + ', ' + (this.state.rightTextBackgroundColorG ? this.state.rightTextBackgroundColorG : '0') + ', ' + (this.state.rightTextBackgroundColorB ? this.state.rightTextBackgroundColorB : '0') + ', ' + (this.state.rightBackgroundOpacity ? this.state.rightBackgroundOpacity : '0') +')',
+            padding: '30px',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
