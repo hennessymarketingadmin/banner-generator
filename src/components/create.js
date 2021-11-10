@@ -8,7 +8,7 @@ import RegionalOfferImg from './images/regionalOffer.png';
 class Create extends Component {
 
     state = {
-        // bannerHeight: '',
+        bannerHeight: '500',
         backgroundImgUrl: '',
         fontFamily: '',
         fontColor: '',
@@ -280,7 +280,7 @@ class Create extends Component {
             backgroundImage: 'url(' + this.state.backgroundImgUrl + ')',
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100%',
-            height: this.state.bannerHeight + 'px',
+            height: (this.state.bannerHeight ? this.state.bannerHeight : '500') + 'px',
             color: this.state.fontColor,
             display: 'grid',
             gridTemplateColumns: '50% 50%',
@@ -963,6 +963,7 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
+            console.log(this.state.bannerHeight)
             for (let i = 0; i < code.length; i++) {
                 if (code[i] !== "[object Object]\n" && code[i] !== "null\n") {
                     filtered.push(code[i])
@@ -993,14 +994,15 @@ class Create extends Component {
                         <CopyToClipboard text={copyCode()}>
                             <div><button className='PinkBtn'>Copy Code</button></div>
                         </CopyToClipboard>
-                        {/* <div>Banner Height</div>
-                        <input   
-                        placeholder='500px'
+                        <div>Banner Height</div>
+                        <input 
+                        value={this.state.bannerHeight} 
+                        placeholder='Default 500px'
                         onChange = {(event) => {
                             let x = event.target.value
                             this.setState({bannerHeight: x})
                         }}
-                        ></input> */}
+                        ></input>
                         <div>Background Image</div>
                         <input
                         placeholder='Background Url'
@@ -1431,14 +1433,14 @@ class Create extends Component {
                             ></input>
                             )</div>
                             <h4>Background Position</h4>
-                            <div>Justify Content (Vertical)</div>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>center</button>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>flex-start</button>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>flex-end</button>
-                            <div>Align Items (Horizontal)</div>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>center</button>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>flex-start</button>
-                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>flex-end</button>
+                            <div>Vertical</div>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>Left</button>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'center'})}}>Center</button>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-end'})}}>Right</button>
+                            <div>Horizontal</div>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>Up</button>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>Center</button>
+                            <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>Down</button>
                             <hr/>
                             <h3>Buttons</h3>
                             <div><button
@@ -1990,14 +1992,14 @@ class Create extends Component {
                         ></input>
                         )</div>
                         <h4>Background Position</h4>
-                        <div>Justify Content (Vertical)</div>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'center'})}}>center</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'flex-start'})}}>flex-start</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'flex-end'})}}>flex-end</button>
-                        <div>Align Items (Horizontal)</div>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'center'})}}>center</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-start'})}}>flex-start</button>
-                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-end'})}}>flex-end</button>
+                        <div>Vertical</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'flex-start'})}}>Left</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'center'})}}>Center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightJustifyContent: 'flex-end'})}}>Right</button>
+                        <div>Horizontal</div>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-start'})}}>Up</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'center'})}}>Center</button>
+                        <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-end'})}}>Down</button>
                         <hr/>
                         <h3>Buttons</h3>
                         <div><button
