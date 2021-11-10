@@ -4,6 +4,7 @@ import OptionOneImg from './images/optionOne.png';
 import OptionTwoImg from './images/optionTwo.png';
 import OptionThreeImg from './images/optionThree.png';
 import RegionalOfferImg from './images/regionalOffer.png';
+import OptionFourImg from './images/optionFour.png';
 
 class Create extends Component {
 
@@ -26,6 +27,8 @@ class Create extends Component {
         leftPricingOptionThreeMonthlyLease: '',
         leftPricingOptionThreeMonthly: '',
         leftPricingOptionThreeMSRP: '',
+        leftOptionFourApr: '',
+        leftOptionFourMo: '',
         leftAddPricing: false,
         leftAddDropDown: false,
         LeftDropDownTitle: '',
@@ -88,6 +91,8 @@ class Create extends Component {
         rightPricingOptionThreeMonthlyLease: '',
         rightPricingOptionThreeMonthly: '',
         rightPricingOptionThreeMSRP: '',
+        rightOptionFourApr: '',
+        rightOptionFourMo: '',
         rightAddPricing: false,
         rightAddDropDown: false,
         rightDropDownTitle: '',
@@ -398,6 +403,7 @@ class Create extends Component {
                 (this.state.leftPricingOption === 'one' ? '<div class=\'pricingContainerOptionOne\'>\n<div>' + (this.state.leftPricingOptionOneMonthlyLease ? this.state.leftPricingOptionOneMonthlyLease : '36') + ' month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionOneMonthly ? this.state.leftPricingOptionOneMonthly : '439') + '</span> / month</div>\n<div>MSRP: $' + (this.state.leftPricingOptionOneMSRP ? this.state.leftPricingOptionOneMSRP : '40,745') + '</div>\n</div>': null) + '\n',
                 (this.state.leftPricingOption === 'two' ? '<div class=\'pricingContainerOptionTwo\'>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>' + (this.state.leftPricingOptionTwoAPR ? this.state.leftPricingOptionTwoAPR : '2') + '</span>% apr</div>\n<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>$' + (this.state.leftPricingOptionTwoMonthly ? this.state.leftPricingOptionTwoMonthly : '399' ) + '</span>/mo.</div>\n</div>' : null) + '\n',
                 (this.state.leftPricingOption === 'three' ? '<div class=\'pricingContainerOptionThree\'>\n<div>' + (this.state.leftPricingOptionThreeMonthlyLease ? this.state.leftPricingOptionThreeMonthlyLease : '24') + 'month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionThreeMonthly ? this.state.leftPricingOptionThreeMonthly : '439') + '</span> / month</div>\n<hr class=\'pricingLineVirtical\'></hr>\n<div>Buy for</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300') + '</span></div>\n<div>Limited availability at this price</div>\n</div>' : null) + '\n',
+                (this.state.leftPricingOption === 'four' ? '<div class=\'pricingContainerOptionFour\'>\n<div><span class=\'pricing\'>' + (this.state.leftOptionFourApr ? this.state.leftOptionFourApr : '1.9') + '%</span> APR</div>\n<div>for ' + (this.state.leftOptionFourMo ? this.state.leftOptionFourMo : '24-48') + 'mos.</div>\n</div>' : null ) + '\n',
                 (this.state.leftButton1 ? '<div class=\'bannerBtnContainer\'>' : null) + '\n',
                 (this.state.leftButton1 ? '<a href=' + (this.state.leftButtonLink1) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.leftButton2 ? '<a href=' + (this.state.leftButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
@@ -456,6 +462,7 @@ class Create extends Component {
                 (this.state.rightPricingOption === 'one' ? '<div class=\'pricingContainerOptionOne\'>\n<div>' + (this.state.rightPricingOptionOneMonthlyLease ? this.state.rightPricingOptionOneMonthlyLease : '36') + ' month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.rightPricingOptionOneMonthly ? this.state.rightPricingOptionOneMonthly : '439') + '</span> / month</div>\n<div>MSRP: $' + (this.state.rightPricingOptionOneMSRP ? this.state.rightPricingOptionOneMSRP : '40,745') + '</div>\n</div>': null) + '\n',
                 (this.state.rightPricingOption === 'two' ? '<div class=\'pricingContainerOptionTwo\'>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>' + (this.state.rightPricingOptionTwoAPR ? this.state.rightPricingOptionTwoAPR : '2') + '</span>% apr</div>\n<div class=\'dropDownPrice\'><div class=\'vl\'></div><div>financing</div> up to<div class=\'vl\'></div></div>\n<div class=\'pricingOptionTwo\'><span class=\'pricing\'>$' + (this.state.rightPricingOptionTwoMonthly ? this.state.rightPricingOptionTwoMonthly : '399' ) + '</span>/mo.</div>\n</div>' : null) + '\n',
                 (this.state.rightPricingOption === 'three' ? '<div class=\'pricingContainerOptionThree\'>\n<div>' + (this.state.rightPricingOptionThreeMonthlyLease ? this.state.rightPricingOptionThreeMonthlyLease : '24') + 'month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.rightPricingOptionThreeMonthly ? this.state.rightPricingOptionThreeMonthly : '439') + '</span> / month</div>\n<hr class=\'pricingLineVirtical\'></hr>\n<div>Buy for</div>\n<div><span class=\'pricing\'>$' + (this.state.rightPricingOptionThreeMSRP ? this.state.rightPricingOptionThreeMSRP : '42,300') + '</span></div>\n<div>Limited availability at this price</div>\n</div>' : null) + '\n',
+                (this.state.rightPricingOption === 'four' ? '<div class=\'pricingContainerOptionFour\'>\n<div><span class=\'pricing\'>' + (this.state.rightOptionFourApr ? this.state.rightOptionFourApr : '1.9') + '%</span> APR</div>\n<div>for ' + (this.state.rightOptionFourMo ? this.state.rightOptionFourMo : '24-48') + 'mos.</div>\n</div>' : null ) + '\n',
                 (this.state.rightButton1 ? '<div class=\'bannerBtnContainer\'>' : null) + '\n',
                 (this.state.rightButton1 ? '<a href=' + (this.state.rightButtonLink1) + '><button class=\'bannerBtn\'>' + (this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.rightButton2 ? '<a href=' + (this.state.rightButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.rightButtonText2 ? this.state.rightButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
@@ -833,6 +840,11 @@ class Create extends Component {
                 'justify-content: center;\n',
                 'align-items: center;\n',
                 '}\n',
+                '.pricingContainerOptionFour {\n',
+                'display: flex;\n',
+                'flex-direction: column;\n',
+                'align-items: center;\n',
+                '}\n',
                 '.offerDetailsDropdown {\n',
                 'position: relative;\n',
                 'display: inline-block;\n',
@@ -967,7 +979,7 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
-            console.log(this.state.buttonRadius)
+            // console.log(this.state.buttonRadius)
             for (let i = 0; i < code.length; i++) {
                 if (code[i] !== "[object Object]\n" && code[i] !== "null\n") {
                     filtered.push(code[i])
@@ -1076,6 +1088,36 @@ class Create extends Component {
                         <div>
                             <h4>Pick A Pricing Style</h4>
                             <div>Option 1</div>
+                            <img src={OptionFourImg} alt='' width='200px' height='100px' onClick={()=>{this.setState({leftPricingOption: 'four'})}}/>
+                            {this.state.leftPricingOption === 'four' ? <div>
+                                <div>APR</div>
+                                <input
+                                value={this.state.leftOptionFourApr}
+                                type='number'
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({leftOptionFourApr: x})
+                                }}
+                                ></input>
+                                <div>Size</div>
+                                <input
+                                value={this.state.optionFontSize}
+                                type='number'
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({optionFontSize: x})
+                                }}
+                                ></input>
+                                <div>Months</div>
+                                <input
+                                value={this.state.leftOptionFourMo}
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({leftOptionFourMo: x})
+                                }}
+                                ></input>
+                            </div> : null}
+                            <div>Option 2</div>
                             <img src={OptionOneImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
                                     // displayOption('one');
@@ -1102,7 +1144,7 @@ class Create extends Component {
                                         this.setState({leftPricingOptionOneMonthly: x})
                                     }}
                                 ></input>
-                                <div>Monthly Size</div>
+                                <div>Size</div>
                                 <input
                                     value={this.state.optionFontSize}
                                     type='number'
@@ -1120,7 +1162,7 @@ class Create extends Component {
                                     }}
                                 ></input>
                             </div> : null}
-                            <div>Option 2</div>
+                            <div>Option 3</div>
                             <img src={OptionTwoImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
                                     // displayOption('two');
@@ -1147,7 +1189,7 @@ class Create extends Component {
                                         this.setState({leftPricingOptionTwoMonthly: x})
                                     }}
                                 ></input>
-                                <div>Monthly Size</div>
+                                <div>Size</div>
                                 <input
                                     value={this.state.optionFontSize}
                                     type='number'
@@ -1157,7 +1199,7 @@ class Create extends Component {
                                     }}
                                 ></input>
                             </div> : null}
-                            <div>Option 3</div>
+                            <div>Option 4</div>
                             <img src={OptionThreeImg} alt='' width='200px' height='150px'
                                 onClick={()=>{
                                     // displayOption('three');
@@ -1184,7 +1226,7 @@ class Create extends Component {
                                         this.setState({leftPricingOptionThreeMonthly: x})
                                     }}
                                 ></input>
-                                <div>Monthly Size</div>
+                                <div>Size</div>
                                 <input
                                     value={this.state.optionFontSize}
                                     type='number'
@@ -1475,7 +1517,7 @@ class Create extends Component {
                             <input
                             valuse={this.state.buttonRadius}
                             onChange={(event)=>{
-                                console.log(event.target.value)
+                                // console.log(event.target.value)
                                 this.setState({buttonRadius: event.target.value})
                             }}
                             ></input>
@@ -1629,6 +1671,36 @@ class Create extends Component {
                         <div>
                             <h4>Pick A Pricing Style</h4>
                             <div>Option 1</div>
+                            <img src={OptionFourImg} alt='' width='200px' height='100px' onClick={()=>{this.setState({rightPricingOption: 'four'})}}/>
+                            {this.state.rightPricingOption === 'four' ? <div>
+                                <div>APR</div>
+                                <input
+                                value={this.state.rightOptionFourApr}
+                                type='number'
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({rightOptionFourApr: x})
+                                }}
+                                ></input>
+                                <div>Size</div>
+                                <input
+                                value={this.state.optionFontSize}
+                                type='number'
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({optionFontSize: x})
+                                }}
+                                ></input>
+                                <div>Months</div>
+                                <input
+                                value={this.state.rightOptionFourMo}
+                                onChange={(event)=>{
+                                    let x = event.target.value
+                                    this.setState({rightOptionFourMo: x})
+                                }}
+                                ></input>
+                            </div> : null}
+                            <div>Option 2</div>
                             <img src={OptionOneImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
                                     this.setState({rightPricingOption: 'one'})
@@ -1672,7 +1744,7 @@ class Create extends Component {
                                     }}
                                 ></input>
                             </div> : null}
-                            <div>Option 2</div>
+                            <div>Option 3</div>
                             <img src={OptionTwoImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
                                     this.setState({rightPricingOption: 'two'})
@@ -1707,7 +1779,7 @@ class Create extends Component {
                                     this.setState({optionFontSize: x})
                                 }}></input>
                             </div> : null}
-                            <div>Option 3</div>
+                            <div>Option 4</div>
                             <img src={OptionThreeImg} alt='' width='200px' height='150px'
                                 onClick={()=>{
                                     this.setState({rightPricingOption: 'three'})
@@ -2025,7 +2097,7 @@ class Create extends Component {
                             <input
                             valuse={this.state.buttonRadius}
                             onChange={(event)=>{
-                                console.log(event.target.value)
+                                // console.log(event.target.value)
                                 this.setState({buttonRadius: event.target.value})
                             }}
                             ></input>
@@ -2160,7 +2232,13 @@ class Create extends Component {
                                         <div>Buy for</div>
                                         <div><span style={pricing}>${this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
-                                    </div> : null}
+                                    </div> 
+                                    : this.state.leftPricingOption === 'four' ? 
+                                    <div className='pricingContainerOptionFour'>
+                                        <div><span style={pricing}>{this.state.leftOptionFourApr ? this.state.leftOptionFourApr : '1.9'}%</span> APR</div>
+                                        <div>for {this.state.leftOptionFourMo ? this.state.leftOptionFourMo : '24-48'} mos.</div>
+                                    </div>
+                                    : null}
                                     {this.state.leftButton1 ? 
                                         <div style={bannerBtnContainer}>
                                             {this.state.leftButton1 ? <a href={this.state.leftButtonLink1}><button style={bannerBtn}>{this.state.leftButtonText1 ? this.state.leftButtonText1 : 'button 1'}</button></a> : null}
@@ -2258,7 +2336,13 @@ class Create extends Component {
                                         <div>Buy for</div>
                                         <div><span style={pricing}>${this.state.rightPricingOptionThreeMSRP ? this.state.rightPricingOptionThreeMSRP : '42,300'}</span></div>
                                         <div>Limited availability at this price</div>
-                                    </div> : null}
+                                    </div> 
+                                    : this.state.rightPricingOption === 'four' ?
+                                    <div className='pricingContainerOptionFour'>
+                                        <div><span style={pricing}>{this.state.rightOptionFourApr ? this.state.rightOptionFourApr : '1.9'}%</span> APR</div>
+                                        <div>for {this.state.rightOptionFourMo ? this.state.rightOptionFourMo : '24-48'} mos.</div>
+                                    </div>
+                                    : null}
                                     {this.state.rightButton1 ?
                                     <div style={bannerBtnContainer}>
                                         {this.state.rightButton1 ? <a href={this.state.rightButtonLink1}><button style={bannerBtn}>{this.state.rightButtonText1 ? this.state.rightButtonText1 : 'button 1'}</button></a> : null}
@@ -2340,3 +2424,8 @@ class Create extends Component {
 }
 
 export default Create;
+
+{/* <div class=\'pricingContainerOptionFour\'>\n */}
+{/* <div><span class=\'pricing\'>' + (this.state.rightOptionFourApr ? this.state.rightOptionFourApr : '1.9') + '%</span> APR</div>\n */}
+{/* <div>for ' + (this.state.rightOptionFourMo ? this.state.rightOptionFourMo : '24-48') + 'mos.</div>\n */}
+// </div>
