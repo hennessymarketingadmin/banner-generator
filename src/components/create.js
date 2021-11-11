@@ -291,8 +291,8 @@ class Create extends Component {
             backgroundSize: '100%',
             height: (this.state.bannerHeight ? this.state.bannerHeight : '500') + 'px',
             color: this.state.fontColor,
-            display: 'grid',
-            gridTemplateColumns: '50% 50%',
+            display: 'flex',
+            flexDirection: 'row',
             // fontFamily: this.state.fontFamily,
         }
 
