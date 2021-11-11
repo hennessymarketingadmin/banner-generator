@@ -155,12 +155,12 @@
     display: flex;
     flex-direction: row;
 }
-/* .templateRight {
-    border: 1px solid red;
+.templateRight {
+    width: 50%;
 }
 .templateLeft {
-    border: 1px solid red;
-} */
+    width: 50%;
+}
 /* .bannerBtnContainer {
     border: 1px solid red;
 } */
