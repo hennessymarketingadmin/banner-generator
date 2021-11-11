@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/banner-generator/static/css/main.2f69c4c7.chunk.css",
-    "main.js": "/banner-generator/static/js/main.90fa175e.chunk.js",
-    "main.js.map": "/banner-generator/static/js/main.90fa175e.chunk.js.map",
+    "main.css": "/banner-generator/static/css/main.f3768562.chunk.css",
+    "main.js": "/banner-generator/static/js/main.9fb88f4c.chunk.js",
+    "main.js.map": "/banner-generator/static/js/main.9fb88f4c.chunk.js.map",
     "runtime-main.js": "/banner-generator/static/js/runtime-main.f587809c.js",
     "runtime-main.js.map": "/banner-generator/static/js/runtime-main.f587809c.js.map",
     "static/js/2.7fde1210.chunk.js": "/banner-generator/static/js/2.7fde1210.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ba94345d.chunk.js": "/banner-generator/static/js/3.ba94345d.chunk.js",
     "static/js/3.ba94345d.chunk.js.map": "/banner-generator/static/js/3.ba94345d.chunk.js.map",
     "index.html": "/banner-generator/index.html",
-    "static/css/main.2f69c4c7.chunk.css.map": "/banner-generator/static/css/main.2f69c4c7.chunk.css.map",
+    "static/css/main.f3768562.chunk.css.map": "/banner-generator/static/css/main.f3768562.chunk.css.map",
     "static/js/2.7fde1210.chunk.js.LICENSE.txt": "/banner-generator/static/js/2.7fde1210.chunk.js.LICENSE.txt",
     "static/media/homeImg.5461e2b7.png": "/banner-generator/static/media/homeImg.5461e2b7.png",
     "static/media/optionFour.e58fe13c.png": "/banner-generator/static/media/optionFour.e58fe13c.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.f587809c.js",
     "static/js/2.7fde1210.chunk.js",
-    "static/css/main.2f69c4c7.chunk.css",
-    "static/js/main.90fa175e.chunk.js"
+    "static/css/main.f3768562.chunk.css",
+    "static/js/main.9fb88f4c.chunk.js"
   ]
 }
