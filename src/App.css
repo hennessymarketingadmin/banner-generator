@@ -152,21 +152,15 @@
     width: 98%;
     height: 500px;
     margin-top: 13px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-/* 
-    font-family: 'nobel book';
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 45px;
-    line-height: 1; */
+    display: flex;
+    flex-direction: row;
 }
-/* .templateRight {
+.templateRight {
     border: 1px solid red;
 }
 .templateLeft {
     border: 1px solid red;
-} */
+}
 /* .bannerBtnContainer {
     border: 1px solid red;
 } */
