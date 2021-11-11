@@ -23,10 +23,17 @@
     font-family: Arial Rounded MT Bold;
 }
 .homeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(81, 93, 113);
+}
+.home {
     background-color: rgb(81, 93, 113);
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+    width: 1500px;
 }
 .homeContainerLeft {
     display: flex;
@@ -98,8 +105,8 @@
 
 .leftNavSection, .rightNavSection {
     background-color: rgb(42, 48, 56);
-    padding: 20px;
-    height: auto;
+    padding: 20px 20px 50px 20px;
+    min-height: 400px;
 }
 .topNavSection {
     background-color: rgb(42, 48, 56);
@@ -368,4 +375,18 @@ input:focus {
     font-weight: 500;
     /* color: white; */
     /* margin-right: 5px; */
+}
+
+.bannerDropDown {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 200px;
 }

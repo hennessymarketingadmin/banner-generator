@@ -20,19 +20,21 @@ class App extends Component {
         {this.state.create ? <Create/>
         :
         <div className='homeContainer'>
-          <div className='homeContainerLeft'>
-            <img src={HomeImg} alt='Home'/>
-          </div>
-          <div className='homeContainerRight'>
-            <h1 className='homeHeader'>Bring</h1>
-            <h1 className='homeHeader'>Your Product</h1>
-            <h1 className='homeHeader'>To Life</h1>
-            <button
-              className='PinkBtn'
-              onClick = {()=>{
-                this.setState({create: true})
-              }}
-              >Get Started</button>
+          <div className='home'>
+            <div className='homeContainerLeft'>
+              <img src={HomeImg} alt='Home'/>
+            </div>
+            <div className='homeContainerRight'>
+              <h1 className='homeHeader'>Bring</h1>
+              <h1 className='homeHeader'>Your Product</h1>
+              <h1 className='homeHeader'>To Life</h1>
+              <button
+                className='PinkBtn'
+                onClick = {()=>{
+                  this.setState({create: true})
+                }}
+                >Get Started</button>
+            </div>
           </div>
         </div>
         }

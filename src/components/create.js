@@ -9,6 +9,7 @@ import OptionFourImg from './images/optionFour.png';
 class Create extends Component {
 
     state = {
+        bannerDropDown: false,
         topNavDisplay: 'title',
         bannerHeight: '500',
         backgroundImgUrl: '',
@@ -915,7 +916,12 @@ class Create extends Component {
                         <CopyToClipboard text={copyCode()}>
                             <div><button className='PinkBtn'>Copy Code</button></div>
                         </CopyToClipboard>
-                        <button>drop down</button>
+                        <button className='bannerDropDown' 
+                        onClick={()=>{
+                            let x = this.state.bannerDropDown
+                            this.setState({bannerDropDown: !x})}}
+                        >Banner</button>
+                        {this.state.bannerDropDown ? <div>
                         <div className='section'>
                             <div>Banner Height</div>
                             <input 
@@ -955,6 +961,7 @@ class Create extends Component {
                             }}
                             ></input>
                         </div>
+                        </div> : null}
                     </div>
                     {this.state.displayLeftNav ?
                     <div className='leftNavSection'>
