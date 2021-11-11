@@ -9,6 +9,7 @@ import OptionFourImg from './images/optionFour.png';
 class Create extends Component {
 
     state = {
+        topNavDisplay: 'title',
         bannerHeight: '500',
         backgroundImgUrl: '',
         fontFamily: '',
@@ -874,108 +875,12 @@ class Create extends Component {
                 // 'height: ' + (this.state.leftImageWidth) + 'px;\n',
                 // '}\n',
                 '@media screen and (min-width: 300px) and (max-width: 400px) {\n',
-                '.template {\n',
-                'flex-direction: column-reverse;\n',
-                'background-image: url("");\n',
-                'height: auto;\n',
-                '}\n',
-                '.templateLeft {\n',
-                'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100% 100%;\n',
-                '}\n',
-                '.leftTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                '}\n',
-                '.rightTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                'color: black;\n',
-                '}\n',
-                '.bannerBtn {\n',
-                'padding: 5px 30px;\n',
-                'margin: 5px;\n',
-                'background-color: black;\n',
-                'color: white;\n',
-                '}\n',
                 '}\n',
                 '@media screen and (min-width: 400px) and (max-width: 500px) {\n',
-                '.template {\n',
-                'flex-direction: column-reverse;\n',
-                'background-image: url("");\n',
-                'height: auto;\n',
-                '}\n',
-                '.templateLeft {\n',
-                'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100% 100%;\n',
-                '}\n',
-                '.leftTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                '}\n',
-                '.rightTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                'color: black;\n',
-                '}\n',
-                '.bannerBtn {\n',
-                'padding: 5px 30px;\n',
-                'margin: 5px;\n',
-                'background-color: black;\n',
-                'color: white;\n',
-                '}\n',
                 '}\n',
                 '@media screen and (min-width: 500px) and (max-width: 600px) {\n',
-                '.template {\n',
-                'flex-direction: column-reverse;\n',
-                'background-image: url("");\n',
-                'height: auto;\n',
-                '}\n',
-                '.templateLeft {\n',
-                'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100% 100%;\n',
-                '}\n',
-                '.leftTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                '}\n',
-                '.rightTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                'color: black;\n',
-                '}\n',
-                '.bannerBtn {\n',
-                'padding: 5px 30px;\n',
-                'margin: 5px;\n',
-                'background-color: black;\n',
-                'color: white;\n',
-                '}\n',
                 '}\n',
                 '@media screen and (min-width: 600px) and (max-width: 700px) {\n',
-                '.template {\n',
-                'flex-direction: column-reverse;\n',
-                'background-image: url("");\n',
-                'height: auto;\n',
-                '}\n',
-                '.templateLeft {\n',
-                'background-image: url(\'' + this.state.backgroundImgUrl + '\');\n',
-                'background-size: 100% 100%;\n',
-                '}\n',
-                '.leftTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                '}\n',
-                '.rightTextBackground {\n',
-                'width: 100%;\n',
-                'height: 100%;\n',
-                'color: black;\n',
-                '}\n',
-                '.bannerBtn {\n',
-                'padding: 5px 30px;\n',
-                'margin: 5px;\n',
-                'background-color: black;\n',
-                'color: white;\n',
-                '}\n',
                 '}\n',
                 '</style>\n',
             ]
@@ -1010,86 +915,110 @@ class Create extends Component {
                         <CopyToClipboard text={copyCode()}>
                             <div><button className='PinkBtn'>Copy Code</button></div>
                         </CopyToClipboard>
-                        <div>Banner Height</div>
-                        <input 
-                        value={this.state.bannerHeight}
-                        placeholder='Default 500px'
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({bannerHeight: x})
-                        }}
-                        ></input>
-                        <div>Background Image</div>
-                        <input
-                        placeholder='Background Url'
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({backgroundImgUrl: x})
-                        }}
-                        ></input>
-                        <div>Font-Color</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({fontColor: x})
-                        }}
-                        ></input>
-                        <div>Font-Family</div>
-                        <input
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({fontFamily: x})
-                        }}
-                        ></input>
+                        <button>drop down</button>
+                        <div className='section'>
+                            <div>Banner Height</div>
+                            <input 
+                            value={this.state.bannerHeight}
+                            placeholder='Default 500px'
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({bannerHeight: x})
+                            }}
+                            ></input>
+                        </div>
+                        <div className='section'>
+                            <div>Background Image</div>
+                            <input
+                            placeholder='Background Url'
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({backgroundImgUrl: x})
+                            }}
+                            ></input>
+                        </div>
+                        <div className='section'>
+                            <div>Font-Color</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({fontColor: x})
+                            }}
+                            ></input>
+                        </div>
+                        <div className='section'>
+                            <div>Font-Family</div>
+                            <input
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({fontFamily: x})
+                            }}
+                            ></input>
+                        </div>
                     </div>
                     {this.state.displayLeftNav ?
                     <div className='leftNavSection'>
                         <h1>Left Section</h1>
-                        <div>Title</div>
-                        <input
-                        value={this.state.leftTitle}
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftTitle: x})
-                        }} 
-                        ></input>
-                        <div>Title Font-Size</div>
-                        <input
-                        type='number'
-                        value={this.state.leftTitleFontSize}
-                        placeholder='px'
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftTitleFontSize: x})
-                        }}
-                        ></input>
-                        <hr/>
-                        <div>Body</div>
-                        <input
-                        value={this.state.leftBody}
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftBody: x})
-                        }} 
-                        ></input>
-                        <div>Body Font-Size</div>
-                        <input
-                        value={this.state.leftBodyFontSize}
-                        type='number'
-                        placeholder='px'
-                        onChange = {(event) => {
-                            let x = event.target.value
-                            this.setState({leftBodyFontSize: x})
-                        }} 
-                        ></input>
-                        <hr/>
+                        {this.state.topNavDisplay === 'title' ? <div>
+                            <div className='section'>
+                            <div>Title</div>
+                            <input
+                            value={this.state.leftTitle}
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftTitle: x})
+                            }} 
+                            ></input>
+                        </div>
+                        <div className='section'>
+                            <div>Title Font-Size</div>
+                            <input
+                            type='number'
+                            value={this.state.leftTitleFontSize}
+                            placeholder='px'
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftTitleFontSize: x})
+                            }}
+                            ></input>
+                        </div>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'body' ? <div>
+                        <div className='section'>
+                            <div>Body</div>
+                            <input
+                            value={this.state.leftBody}
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftBody: x})
+                            }} 
+                            ></input>
+                        </div>
+                        <div className='section'>
+                            <div>Body Font-Size</div>
+                            <input
+                            value={this.state.leftBodyFontSize}
+                            type='number'
+                            placeholder='px'
+                            onChange = {(event) => {
+                                let x = event.target.value
+                                this.setState({leftBodyFontSize: x})
+                            }} 
+                            ></input>
+                        </div>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'pricing' ? <div>
                         <h2>Pricing</h2>
                         
                         <div>
                             <h4>Pick A Pricing Style</h4>
+                            <div className='section'>
                             <div>Option 1</div>
                             <img src={OptionFourImg} alt='' width='200px' height='100px' onClick={()=>{this.setState({leftPricingOption: 'four'})}}/>
-                            {this.state.leftPricingOption === 'four' ? <div>
+                            </div>
+                            {this.state.leftPricingOption === 'four' ? <div className='section'>
                                 <div>APR</div>
                                 <input
                                 value={this.state.leftOptionFourApr}
@@ -1117,6 +1046,7 @@ class Create extends Component {
                                 }}
                                 ></input>
                             </div> : null}
+                            <div className='section'>
                             <div>Option 2</div>
                             <img src={OptionOneImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
@@ -1124,8 +1054,9 @@ class Create extends Component {
                                     this.setState({leftPricingOption: 'one'})
                                 }}
                             />
+                            </div>
                             {this.state.leftPricingOption === 'one' ? 
-                            <div>
+                            <div className='section'>
                                 <div>Month lease </div>
                                 <input 
                                     value={this.state.leftPricingOptionOneMonthlyLease}
@@ -1162,6 +1093,7 @@ class Create extends Component {
                                     }}
                                 ></input>
                             </div> : null}
+                            <div className='section'>
                             <div>Option 3</div>
                             <img src={OptionTwoImg} alt='' width='200px' height='100px'
                                 onClick={()=>{
@@ -1169,8 +1101,9 @@ class Create extends Component {
                                     this.setState({leftPricingOption: 'two'})
                                 }}
                             />
+                            </div>
                             {this.state.leftPricingOption === 'two' ? 
-                            <div>
+                            <div className='section'>
                                 <div>APR</div>
                                 <input
                                     value={this.state.leftPricingOptionTwoAPR}
@@ -1199,15 +1132,16 @@ class Create extends Component {
                                     }}
                                 ></input>
                             </div> : null}
+                            <div className='section'>
                             <div>Option 4</div>
                             <img src={OptionThreeImg} alt='' width='200px' height='150px'
                                 onClick={()=>{
-                                    // displayOption('three');
                                     this.setState({leftPricingOption: 'three'})
                                 }}
                             />
+                            </div>
                             {this.state.leftPricingOption === 'three' ? 
-                            <div>
+                            <div className='section'>
                                 <div>Month lease</div>
                                 <input
                                     value={this.state.leftPricingOptionThreeMonthlyLease}
@@ -1250,7 +1184,9 @@ class Create extends Component {
                                     this.setState({leftPricingOption: ''})
                                 }} 
                             >Remove Pricing</button>
-                            <hr/>
+                            </div> : null}
+                            {/* <hr/> */}
+                            {this.state.topNavDisplay === 'regional' ? <div>
                             <h3>Regional Offer</h3>
                             <img src={RegionalOfferImg} alt='' width='250px' height='180px'
                                 onClick={()=>{
@@ -1412,8 +1348,11 @@ class Create extends Component {
                             >Remove Offer</button></div>
                             </div> 
                             : null}
-                            <hr/>
+                            </div> : null}
+                            {/* <hr/> */}
+                            {this.state.topNavDisplay === 'background' ? <div>
                             <h3>Background</h3>
+                            <div className='section'>
                             <div>Text Background size width</div>
                             <input
                             value={this.state.leftBackgroundWidth}
@@ -1424,6 +1363,8 @@ class Create extends Component {
                                 this.setState({leftBackgroundWidth: x})
                             }} 
                             ></input>
+                            </div>
+                            <div className='section'>
                             <div>Text Background size height</div>
                             <input
                             value={this.state.leftBackgroundHeight}
@@ -1434,6 +1375,8 @@ class Create extends Component {
                                 this.setState({leftBackgroundHeight: x})
                             }} 
                             ></input>
+                            </div>
+                            <div className='section'>
                             <div>Text Background color</div>
                             <div> rgba(
                             <input
@@ -1478,6 +1421,7 @@ class Create extends Component {
                             }} 
                             ></input>
                             )</div>
+                            </div>
                             <h4>Background Position</h4>
                             <div>Vertical</div>
                             <button className='whiteBtn' onClick={()=>{this.setState({leftJustifyContent: 'flex-start'})}}>Left</button>
@@ -1487,9 +1431,12 @@ class Create extends Component {
                             <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-start'})}}>Up</button>
                             <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'center'})}}>Center</button>
                             <button className='whiteBtn' onClick={()=>{this.setState({leftAlignItems: 'flex-end'})}}>Down</button>
-                            <hr/>
+                            </div> : null}
+                            {/* <hr/> */}
+                            {this.state.topNavDisplay === 'buttons' ? <div>
                             <h3>Buttons</h3>
                             {this.state.leftButton1 ? <div>
+                            <div className='section'>
                             <div>Button Background color</div>
                             <input
                             value={this.state.buttonBackgroundColor}
@@ -1498,6 +1445,8 @@ class Create extends Component {
                                 this.setState({buttonBackgroundColor: x})
                             }} 
                             ></input>
+                            </div>
+                            <div className='section'>
                             <div>Button Text Color</div>
                             <input
                             value={this.state.buttonColor}
@@ -1506,6 +1455,8 @@ class Create extends Component {
                                 this.setState({buttonColor: x})
                             }} 
                             ></input> 
+                            </div>
+                            <div className='section'>
                             <div>Button Padding</div>
                             <input
                             value={this.state.buttonPadding}
@@ -1513,6 +1464,8 @@ class Create extends Component {
                                 this.setState({buttonPadding: event.target.value})
                             }}
                             ></input>
+                            </div>
+                            <div className='section'>
                             <div>Button Radius</div>
                             <input
                             valuse={this.state.buttonRadius}
@@ -1521,6 +1474,7 @@ class Create extends Component {
                                 this.setState({buttonRadius: event.target.value})
                             }}
                             ></input>
+                            </div>
                             </div> : null}
                             <div><button
                             className='whiteBtn'
@@ -1531,6 +1485,7 @@ class Create extends Component {
                             >{this.state.leftButton1 ? 'Remove Button 1' : 'Add Button'}</button></div>
 
                             {this.state.leftButton1 ? <div>
+                            <div className='section'>
                             <div>Button 1 Text</div>
                             <input
                             value={this.state.leftButtonText1}
@@ -1539,7 +1494,8 @@ class Create extends Component {
                                 this.setState({leftButtonText1: x})
                             }} 
                             ></input>
-                        
+                            </div>
+                            <div className='section'>
                             <div>Button 1 Link</div>
                             <input
                             value={this.state.leftButtonLink1}
@@ -1548,7 +1504,7 @@ class Create extends Component {
                                 this.setState({leftButtonLink1: x})
                             }} 
                             ></input>
-                            
+                            </div>
                         
                             <div><button
                             className='whiteBtn'
@@ -1558,6 +1514,7 @@ class Create extends Component {
                                 }}
                             >{this.state.leftButton2 ? 'Remove Button 2' : 'Add Button'}</button></div>
                             {this.state.leftButton2 ? <div>
+                            <div className='section'>
                             <div>Button 2 Text</div>
                             <input
                             value={this.state.leftButtonText2}
@@ -1566,7 +1523,8 @@ class Create extends Component {
                                 this.setState({leftButtonText2: x})
                             }} 
                             ></input>
-                        
+                            </div>
+                            <div className='section'>
                             <div>Button 2 Link</div>
                             <input
                             value={this.state.leftButtonLink2}
@@ -1575,9 +1533,12 @@ class Create extends Component {
                                 this.setState({leftButtonLink2: x})
                             }} 
                             ></input>
+                            </div>
                             </div>: null}
                             </div>: null}
-                        <hr/>
+                            </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'offer' ? <div>
                         <h3>Offer Details</h3>
                         <button className='whiteBtn'
                             onClick={()=>{
@@ -1588,6 +1549,7 @@ class Create extends Component {
                         </button>
                         {this.state.leftAddOfferDetails ? 
                         <div>
+                            <div className='section'>
                             <div>Offer details Info</div>
                             <input 
                                 value={this.state.leftAddOfferDetailsText}
@@ -1595,8 +1557,10 @@ class Create extends Component {
                                     this.setState({leftAddOfferDetailsText: event.target.value})
                                 }}
                             ></input> 
+                            </div>
                         </div> : null}
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
                         {/* <hr/>
                         <h3>Insert Image</h3>
                         <input 
@@ -1626,6 +1590,7 @@ class Create extends Component {
                     :
                     <div className='rightNavSection'>
                         <h1>Right Section</h1>
+                        {this.state.topNavDisplay === 'title' ? <div>
                         <div>Title</div>
                         <input
                         value={this.state.rightTitle}
@@ -1645,7 +1610,9 @@ class Create extends Component {
                             this.setState({rightTitleFontSize: x})
                         }}
                         ></input>
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay==='body' ? <div>
                         <div>Body</div>
                         <input
                         value={this.state.rightBody}
@@ -1665,9 +1632,10 @@ class Create extends Component {
                             this.setState({rightBodyFontSize: x})
                         }} 
                         ></input>
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'pricing' ? <div>
                         <h2>Pricing</h2>
-                        
                         <div>
                             <h4>Pick A Pricing Style</h4>
                             <div>Option 1</div>
@@ -1829,7 +1797,9 @@ class Create extends Component {
                             this.setState({rightPricingOption: ''})
                         }} 
                         >Remove Pricing</button>
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'regional' ? <div>
                         <h3>Regional Offer</h3>
                         <img src={RegionalOfferImg} alt='' width='250px' height='180px'
                         onClick={()=>{
@@ -1992,7 +1962,9 @@ class Create extends Component {
                             >Remove Offer</button></div>
                         </div> 
                         : null}
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'background' ? <div>
                         <h3>Background</h3>
                         <div>Text Background size width</div>
                         <input
@@ -2067,7 +2039,9 @@ class Create extends Component {
                         <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-start'})}}>Up</button>
                         <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'center'})}}>Center</button>
                         <button className='whiteBtn' onClick={()=>{this.setState({rightAlignItems: 'flex-end'})}}>Down</button>
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'buttons' ? <div>
                         <h3>Buttons</h3>
                             {this.state.rightButton1 ? <div>
                             <div>Button Background color</div>
@@ -2157,8 +2131,9 @@ class Create extends Component {
                             ></input>
                         </div>: null}
                         </div>: null}
-                    
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'offer' ? <div>
                         <h3>Offer Details</h3>
                         <button className='whiteBtn'
                             onClick={()=>{
@@ -2177,7 +2152,9 @@ class Create extends Component {
                                 }}
                             ></input> 
                         </div> : null}
-                        <hr/>
+                        </div> : null}
+                        {/* <hr/> */}
+                        {this.state.topNavDisplay === 'image' ? <div>
                         <h3>Insert Image</h3>
                         <input 
                         value={this.state.rightImageUrl}
@@ -2200,11 +2177,37 @@ class Create extends Component {
                                 this.setState({rightImageWidth: event.target.value})
                             }} 
                         />
+                        </div> : null}
                     </div> }
 
                     </div>
                     <div className='templateContainer'>
                         {this.state.fontFamily ? <div className='added'>Font Family Added</div> : null}
+                        <div className='topBannerBtnContainer'>
+                            <button className={this.state.topNavDisplay === 'title' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'title'})}}>Title</button>
+                            
+                            <button className={this.state.topNavDisplay === 'body' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'body'})}}>Body</button>
+                            
+                            <button className={this.state.topNavDisplay === 'pricing' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'pricing'})}}>Pricing</button>
+                            
+                            <button className={this.state.topNavDisplay === 'regional' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'regional'})}}>Regional Offer</button>
+                            
+                            <button className={this.state.topNavDisplay === 'background' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'background'})}}>Background</button>
+                            
+                            <button className={this.state.topNavDisplay === 'buttons' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'buttons'})}}>Buttons</button>
+                            
+                            <button className={this.state.topNavDisplay === 'offer' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'offer'})}}>Offer Details</button>
+                            
+                            {this.state.displayLeftNav ? null : <button className={this.state.topNavDisplay === 'image' ? 'topBannerBtnActive' : 'topBannerBtn'} 
+                            onClick={()=>{this.setState({topNavDisplay: 'image'})}}>Image</button>}
+                        </div>
                         <div className='template' style={template} >
                             <div className='templateLeft' style={templateLeft}>
                                 <div style={leftTextBackground}>
@@ -2424,8 +2427,3 @@ class Create extends Component {
 }
 
 export default Create;
-
-{/* <div class=\'pricingContainerOptionFour\'>\n */}
-{/* <div><span class=\'pricing\'>' + (this.state.rightOptionFourApr ? this.state.rightOptionFourApr : '1.9') + '%</span> APR</div>\n */}
-{/* <div>for ' + (this.state.rightOptionFourMo ? this.state.rightOptionFourMo : '24-48') + 'mos.</div>\n */}
-// </div>
