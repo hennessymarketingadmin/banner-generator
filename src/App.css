@@ -389,4 +389,19 @@ input:focus {
     cursor: pointer;
     text-transform: uppercase;
     width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.iconContainer {
+    margin-right: 5px;
+}
+
+.icon {
+    width: 15px;
+    height: 2px;
+    background-color: black;
+    margin: 2px 0;
 }

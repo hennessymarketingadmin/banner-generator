@@ -920,7 +920,14 @@ class Create extends Component {
                         onClick={()=>{
                             let x = this.state.bannerDropDown
                             this.setState({bannerDropDown: !x})}}
-                        >Banner</button>
+                        >
+                        <div className='iconContainer'>
+                            <div className='icon'></div>
+                            <div className='icon'></div>
+                            <div className='icon'></div>
+                        </div>
+                        Banner
+                        </button>
                         {this.state.bannerDropDown ? <div>
                         <div className='section'>
                             <div>Banner Height</div>
