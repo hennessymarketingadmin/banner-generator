@@ -407,8 +407,8 @@ class Create extends Component {
                 (this.state.leftPricingOption === 'three' ? '<div class=\'pricingContainerOptionThree\'>\n<div>' + (this.state.leftPricingOptionThreeMonthlyLease ? this.state.leftPricingOptionThreeMonthlyLease : '24') + 'month lease</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionThreeMonthly ? this.state.leftPricingOptionThreeMonthly : '439') + '</span> / month</div>\n<hr class=\'pricingLineVirtical\'></hr>\n<div>Buy for</div>\n<div><span class=\'pricing\'>$' + (this.state.leftPricingOptionThreeMSRP ? this.state.leftPricingOptionThreeMSRP : '42,300') + '</span></div>\n<div>Limited availability at this price</div>\n</div>' : null) + '\n',
                 (this.state.leftPricingOption === 'four' ? '<div class=\'pricingContainerOptionFour\'>\n<div><span class=\'pricing\'>' + (this.state.leftOptionFourApr ? this.state.leftOptionFourApr : '1.9') + '%</span> APR</div>\n<div>for ' + (this.state.leftOptionFourMo ? this.state.leftOptionFourMo : '24-48') + 'mos.</div>\n</div>' : null ) + '\n',
                 (this.state.leftButton1 ? '<div class=\'bannerBtnContainer\'>' : null) + '\n',
-                (this.state.leftButton1 ? '<a href=' + (this.state.leftButtonLink1) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText1 ? this.state.LeftButtonText1 : 'button 1') + '</button></a>' : null) + '\n',
-                (this.state.leftButton2 ? '<a href=' + (this.state.leftButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.LeftButtonText2 ? this.state.LeftButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
+                (this.state.leftButton1 ? '<a href=' + (this.state.leftButtonLink1) + '><button class=\'bannerBtn\'>' + (this.state.leftButtonText1 ? this.state.leftButtonText1 : 'button 1') + '</button></a>' : null) + '\n',
+                (this.state.leftButton2 ? '<a href=' + (this.state.leftButtonLink2) + '><button class=\'bannerBtn\'>' + (this.state.leftButtonText2 ? this.state.leftButtonText2 : 'button 1') + '</button></a>' : null) + '\n',
                 (this.state.leftButton1 ? '</div>' : null) + '\n',
                 (this.state.leftAddOfferDetails ? '<div class=\'offerDetailsDropdown\'>\n<span>+ view offer details</span>\n<div class=\'offerDetailsDropdownContent\'>\n<p>' + (this.state.leftAddOfferDetailsText ? this.state.leftAddOfferDetailsText : 'Hello World' ) + '</p>\n</div>\n</div>\n' : null) + '\n',
                 (this.state.leftImageUrl ? '<div><img class=\'leftImage\' src=\'' + this.state.leftImageUrl + '\' alt=\'\'/></div>' : null) + '\n',
@@ -517,7 +517,6 @@ class Create extends Component {
                 '</div>\n',
                 '</div>\n',
                 '</div>\n',
-                
                 '<script>\n',
                 'function leftOfferDetailsOne() {\n',
                 'let x = document.getElementById("leftDetailsOne");\n',
@@ -583,7 +582,6 @@ class Create extends Component {
                 'x.style.display = "block";\n',
                 '}\n',
                 '}\n',
-
                 'function rightOfferDetailsOne() {\n',
                 'let x = document.getElementById("rightDetailsOne");\n',
                 'if (x.style.display === "block") {\n',
@@ -871,7 +869,7 @@ class Create extends Component {
                 '}\n',
                 '.rightImage {\n',
                 'width: ' + (this.state.rightImageWidth) + 'px;\n',
-                'height: ' + (this.state.rightImageheight) + 'px;\n',
+                'height: ' + (this.state.rightImageHeight) + 'px;\n',
                 '}\n',
                 // '.leftImage {\n',
                 // 'width: ' + (this.state.leftImageWidth) + 'px;\n',
@@ -974,7 +972,6 @@ class Create extends Component {
                 '}\n',
                 '</style>\n',
             ]
-            console.log(this.state.rightImageHeight)
             for (let i = 0; i < code.length; i++) {
                 if (code[i] !== "[object Object]\n" && code[i] !== "null\n") {
                     filtered.push(code[i])
